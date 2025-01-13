@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import { useMyContext } from "../MyContext";
 import { useTranslation } from "react-i18next";
+import cv from '../assets/CV.png'
+import tweed from '../assets/tweed.webp'
+import seamless_paper_texture from '../assets/seamless_paper_texture.webp'
 
 const CV = () => {
   const [isEnter, setIsEnter] = useState(false);
@@ -44,14 +47,14 @@ const CV = () => {
 
       {" "}
       <div
-        style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+        style={{ backgroundImage: `url('${tweed}')` }}
         className={`absolute left-0 top-0 w-full h-full  ${
           isEnter ? "brightness-[0.4]" : "brightness-0"
         } transition-all duration-500 hidden z-[1] lg:dark:block`}
       ></div>
       <div
         style={{
-          backgroundImage: `url('./src/assets/seamless_paper_texture.webp')`,
+          backgroundImage: `url('${seamless_paper_texture}')`,
         }}
         className={`absolute left-0 top-0 w-full h-full dark:hidden transition-all duration-500 brightness-[0.99] ${
           isEnter ? " opacity-[1] " : "opacity-[0]  "
@@ -67,7 +70,7 @@ const CV = () => {
         <FiDownload className="arrow5 absolute" />
         <FiDownload className="arrow6 absolute " />
       </div>
-      <img src="./src/assets/CV.png" alt="" className=" relative z-[5] w-[8rem] mt-[15%] xs:mt-[3rem] xl:mt-[0] md:mt-[5%] md:w-[80%] xl:w-[100%]"/>
+      <img src={cv} alt="" className=" relative z-[5] w-[8rem] mt-[15%] xs:mt-[3rem] xl:mt-[0] md:mt-[5%] md:w-[80%] xl:w-[100%]"/>
     </div>
   );
 };

@@ -27,12 +27,7 @@ const ProjectTab = ({
     console.log("github", githubHover);
   }, [githubHover]);
 
-  const images = [
-    "https://via.placeholder.com/600x300?text=Image+1",
-    "https://via.placeholder.com/600x300?text=Image+2",
-    "https://via.placeholder.com/600x300?text=Image+3",
-    "https://via.placeholder.com/600x300?text=Image+4",
-  ];
+
   // console.log(githubHover);
 
   const settings = {

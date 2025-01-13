@@ -4,6 +4,8 @@ import { RiToolsLine } from "react-icons/ri";
 import { LuFolder } from "react-icons/lu";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import seamless_paper_texture from '../../assets/seamless_paper_texture.webp'
+import tweed from '../../assets/tweed.webp'
 
 function Mobile_nav() {
   const [hoveredIcon, setHoveredIcon] = useState("");
@@ -30,12 +32,12 @@ function Mobile_nav() {
         <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center bg-gray-400 dark:bg-transparent  xl:p-3 rounded-full  w-fit z-[999] relative ">
           <div
             style={{
-              backgroundImage: `url('./src/assets/seamless_paper_texture.webp')`,
+              backgroundImage: `url('${seamless_paper_texture}')`,
             }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.03] opacity-[1] dark:hidden rounded-full"
           ></div>
           <div
-            style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+            style={{ backgroundImage: `url('${tweed}')` }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.42] opacity-[0.9] hidden dark:block rounded-full"
           ></div>
 

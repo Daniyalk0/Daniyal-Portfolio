@@ -132,8 +132,10 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
   border-color:  brown !important;
 }
 
-.overlay{
-  background: rgba(255,255,255,0.2);
-  /* mix-blend-mode: lighten; */
-  border: 2px solid black;
+.custom-transition {
+  transition: none;
+}
+
+.custom-transition:hover {
+  transition: all 0.5s ease;
 }

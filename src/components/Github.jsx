@@ -5,6 +5,8 @@ import { MdLightMode } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
+import tweed from '../assets/tweed.webp'
+import seamless_paper_texture from '../assets/seamless_paper_texture.webp'
 
 const Github = () => {
   const [isEnter, setIsEnter] = useState(false);
@@ -56,14 +58,14 @@ const Github = () => {
        border-[#c0c0c0] w-[53vw] md:w-[53%] h-[200px] rounded-[6vw] md:rounded-[4vw] md:h-[270px]  font-[real2] py-3 px-4 relative overflow-hidden flex items-center justify-center xl:w-[19vw] xl:h-[230px] xl:rounded-[2.2vw] bg-[#eeeeee] dark:bg-zinc-900"
       >
         <div
-          style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+          style={{ backgroundImage: `url('${tweed}')` }}
           className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
             isEnter ? "brightness-[0.4] " : "brightness-0 opacity-0"
           } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
         ></div>
         <div
           style={{
-            backgroundImage: `url('./src/assets/seamless_paper_texture.webp')`,
+            backgroundImage: `url('${seamless_paper_texture}')`,
           }}
           className={`absolute left-0 top-0 w-full h-full dark:hidden transition-all duration-500 brightness-[0.99] ${
             isEnter ? " opacity-[0.9] " : "opacity-[0]  "
@@ -99,12 +101,12 @@ const Github = () => {
         >
           <div
             style={{
-              backgroundImage: `url('./src/assets/seamless_paper_texture.webp')`,
+              backgroundImage: `url('${seamless_paper_texture}')`,
             }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.04] opacity-[1] dark:hidden block"
           ></div>
           <div
-            style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+            style={{ backgroundImage: `url('${tweed}')` }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.38] opacity-[0.9] hidden dark:block "
           ></div>
           <div

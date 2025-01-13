@@ -8,7 +8,7 @@ import "./i18n.js";
 // import App from "./App.jsx";
 import Home from "./components/Home.jsx";
 // import About from "./components/routes/About.jsx";
-const lazyWithDelay = (importFunc, delay = 1500) => {
+const lazyWithDelay = (importFunc, delay = 2000) => {
   return lazy(() =>
     Promise.all([
       importFunc(),
@@ -17,7 +17,7 @@ const lazyWithDelay = (importFunc, delay = 1500) => {
   );
 };
 
-const App = lazyWithDelay(() => import("./App.jsx"), 1500);
+const App = lazyWithDelay(() => import("./App.jsx"), 2000);
 const About = lazyWithDelay(() => import("./components/routes/About.jsx"), 2000);
 const Tools = lazyWithDelay(() => import("./components/routes/Tools.jsx"), 2000);
 const Projects = lazyWithDelay(() => import("./components/routes/Projects.jsx"), 2000);

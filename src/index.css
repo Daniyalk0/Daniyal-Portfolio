@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: anzo1;
+  src: url(assets/file.woff2);
+  text-transform: capitalize;
+}
+@font-face {
+  font-family: anzo2;
+  src: url(assets/file2.woff2);
+}
+@font-face {
+  font-family: anzo3;
+  src: url(assets/file3.woff2);
+}
+@font-face {
+  font-family: anzo4;
+  src: url(assets/file4.woff2);
+}
+@font-face {
+  font-family: anzo5;
+  src: url(assets/file5.woff2);
+}
+@font-face {
+  font-family: anzo6;
+  src: url(assets/madefor-text.var.original.woff2);
+}
+@font-face {
+  font-family: real;
+  src: url(assets/realfont.woff2);
+}
+@font-face {
+  font-family: real2;
+  src: url(assets/DMSans-Regular.ttf);
+}
+@font-face {
+  font-family: pop;
+  src: url(assets/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: pop2;
+  src: url(assets/Poppins-Medium.ttf);
+}
+
+* {
+  cursor: none !important;
+}
+
+/* Slider container */
+/* Slider container */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Slider track */
+.slider-track {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+  animation: none;
+}
+
+/* Each slide */
+.slide {
+  flex: 0 0 auto;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3/3;
+  object-fit: contain;
+}
+
+.vignette-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure it doesn't interfere with clicks */
+  content: "";
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 70%,
+    /* Transparent center */ rgba(0, 0, 0, 0.5) 100% /* Dark edges */
+  );
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+  background-blend-mode: multiply; /* Blend texture with the background */
+}
+
+.eng {
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(179,25,66,1) 50%, rgba(255,255,255,0) 90%);
+}
+.fr{
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(0,72,181,1) 50%, rgba(255,255,255,0) 90%);
+}
+
+.ur{
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(124, 8, 240) 50%, rgba(255,255,255,0) 90%);
+}
+
+.in{
+  background: rgb(255,255,255);
+background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(255,92,13,1) 50%, rgba(255,255,255,0) 90%);
+}
+
+.ta{
+  background: rgb(255,255,255);
+background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50%, rgba(255,255,255,0) 90%);
+}
+
+.gm{
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(199,165,21,1) 50%, rgba(255,255,255,0) 90%);
+}
+
+
+.bg{
+  border-color:  brown !important;
+}
+
+.overlay{
+  background: rgba(255,255,255,0.2);
+  /* mix-blend-mode: lighten; */
+  border: 2px solid black;
+}

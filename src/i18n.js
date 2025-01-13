@@ -18,7 +18,9 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/translation.json', // Correct path to translations
     },
+    preload: ['en', 'fr', 'gm', 'ta', 'ur', 'hi'], // Preload languages
   });
+
 
 export default i18n;
 

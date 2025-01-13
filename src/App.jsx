@@ -4,25 +4,19 @@ import CustomCursor from "./components/CustomCursor";
 import Mobile_nav from "./components/NavBar'/Mobile_nav";
 import { Outlet } from "react-router-dom";
 import Loader from "./components/Loader";
-import seamless_paper_texture from './assets/seamless_paper_texture.webp'
-import tweed from './assets/tweed.webp'
+import seamless_paper_texture from "./assets/seamless_paper_texture.webp";
+import tweed from "./assets/tweed.webp";
 
 function App() {
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   const [Hide, setHide] = useState(false);
   const [opacity, setOpacity] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 2000);
-    setTimeout(() => {
-      setOpacity(true);
-    }, 2000);
-
-  }, []);
-  
-
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoader(false);
+  //   }, 1500);
+  // }, []);
 
   useEffect(() => {
     document.body.style.overflow = loader ? "hidden" : "auto";
@@ -34,12 +28,8 @@ function App() {
 
   return (
     <>
-      <Loader className={`${!loader && "hidden"} `}  loader={loader}/>
-
       <div
-        className={`${
-          opacity ? "opacity-1" : "opacity-0"
-        } relative min-h-screen  bg-gray-400 dark:bg-zinc-900 transition-opacity duration-500`}
+        className={` relative min-h-screen  bg-gray-400 dark:bg-zinc-900 transition-opacity duration-500`}
       >
         <div
           style={{

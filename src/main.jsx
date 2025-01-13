@@ -1,17 +1,26 @@
 import { lazy, StrictMode, Suspense, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-// import App from "./App.jsx";
-const App = lazy(() => import("./App.jsx"));
+import { MyProvider } from "./MyContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Loader from "./components/Loader.jsx";
+import "./index.css";
+import "./i18n.js";
+// import App from "./App.jsx";
 import Home from "./components/Home.jsx";
 // import About from "./components/routes/About.jsx";
-import "./i18n.js";
-import { MyProvider } from "./MyContext.jsx";
-import Loader from "./components/Loader.jsx";
-const About = lazy(() => import("./components/routes/About.jsx"));
-const Tools = lazy(() => import("./components/routes/Tools.jsx"));
-const Projects = lazy(() => import("./components/routes/Projects.jsx"));
+const lazyWithDelay = (importFunc, delay = 1500) => {
+  return lazy(() =>
+    Promise.all([
+      importFunc(),
+      new Promise((resolve) => setTimeout(resolve, delay)),
+    ]).then(([moduleExports]) => moduleExports)
+  );
+};
+
+const App = lazyWithDelay(() => import("./App.jsx"), 1500);
+const About = lazyWithDelay(() => import("./components/routes/About.jsx"), 2000);
+const Tools = lazyWithDelay(() => import("./components/routes/Tools.jsx"), 2000);
+const Projects = lazyWithDelay(() => import("./components/routes/Projects.jsx"), 2000);
 
 const router = createBrowserRouter([
   {

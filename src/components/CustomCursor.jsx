@@ -68,7 +68,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="dark:bg-[#ffffff35] bg-[#00000040] rounded-full fixed pointer-events-none z-[9999] "
+      className="dark:bg-[#ffffff35] bg-[#00000040] rounded-full fixed pointer-events-none z-[9999] hidden md:block"
       style={{
         width: cursorSize + "px",
         height: cursorSize + "px",

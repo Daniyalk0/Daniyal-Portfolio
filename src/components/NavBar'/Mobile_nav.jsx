@@ -29,7 +29,7 @@ function Mobile_nav() {
   return (
     <div className="w-full pt-7 pb-3 relative  xl:pt-4 ">
       <div className="flex items-center justify-center xs:gap-4 w-full ">
-        <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center bg-gray-400 dark:bg-transparent  xl:p-3 rounded-full  w-fit z-[999] relative ">
+        <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center bg-gray-400 dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative ">
           <div
             style={{
               backgroundImage: `url('${seamless_paper_texture}')`,
@@ -45,7 +45,7 @@ function Mobile_nav() {
             <div
               onClick={() => changeRoute(text)}
               key={id}
-              className="dark:text-white text-[5vw] md:text-[3vw] font-bold relative group xl:text-[1.8vw] xs:text-[5vw]"
+              className="dark:text-white text-[5vw] md:text-[3vw] font-bold relative group xl:text-[1.8vw] xs:text-[7vw]"
               onMouseEnter={() => setHoveredIcon(id)}
               onMouseLeave={() => setHoveredIcon("")}
             >

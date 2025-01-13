@@ -46,7 +46,7 @@ const ProjectTab = ({
 
     <div
       className={`w-[91.6vw] h-[240px] rounded-[6vw] border-[1px] relative  
-      overflow-hidden border-[#c0c0c0]  dark:border-[#292929] md:h-[346px]  md:rounded-[4vw] xl:w-[20vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[19vw] flex items-center justify-center ${wClass} xs:w-[91vw]`}
+      overflow-hidden border-[#c0c0c0]  dark:border-[#292929] md:h-[346px]  md:rounded-[4vw] xl:w-[20vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[19vw] flex items-center justify-center ${wClass} xs:w-[89vw]`}
       onMouseEnter={() => setHoverState(true)}
       onMouseLeave={() => setHoverState(false)}
     >

@@ -66,7 +66,7 @@ const CV = () => {
         {/* View CV */}
         {t('cv')}
       </p>
-      <div className="icon border-[1px] dark:border-[2px] p-[4vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%]  xs:text-[0.7rem] xs:p-[4vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[2] bg-[#eeeeee] dark:bg-zinc-900 xl:p-5 overflow-hidden">
+      <div className="icon border-[1px] dark:border-[2px] p-[4vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%]  xs:text-[0.7rem] xs:p-[4.8vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[2] bg-[#eeeeee] dark:bg-zinc-900 xl:p-5 overflow-hidden">
         <FiDownload className="arrow5 absolute" />
         <FiDownload className="arrow6 absolute " />
       </div>

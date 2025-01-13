@@ -48,7 +48,7 @@ function AboutHome() {
           <img />
         </div>
         <div
-          className="rounded-[6vw] md:rounded-[4vw] border-[#c0c0c0]  dark:border-[#292929] xs:w-[95vw] w-full h-[210px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[34.3vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-6 xs:py-5 xs:px-6 md:w-[70%] xl:px-7 xl:py-7 lg:w-[71vw] xl:mr-0 xl:ml-2 2xl:mr-4 2xl:ml-0 bg-[#eeeeee] dark:bg-zinc-900 dark:bg-transparent xs:h-[190px]"
+          className="rounded-[6vw] md:rounded-[4vw] border-[#c0c0c0]  dark:border-[#292929]  w-full h-[210px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[34.3vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-6 xs:py-5 xs:px-6 md:w-[70%] xl:px-7 xl:py-7 lg:w-[71vw] xl:mr-0 xl:ml-2 2xl:mr-4 2xl:ml-0 bg-[#eeeeee] dark:bg-zinc-900 dark:bg-transparent xs:h-[190px]"
           onMouseEnter={() => setIsEnter(true)}
           onMouseLeave={() => setIsEnter(false)}
         >
@@ -83,10 +83,10 @@ function AboutHome() {
             {/* Passionate about web development and enjoy solving problems. */}
             {t("aboutHomeText")}
           </p>
-          <div className="icon border-[1px] dark:border-[2px] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%] rotate-[-50deg] xs:text-[0.6rem] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[2] bg-[#eeeeee] dark:bg-zinc-900 xl:p-5 overflow-hidden p-[1.15rem] xs:p-[4vw]">
-            <FaArrowRight className="arrow3 absolute" />
-            <FaArrowRight className="arrow4 absolute" />
-          </div>
+        <div className="icon border-[1px] dark:border-[2px] p-[2.2vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%] rotate-[-50deg] xs:text-[0.6rem] xs:p-[2.5vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[10] bg-[#eeeeee] dark:bg-zinc-900 xl:p-5 overflow-hidden">
+                  <FaArrowRight className={`arrow2 md:absolute`} />
+                  <FaArrowRight className="arrow md:block hidden md:absolute" />
+                </div>
         </div>
       </div>
     </NavLink>

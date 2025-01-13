@@ -50,7 +50,7 @@ const ReUse = ({ isGreet = true, background = true }) => {
          {t('name')}
         </h1>
 
-        <span className={`dark:text-[#4e4e4e] text-gray-400 text-[1.04rem]   font-[real2] md:text-[1.3rem] xl:text-[1.1rem] 2xl:text-[1.3rem] ${isTransitioning ? 'opacity-0' : 'opacity-1'} transition-opacity duration-700  ${currentTa && "xl:text-[1vw] xs:text-[3.4vw] text-[0.79rem]" }`}>
+        <span className={`dark:text-[#4e4e4e] text-gray-400 text-[1.04rem]   font-[real2] md:text-[1.3rem] xl:text-[1.1rem] 2xl:text-[1.3rem] ${isTransitioning ? 'opacity-0' : 'opacity-1'} transition-opacity duration-700  ${currentTa && "xl:text-[1vw] xs:text-[3.1vw] text-[0.79rem] " } xs:text-[0.9rem]`}>
           {/* Frontend Developer, currently seeking opportunities to create
           impactful web applications. */}
           <h1>{t('title')}</h1>

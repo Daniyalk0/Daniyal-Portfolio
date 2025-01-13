@@ -10,9 +10,9 @@ import seamless_paper_texture from '../assets/seamless_paper_texture.webp'
 
 const CV = () => {
   const [isEnter, setIsEnter] = useState(false);
-    const { isTransitioning, currentLang, textL, currentTa, currentUr } = useMyContext();
+    const { isTransitioning, currentLang, textL, currentTa, currentUr, currentGm } = useMyContext();
     const { t, i18n } = useTranslation();
-  
+    console.log(currentGm);
 
   const handleDownload = () => {
     // Replace with your actual CV file path
@@ -60,7 +60,7 @@ const CV = () => {
           isEnter ? " opacity-[1] " : "opacity-[0]  "
         }`}
       />
-    <p className={`font-[pop2]  mt-[-0.5rem]   text-[1.15rem] text-[#2a2a2a] dark:text-[#cbcbcb] left-[5vw] xs:text-[1rem] xs:mt-[-0.9vw] xl:text-[1.3rem] xl:mt-[-0.7vw] md:mt-[0vw] xl:left-[2vw] xs:w-[75%] w-[75%] absolute z-[4]  ${
+    <p className={`font-[pop2]  mt-[-0.5rem]   text-[1.15rem] text-[#2a2a2a] dark:text-[#cbcbcb] left-[5vw] xs:text-[1rem] xs:mt-[-0.9vw] xl:text-[1.3rem] xl:mt-[-0.7vw] md:mt-[0vw] xl:left-[2vw] xs:w-[75%] w-[75%] absolute z-[4]  xl:w-[80%]  ${
           isTransitioning ? "opacity-0" : "opacity-1"
         }  ${!textL && "text-right rtl"} ${currentTa && 'xl:text-[1rem] text-[0.9rem] xs:text-[3.2vw]'} ${currentUr && 'xl:text-[1rem] text-[0.9rem] xs:text-[4vw]'} transition-opacity duration-700`}>
         {/* View CV */}

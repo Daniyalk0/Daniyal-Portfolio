@@ -41,7 +41,7 @@ const ReUse = ({ isGreet = true, background = true }) => {
 
   return (
     <div
-      className="w-full h-[210px] rounded-[6vw] md:rounded-[4vw] md:w-full border-[1px] relative overflow-hidden border-[#c0c0c0] bg-zinc-100 dark:bg-zinc-900  dark:border-[#292929] md:h-[230px] xl:w-[34vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35vw] lg:rounded-[3vw] xs:h-[190px]"
+      className="w-full h-[210px] rounded-[6vw] md:rounded-[4vw] md:w-full border-[1px] relative overflow-hidden border-[#c0c0c0]   dark:border-[#292929] md:h-[230px] xl:w-[34vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35vw] lg:rounded-[3vw] xs:h-[190px]"
       onMouseEnter={() => setIsEntered(true)}
       onMouseLeave={() => setIsEntered(false)}
     >

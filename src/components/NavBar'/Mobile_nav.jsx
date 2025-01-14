@@ -39,12 +39,12 @@ function Mobile_nav() {
     >
       <div className="flex items-center justify-center xs:gap-4 w-full ">
         <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center bg-gray-400 dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative ">
-          <div
-            style={{
-              backgroundImage: `url('${nayaLight}')`,
-            }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[1] dark:hidden rounded-full"
-          ></div>
+         <div
+                     style={{
+                       backgroundImage: `url('${nayaLight}')`,
+                     }}
+                     className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.15] opacity-[1] dark:hidden"
+                   ></div>
           <div
             style={{ backgroundImage: `url('${tweed}')` }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.42] opacity-[0.9] hidden dark:block rounded-full"

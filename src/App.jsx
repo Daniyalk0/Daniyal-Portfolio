@@ -29,11 +29,11 @@ function App() {
           style={{
             backgroundImage: `url('${star}')`,
           }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.12] hidden dark:block opacity-[1] "
+          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.13] hidden dark:block opacity-[1] "
         ></div>
         <div
           style={{ backgroundImage: `url('${star}')` }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.99] opacity-[1] dark:hidden block"
+          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.03] opacity-[1] dark:hidden block"
         ></div>
         <CustomCursor />
         <Mobile_nav />

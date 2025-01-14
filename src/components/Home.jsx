@@ -105,10 +105,10 @@ const Home = () => {
             style={{
               backgroundImage: `url('${nayaLight}')`,
             }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[0.9] dark:hidden"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.16] opacity-[1] dark:hidden"
           ></div>
           <div
-            style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+            style={{ backgroundImage: `url('${tweed}')` }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
           ></div>
           <ReUse />

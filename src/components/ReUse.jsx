@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useMyContext } from "../MyContext";
 import tweed from "../assets/tweed.webp";
 import seamless_paper_texture from "../assets/seamless_paper_texture.webp";
+import nayaLight from "../assets/nayaLight.webp";
 
 const ReUse = ({ isGreet = true, background = true }) => {
   const {isTransitioning, currentLang, textL, currentTa, currentUr} = useMyContext()
@@ -40,17 +41,12 @@ const ReUse = ({ isGreet = true, background = true }) => {
 
   return (
     <div
-      className="w-full h-[210px] rounded-[6vw] md:rounded-[4vw] md:w-full border-[1px] relative overflow-hidden border-[#c0c0c0] bg-[#eeeeee] dark:bg-zinc-900  dark:border-[#292929] md:h-[230px] xl:w-[34vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35vw] lg:rounded-[3vw] xs:h-[190px]"
+      className="w-full h-[210px] rounded-[6vw] md:rounded-[4vw] md:w-full border-[1px] relative overflow-hidden border-[#c0c0c0] bg-zinc-100 dark:bg-zinc-900  dark:border-[#292929] md:h-[230px] xl:w-[34vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35vw] lg:rounded-[3vw] xs:h-[190px]"
       onMouseEnter={() => setIsEntered(true)}
       onMouseLeave={() => setIsEntered(false)}
     >
 
-  <div
-            style={{
-              backgroundImage: `url('${seamless_paper_texture}')`,
-            }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.15] opacity-[1] dark:hidden"
-          ></div>
+
           <div
             style={{ backgroundImage: `url('${tweed}')` }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"

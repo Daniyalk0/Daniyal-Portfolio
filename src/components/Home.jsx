@@ -11,27 +11,27 @@ import ToolsHome from "./ToolsHome";
 import Copy from "./Copy";
 import CV from "./CV";
 import Lang from "./Lang";
-import tweed from '../assets/tweed.webp'
-import nayaLight from '../assets/nayaLight.webp'
-import seamless_paper_texture from '../assets/seamless_paper_texture.webp'
+import tweed from "../assets/tweed.webp";
+import nayaLight from "../assets/nayaLight.webp";
+import seamless_paper_texture from "../assets/seamless_paper_texture.webp";
 
 const Home = () => {
-  
   return (
     <>
-    
       <div className=" mt-[-1.7rem]  py-6  px-3">
-        <div className="border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen rounded-[5vw]  px-[2vw] xs:px-3 xs:py-3 lg:rounded-[4vw] lg:py-4 lg:px-0 xl:flex items-center justify-center gap-4 xl:py-0 md:hidden hidden relative overflow-hidden dark:bg-zinc-900  xl:rounded-[3vw] flex-col  ">
+        <div className="border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen rounded-[5vw]  px-[2vw] xs:px-3 xs:py-3 lg:rounded-[4vw] lg:py-4 lg:px-0 xl:flex items-center justify-center gap-4 xl:py-0 md:hidden hidden relative  overflow-hidden   xl:rounded-[3vw] flex-col   z-[999]">
           <div
             style={{
               backgroundImage: `url('${nayaLight}')`,
             }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[0.9] dark:hidden"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[1] dark:hidden  block"
           ></div>
           <div
             style={{ backgroundImage: `url('${tweed}')` }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[1] hidden dark:block"
           ></div>
+
+          
           <div className="flex items-center justify-center gap-3 py-3">
             <div className=" flex-wrap items-center justify-center gap-3  w-[78%]  xl:flex ">
               <div className="flex items-center nowrap justify-between w-full 2xl:justify-center 2xl:gap-5">
@@ -59,19 +59,18 @@ const Home = () => {
         </div>
       </div>
       <div className="w-full md:flex items-center justify-center xl:hidden hidden ">
-        <div className="  items-center justify-center w-[97%] py-4 md:flex    border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen  flex-col gap-4 relative overflow-hidden rounded-[5vw] px-4  ">
-        <div
-          style={{
-            backgroundImage: `url('./src/assets/seamless_paper_texture.webp')`,
-          }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.07] opacity-[0.9] dark:hidden"
-        ></div>
-        <div
-          style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
-        ></div>
+        <div className="  items-center justify-center w-[97%] py-4 md:flex    border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen  flex-col gap-4 relative overflow-hidden rounded-[5vw] px-4 ">
+          <div
+            style={{
+              backgroundImage: `url('./src/assets/seamless_paper_texture.webp')`,
+            }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[1] dark:hidden"
+          ></div>
+          <div
+            style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+          ></div>
           <div className="flex items-center  justify-between w-full flex-col gap-4">
-
             <ReUse />
             <AboutHome />
           </div>
@@ -101,18 +100,17 @@ const Home = () => {
       </div>
 
       <div className=" items-center justify-center gap-3  w-full flex md:hidden min-h-screen   relative px-2 py-2 xs:mt-[-1rem] mt-[-1rem] ">
-       
-        <div className="flex items-center gap-4 justify-between p-2 rounded-[6vw] w-[100%] flex-col md:gap-5 border-[2px]  dark:border-[#292929] border-[#cdcdcd] relative overflow-hidden">
-        <div
-          style={{
-            backgroundImage: `url('./src/assets/seamless_paper_texture.webp')`,
-          }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.07] opacity-[0.9] dark:hidden"
-        ></div>
-        <div
-          style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
-        ></div>
+        <div className="flex items-center gap-4 justify-between p-2 rounded-[6vw] w-[100%] flex-col md:gap-5 border-[2px]  dark:border-[#292929] border-[#cdcdcd] relative overflow-hidden ">
+          <div
+            style={{
+              backgroundImage: `url('${nayaLight}')`,
+            }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[0.9] dark:hidden"
+          ></div>
+          <div
+            style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+          ></div>
           <ReUse />
           <AboutHome />
           <Onixstore />

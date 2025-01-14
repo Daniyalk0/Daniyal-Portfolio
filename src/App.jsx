@@ -8,6 +8,7 @@ import seamless_paper_texture from "./assets/seamless_paper_texture.webp";
 import nayaLight from "./assets/nayaLight.webp";
 import dot from "./assets/dot.webp";
 import tweed from "./assets/tweed.webp";
+import star from "./assets/star.webp";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,15 +25,15 @@ function App() {
       <div
         className={` relative min-h-screen   dark:bg-zinc-900 transition-opacity duration-500  `}
       >
-        {/* <div
-          style={{
-            backgroundImage: `url('${dot}')`,
-          }}
-          className="absolute left-0 top-0 w-full h-full z-[0]  opacity-[1] dark:hidden"
-        ></div> */}
         <div
-          style={{ backgroundImage: `url('${tweed}')` }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+          style={{
+            backgroundImage: `url('${star}')`,
+          }}
+          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.12] hidden dark:block opacity-[1] "
+        ></div>
+        <div
+          style={{ backgroundImage: `url('${star}')` }}
+          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.99] opacity-[1] dark:hidden block"
         ></div>
         <CustomCursor />
         <Mobile_nav />

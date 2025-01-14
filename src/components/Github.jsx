@@ -55,21 +55,13 @@ const Github = () => {
         href="https://github.com/Daniyalk0"
         target="_blank"
         className="border-[1px] dark:border-[#292929] z-[5] dark:bg-transparent 
-       border-[#c0c0c0] w-[53vw] md:w-[53%] h-[200px] rounded-[6vw] md:rounded-[4vw] md:h-[270px]  font-[real2] py-3 px-4 relative overflow-hidden flex items-center justify-center xl:w-[19vw] xl:h-[230px] xl:rounded-[2.2vw] bg-[#eeeeee] dark:bg-zinc-900"
+       border-[#c0c0c0] w-[53vw] md:w-[53%] h-[200px] rounded-[6vw] md:rounded-[4vw] md:h-[270px]  font-[real2] py-3 px-4 relative overflow-hidden flex items-center justify-center xl:w-[19vw] xl:h-[230px] xl:rounded-[2.2vw] bg-zinc-100 dark:bg-zinc-900"
       >
         <div
           style={{ backgroundImage: `url('${tweed}')` }}
           className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
             isEnter ? "brightness-[0.4] " : "brightness-0 opacity-0"
           } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url('${seamless_paper_texture}')`,
-          }}
-          className={`absolute left-0 top-0 w-full h-full dark:hidden transition-all duration-500 brightness-[0.99] ${
-            isEnter ? " opacity-[0.9] " : "opacity-[0]  "
-          }`}
         ></div>
 
         <div className="dark:text-zinc-400 text-zinc-800 text-[7rem] relative z-[2] ">

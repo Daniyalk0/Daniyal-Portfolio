@@ -35,7 +35,7 @@ function App() {
           style={{
             backgroundImage: `url('${seamless_paper_texture}')`,
           }}
-          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.1] opacity-[1] dark:hidden"
+          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.2] opacity-[1] dark:hidden"
         ></div>
         <div
           style={{ backgroundImage: `url('${tweed}')` }}

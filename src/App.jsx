@@ -27,33 +27,26 @@ function App() {
     };
   }, []);
 
-
-
   return (
-    <>
-      {isLoading ?  <Loader /> : (
-
-        
+    <Loader>
+      <div
+        className={` relative min-h-screen  bg-gray-400 dark:bg-zinc-900 transition-opacity duration-500`}
+      >
         <div
-          className={` relative min-h-screen  bg-gray-400 dark:bg-zinc-900 transition-opacity duration-500`}
-        >
-          <div
-            style={{
-              backgroundImage: `url('${seamless_paper_texture}')`,
-            }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.15] opacity-[1] dark:hidden"
-          ></div>
-          <div
-            style={{ backgroundImage: `url('${tweed}')` }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
-          ></div>
-          <CustomCursor />
-          <Mobile_nav />
-          <Outlet />
-        </div>
-          )}
-      
-    </>
+          style={{
+            backgroundImage: `url('${seamless_paper_texture}')`,
+          }}
+          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.15] opacity-[1] dark:hidden"
+        ></div>
+        <div
+          style={{ backgroundImage: `url('${tweed}')` }}
+          className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+        ></div>
+        <CustomCursor />
+        <Mobile_nav />
+        <Outlet />
+      </div>
+    </Loader>
   );
 }
 

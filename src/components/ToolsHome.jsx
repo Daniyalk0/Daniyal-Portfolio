@@ -115,11 +115,11 @@ const ToolsHome = () => {
           <FaArrowRight className="arrowt2 md:block hidden md:absolute" />
         </div>
 
-      <div className="absolute bg-[#ececec] left-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden "></div>
-      <div className="absolute bg-[#ececec] right-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden"></div>
+      <div className="absolute bg-[#ececec] left-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden xs:w-[44%]"></div>
+      <div className="absolute bg-[#ececec] right-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden xs:w-[44%]"></div>
 
-      <div className={`absolute  left-[-18%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[42%]`} style={{backgroundImage:`url(${tweed})`}}></div>
-      <div className="absolute bg-[#000000] right-[-15%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[42%]" style={{backgroundImage:`url(${tweed})`}}></div>
+      <div className={`absolute  left-[-18%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[44%]`} style={{backgroundImage:`url(${tweed})`}}></div>
+      <div className="absolute bg-[#000000] right-[-15%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[44%]" style={{backgroundImage:`url(${tweed})`}}></div>
     </div>
   );
 };

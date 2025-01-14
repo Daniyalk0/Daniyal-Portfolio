@@ -7,8 +7,9 @@ import InnerImageZoom from "react-inner-image-zoom";
 import { useTranslation } from "react-i18next";
 import { useMyContext } from "../MyContext";
 import { NavLink } from "react-router-dom";
-import pfp from '../assets/pfp.jpg'
-import tweed from '../assets/tweed.webp'
+import pfp from "../assets/pfp.jpg";
+import tweed from "../assets/tweed.webp";
+import seamless_paper_texture from "../assets/seamless_paper_texture.webp";
 
 function AboutHome() {
   const [isEnter, setIsEnter] = useState(false);
@@ -67,6 +68,16 @@ function AboutHome() {
               isEnter ? " opacity-[1] " : "opacity-[0]  "
             }`}
           ></div>
+          <div
+            style={{
+              backgroundImage: `url('${seamless_paper_texture}')`,
+            }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.1] opacity-[1] dark:hidden"
+          ></div>
+          <div
+            style={{ backgroundImage: `url('${tweed}')` }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+          ></div>
 
           <h2
             className={`font-[real] uppercase tracking-[0.6vw] text-[1rem] dark:text-[#4e4e4e] text-gray-500 font-semibold  xs:text-[0.9rem] xs:tracking-[0.4vw] md:tracking-[0.3vw] md:text-[0.9rem] xl:text-[1rem] xl:tracking-[0.2vw] relative z-[1] ${
@@ -78,15 +89,17 @@ function AboutHome() {
           <p
             className={`font-[pop2]  mt-[5vw] text-[1.25rem] text-[#2a2a2a] dark:text-[#cbcbcb]  xs:text-[1.1rem] xs:mt-[5.7vw] xl:text-[1.3rem] xl:mt-[2vw] md:mt-[3vw]  relative z-[2]  ${
               isTransitioning ? "opacity-0 mt-[2rem]" : "opacity-1"
-            } transition-opacity duration-700 ${!textL && "text-right rtl"} ${currentTa && "xl:text-[0.5rem] xs:text-[4vw] text-[0.8rem]" }`}
+            } transition-opacity duration-700 ${!textL && "text-right rtl"} ${
+              currentTa && "xl:text-[0.5rem] xs:text-[4vw] text-[0.8rem]"
+            }`}
           >
             {/* Passionate about web development and enjoy solving problems. */}
             {t("aboutHomeText")}
           </p>
-        <div className="icon border-[1px] dark:border-[2px] p-[2.2vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%] rotate-[-50deg] xs:text-[0.6rem] xs:p-[2.5vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[10] bg-[#eeeeee] dark:bg-zinc-900 xl:p-5 overflow-hidden">
-                  <FaArrowRight className={`arrow2 md:absolute`} />
-                  <FaArrowRight className="arrow md:block hidden md:absolute" />
-                </div>
+          <div className="icon border-[1px] dark:border-[2px] p-[2.2vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%] rotate-[-50deg] xs:text-[0.6rem] xs:p-[2.5vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[10] bg-[#eeeeee] dark:bg-zinc-900 xl:p-5 overflow-hidden">
+            <FaArrowRight className={`arrow2 md:absolute`} />
+            <FaArrowRight className="arrow md:block hidden md:absolute" />
+          </div>
         </div>
       </div>
     </NavLink>

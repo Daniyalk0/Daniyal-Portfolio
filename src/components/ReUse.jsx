@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { useMyContext } from "../MyContext";
+import tweed from "../assets/tweed.webp";
+import seamless_paper_texture from "../assets/seamless_paper_texture.webp";
 
 const ReUse = ({ isGreet = true, background = true }) => {
   const {isTransitioning, currentLang, textL, currentTa, currentUr} = useMyContext()
@@ -43,7 +45,16 @@ const ReUse = ({ isGreet = true, background = true }) => {
       onMouseLeave={() => setIsEntered(false)}
     >
 
-
+  <div
+            style={{
+              backgroundImage: `url('${seamless_paper_texture}')`,
+            }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.1] opacity-[1] dark:hidden"
+          ></div>
+          <div
+            style={{ backgroundImage: `url('${tweed}')` }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+          ></div>
 
       <div className={`px-9 py-[9vw] md:py-12 flex xs:px-6  gap-4 flex-col relative z-[10]  justify-center lg:py-[6.2vw] lg:px-14 xl:py-14 xl:px-10 2xl:py-14 ${!textL && "text-right rtl"}  transition-all duration-700`}>
         <h1 className={`capitalize text-[1.5rem] font-semibold font-[real] dark:text-[#ffffffb1] text-zinc-700 md:text-[1.9rem] lg:text-[2rem] xl:text-[1.6rem] 2xl:text-[2.1rem] ${isTransitioning ? 'opacity-0' : 'opacity-1'} transition-opacity duration-700 ${currentTa && "xl:text-[1.5vw] xs:text-[5vw] text-[0.8rem]" } ${currentTa && "xl:text-[1.5vw] xs:text-[5vw] text-[1rem]" }`} >

@@ -26,6 +26,7 @@ import { useMyContext } from "../MyContext";
 import { useTranslation } from "react-i18next";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
+import tweed from '../assets/tweed.webp'
 
 const ToolsHome = () => {
   const sliderRef = useRef(null);
@@ -117,8 +118,8 @@ const ToolsHome = () => {
       <div className="absolute bg-[#ececec] left-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden "></div>
       <div className="absolute bg-[#ececec] right-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden"></div>
 
-      <div className="absolute bg-[#000000] left-[-15%] z-[3] w-[30%] top-0 h-full opacity-[0.97] blur-xl hidden dark:block"></div>
-      <div className="absolute bg-[#000000] right-[-15%] z-[3] w-[30%] top-0 h-full opacity-[0.97] blur-xl hidden dark:block"></div>
+      <div className={`absolute  left-[-18%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[42%]`} style={{backgroundImage:`url(${tweed})`}}></div>
+      <div className="absolute bg-[#000000] right-[-15%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[42%]" style={{backgroundImage:`url(${tweed})`}}></div>
     </div>
   );
 };

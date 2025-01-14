@@ -128,8 +128,9 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
 }
 
 
-.bg{
-  border-color:  brown !important;
+body {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.137) 1px, transparent 1px);
+  background-size: 20px 20px; /* Size of the dots and spacing */
 }
 
 

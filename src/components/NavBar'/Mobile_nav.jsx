@@ -4,12 +4,13 @@ import { RiToolsLine } from "react-icons/ri";
 import { LuFolder } from "react-icons/lu";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import seamless_paper_texture from '../../assets/seamless_paper_texture.webp'
-import tweed from '../../assets/tweed.webp'
+import seamless_paper_texture from "../../assets/seamless_paper_texture.webp";
+import tweed from "../../assets/tweed.webp";
 
 function Mobile_nav() {
   const [hoveredIcon, setHoveredIcon] = useState("");
   const navigate = useNavigate();
+  const [opacity, setOpacity] = useState(true);
 
   const icons = [
     { id: "first", Icon: GoHome, text: "Home" },
@@ -23,18 +24,25 @@ function Mobile_nav() {
     } else {
       navigate(`/${route}`);
     }
-    setHoveredIcon(false)
+    setHoveredIcon(false);
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setOpacity(false);
+    }, 2000);
+  }, []);
 
   return (
-    <div className="w-full pt-7 pb-3 relative  xl:pt-4 ">
+    <div
+      className={`w-full pt-7 pb-3 relative  xl:pt-4  transition-opacity duration-200`}
+    >
       <div className="flex items-center justify-center xs:gap-4 w-full ">
         <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center bg-gray-400 dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative ">
           <div
             style={{
               backgroundImage: `url('${seamless_paper_texture}')`,
             }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.03] opacity-[1] dark:hidden rounded-full"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] opacity-[1] dark:hidden rounded-full"
           ></div>
           <div
             style={{ backgroundImage: `url('${tweed}')` }}

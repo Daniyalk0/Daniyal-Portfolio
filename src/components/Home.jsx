@@ -12,9 +12,11 @@ import Copy from "./Copy";
 import CV from "./CV";
 import Lang from "./Lang";
 import tweed from '../assets/tweed.webp'
+import nayaLight from '../assets/nayaLight.webp'
 import seamless_paper_texture from '../assets/seamless_paper_texture.webp'
 
 const Home = () => {
+  
   return (
     <>
     
@@ -22,9 +24,9 @@ const Home = () => {
         <div className="border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen rounded-[5vw]  px-[2vw] xs:px-3 xs:py-3 lg:rounded-[4vw] lg:py-4 lg:px-0 xl:flex items-center justify-center gap-4 xl:py-0 md:hidden hidden relative overflow-hidden dark:bg-zinc-900  xl:rounded-[3vw] flex-col  ">
           <div
             style={{
-              backgroundImage: `url('${seamless_paper_texture}')`,
+              backgroundImage: `url('${nayaLight}')`,
             }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.02] opacity-[0.9] dark:hidden"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[0.9] dark:hidden"
           ></div>
           <div
             style={{ backgroundImage: `url('${tweed}')` }}

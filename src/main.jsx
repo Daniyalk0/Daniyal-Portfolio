@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loader from "./components/Loader.jsx";
 import "./index.css";
 import "./i18n.js";
-// import App from "./App.jsx";
+import App from "./App.jsx";
 import Home from "./components/Home.jsx";
 // import About from "./components/routes/About.jsx";
 const lazyWithDelay = (importFunc, delay = 2000) => {
@@ -17,7 +17,7 @@ const lazyWithDelay = (importFunc, delay = 2000) => {
   );
 };
 
-const App = lazyWithDelay(() => import("./App.jsx"), 2000);
+// const App = lazyWithDelay(() => import("./App.jsx"), 2000);
 const About = lazyWithDelay(() => import("./components/routes/About.jsx"), 2000);
 const Tools = lazyWithDelay(() => import("./components/routes/Tools.jsx"), 2000);
 const Projects = lazyWithDelay(() => import("./components/routes/Projects.jsx"), 2000);
@@ -26,9 +26,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <Suspense fallback={<Loader/>}>
+
         <App />
-      </Suspense>
+
     ),
     children: [
       {

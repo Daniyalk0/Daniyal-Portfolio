@@ -38,16 +38,16 @@ function Mobile_nav() {
       className={`w-full pt-7 pb-3 relative  xl:pt-4  transition-opacity duration-200`}
     >
       <div className="flex items-center justify-center xs:gap-4 w-full ">
-        <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center bg-gray-400 dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative ">
+        <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center  dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative border-[1px] xs:border-[#ececec] border-[#d2d2d2] dark:border-[#292929]">
          <div
                      style={{
                        backgroundImage: `url('${nayaLight}')`,
                      }}
-                     className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.15] opacity-[1] dark:hidden"
+                     className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.11] opacity-[1] dark:hidden rounded-full"
                    ></div>
           <div
             style={{ backgroundImage: `url('${tweed}')` }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.42] opacity-[0.9] hidden dark:block rounded-full"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.43] xs:brightness-[0.42] opacity-[0.9] hidden dark:block rounded-full"
           ></div>
 
           {icons.map(({ id, Icon, text }) => (

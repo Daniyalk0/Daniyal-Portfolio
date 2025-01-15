@@ -24,11 +24,11 @@ const Home = () => {
             style={{
               backgroundImage: `url('${nayaLight}')`,
             }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.09] opacity-[1] dark:hidden  block"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.02] opacity-[1] dark:hidden  block"
           ></div>
           <div
             style={{ backgroundImage: `url('${tweed}')` }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[1] hidden dark:block"
+            className="absolute left-0 top-0 w-full h-full z-[0] xs:brightness-[0.35] brightness-[0.37] opacity-[1] hidden dark:block"
           ></div>
 
           
@@ -58,6 +58,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="w-full md:flex items-center justify-center xl:hidden hidden ">
         <div className="  items-center justify-center w-[97%] py-4 md:flex    border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen  flex-col gap-4 relative overflow-hidden rounded-[5vw] px-4 ">
           <div
@@ -95,21 +96,22 @@ const Home = () => {
               <CV />
               <Lang />
             </div>
+              <Socials/>
           </div>
         </div>
       </div>
 
       <div className=" items-center justify-center gap-3  w-full flex md:hidden min-h-screen   relative px-2 py-2 xs:mt-[-1rem] mt-[-1rem] ">
-        <div className="flex items-center gap-4 justify-between p-2 rounded-[6vw] w-[100%] flex-col md:gap-5 border-[2px]  dark:border-[#292929] border-[#cdcdcd] relative overflow-hidden ">
+        <div className="flex items-center gap-4 justify-between p-2 rounded-[6vw] w-[100%] flex-col md:gap-5 border-[2px]  dark:border-[#292929] border-[#e3e3e3] bg-gray-300 dark:bg-zinc-900 relative overflow-hidden ">
           <div
             style={{
               backgroundImage: `url('${nayaLight}')`,
             }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.13] opacity-[1] dark:hidden"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.13] opacity-[0.9] dark:hidden"
           ></div>
           <div
             style={{ backgroundImage: `url('${tweed}')` }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.32] opacity-[0.9] hidden dark:block"
           ></div>
           <ReUse />
           <AboutHome />
@@ -125,6 +127,7 @@ const Home = () => {
             <Lang />
           </div>
           <Copy />
+          <Socials/>
         </div>
       </div>
     </>

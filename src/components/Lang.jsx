@@ -6,6 +6,11 @@ import usa from '../assets/usa.webp'
 import fr from '../assets/france.webp'
 import ind from '../assets/ind.webp'
 import gm from '../assets/germany.webp'
+import tweed from '../assets/tweed.webp'
+import nayaLight from '../assets/nayaLight.webp'
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const Lang = () => {
   const {
     isTransitioning,
@@ -65,11 +70,39 @@ const Lang = () => {
     }
   };
   
+  gsap.registerPlugin(ScrollTrigger);
+
+useGSAP(() => {
+  gsap.fromTo(
+    ".lang",
+    { 
+      scale: "0", 
+      translateY: "100%" 
+    }, // Starting state
+    { 
+      scale: "1", 
+      translateY: "0%", 
+      duration: 1.6, 
+      delay: 0.6,
+    }
+  );
+}, []);
 
   return (
     <div
-      className={` rounded-[6vw] md:rounded-[4vw] border-[#c0c0c0]  dark:border-[#292929] xs:w-[55vw] w-[53vw] h-[200px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[26vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw]  px-3 py-0 xs:py-5 xs:px-4 md:w-[55vw] xl:px-7 xl:py-8 lg:w-[60vw] 2xl:mr-4 2xl:ml-0  bg-[#ececec] dark:bg-transparent flex items-start md:items-center justify-center flex-col `}
+      className={`lang rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929] xs:w-[55vw] w-[53vw] h-[200px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[26vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw]  px-3 py-0 xs:py-5 xs:px-4 md:w-[55vw] xl:px-7 xl:py-8 lg:w-[60vw] 2xl:mr-4 2xl:ml-0  bg-[#ececec] dark:bg-transparent flex items-start md:items-center justify-center flex-col `}
     >
+    <div
+               style={{
+                 backgroundImage: `url('${nayaLight}')`,
+               }}
+               className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+             ></div>
+          
+                    <div
+                      style={{ backgroundImage: `url('${tweed}')` }}
+                      className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+                    ></div>
       {" "}
       <p
         className={`font-[pop2] md:mt-2  w-[84%] text-[1.10rem] text-[#2a2a2a] dark:text-[#cbcbcb] left-[3vw] xs:text-[0.9rem]  xl:text-[1.3rem]  xl:left-[2vw] md:left-[4.6vw] absolute z-[4] top-[1rem] ${
@@ -88,7 +121,7 @@ const Lang = () => {
               changeLanguage("en"), setCurrentLang("en");
             }}
             className={` w-[32%] xl:w-[60%] md:h-[9vw] lg:w-[14rem] h-[3.9rem]  border-[1px] rounded-[0.8rem] xl:h-[4.4rem] border-[#c0c0c0] dark:border-[#292929]
-               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center  justify-center bg-[#eeeeee] dark:bg-zinc-900 shadow-md   xl:px-[0.25rem] xl:py-[0.30rem] overflow-hidden  ${
+               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center  justify-center bg-[#ffffff] dark:bg-zinc-900 shadow-md   xl:px-[0.25rem] xl:py-[0.30rem] overflow-hidden  ${
                  currentLang === "en" &&
                  "border-transparent dark:border-transparent dark:shadow-none shadow-none"
                }`}
@@ -115,7 +148,7 @@ const Lang = () => {
             // onMouseLeave={() => setIsHover("")}
             className={`w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[10vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
-              relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center   bg-[#eeeeee] dark:bg-zinc-900 shadow-md  xl:px-[0.25rem] xl:py-[0.30rem] justify-center   ${
+              relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center   bg-[#ffffff] dark:bg-zinc-900 shadow-md  xl:px-[0.25rem] xl:py-[0.30rem] justify-center   ${
                 currentLang === "hi" &&
                 "border-transparent dark:border-transparent dark:shadow-none shadow-none"
               } overflow-hidden`}
@@ -147,7 +180,7 @@ const Lang = () => {
             // onMouseLeave={() => setIsHover("")}
             className={` w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[9vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem]  
                 border-[#c0c0c0] dark:border-[#292929]
-              relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center   bg-[#eeeeee] dark:bg-zinc-900 shadow-md  xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
+              relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center   bg-[#ffffff] dark:bg-zinc-900 shadow-md  xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
                 currentLang === "ta" &&
                 "border-transparent dark:border-transparent dark:shadow-none shadow-none"
               } overflow-hidden `}
@@ -179,7 +212,7 @@ const Lang = () => {
             }}
             className={` w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[9vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
-              relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center    bg-[#eeeeee] dark:bg-zinc-900 shadow-md   xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
+              relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center    bg-[#ffffff] dark:bg-zinc-900 shadow-md   xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
                 currentLang === "fr" &&
                 "border-transparent dark:border-transparent dark:shadow-none shadow-none"
               } overflow-hidden`}
@@ -207,7 +240,7 @@ const Lang = () => {
             // onMouseLeave={() => setIsHover("")}
             className={` w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[10vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
-               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center px-[0.2rem] py-[0.15rem]  bg-[#eeeeee] dark:bg-zinc-900 shadow-md  md:p-[0.37rem xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
+               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center px-[0.2rem] py-[0.15rem]  bg-[#ffffff] dark:bg-zinc-900 shadow-md  md:p-[0.37rem xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
                  currentLang === "ur" &&
                  "border-transparent dark:border-transparent dark:shadow-none shadow-none"
                } overflow-hidden`}
@@ -238,7 +271,7 @@ const Lang = () => {
             // onMouseLeave={() => setIsHover("")}
             className={`w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem]  md:h-[10vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
-               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center px-[0.2rem] py-[0.15rem]  bg-[#eeeeee] dark:bg-zinc-900 shadow-md   md:p-[0.37rem xl:px-[0.25rem] xl:py-[0.30rem] justify-center ${
+               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center px-[0.2rem] py-[0.15rem]  bg-[#ffffff] dark:bg-zinc-900 shadow-md   md:p-[0.37rem xl:px-[0.25rem] xl:py-[0.30rem] justify-center ${
                  currentLang === "gm" &&
                  "border-transparent dark:border-transparent dark:shadow-none shadow-none"
                } overflow-hidden`}

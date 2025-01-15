@@ -27,6 +27,7 @@ import { useTranslation } from "react-i18next";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import tweed from '../assets/tweed.webp'
+import nayaLight from '../assets/nayaLight.webp'
 
 const ToolsHome = () => {
   const sliderRef = useRef(null);
@@ -81,8 +82,26 @@ const ToolsHome = () => {
   return (
     <div 
     onMouseEnter={() => setIsEnter(true)}
-    onMouseLeave={() => setIsEnter(false)} className="rounded-[6vw] md:rounded-[4vw] border-[#c0c0c0]  dark:border-[#292929] xs:w-[100%] w-[100%] h-[200px] border-[1px] relative overflow-hidden  md:h-[29.7vw] xl:w-[28vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-6 xs:py-5 xs:px-6 md:w-[61vw] xl:px-0 xl:py-7  lg:w-[65vw]  2xl:mr-4 2xl:ml-0 bg-transparent lg:bg-[#ececec] dark:bg-transparent xs:h-[190px]">
+    onMouseLeave={() => setIsEnter(false)} className="rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929] xs:w-[100%] w-[100%] h-[200px] border-[1px] relative overflow-hidden  md:h-[29.7vw] xl:w-[28vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-6 xs:py-5 xs:px-6 md:w-[61vw] xl:px-0 xl:py-7  lg:w-[65vw]  2xl:mr-4 2xl:ml-0 bg-transparent lg:bg-[#ececec] dark:bg-transparent xs:h-[190px]">
 
+        <div
+          style={{ backgroundImage: `url('${nayaLight}')` }}
+          className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+            isEnter ? "opacity-1 " : "opacity-0"
+          } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
+        ></div>
+
+      <div
+                 style={{
+                   backgroundImage: `url('${nayaLight}')`,
+                 }}
+                 className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.13] opacity-[1] dark:hidden"
+               ></div>
+                
+                          <div
+                            style={{ backgroundImage: `url('${tweed}')` }}
+                            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.30] opacity-[0.9] hidden dark:block"
+                          ></div>
 
       <p
         className={`font-[pop2]  mt-[-0.3vw]  text-[1.15rem] text-[#2a2a2a] dark:text-[#cbcbcb] left-[7vw] xs:text-[1.1rem] xs:mt-[-0vw] xs:left-[7vw] xl:text-[1.3rem] xl:mt-[-0.5vw] md:mt-[0vw] xl:left-[2vw]  absolute z-[4] md:text-[1.4rem] w-[83%]  ${
@@ -115,11 +134,11 @@ const ToolsHome = () => {
           <FaArrowRight className="arrowt2 md:block hidden md:absolute" />
         </div>
 
-      <div className="absolute bg-[#ececec] left-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden xs:w-[44%]"></div>
-      <div className="absolute bg-[#ececec] right-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden xs:w-[44%]"></div>
+      <div className="absolute bg-[#ffffff] left-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden xs:w-[40%]"></div>
+      <div className="absolute bg-[#ffffff] right-[-10%] z-[3] w-[30%] top-0 h-full opacity-[1] blur-xl block dark:hidden xs:w-[40%]"></div>
 
-      <div className={`absolute  left-[-18%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[44%]`} style={{backgroundImage:`url(${tweed})`}}></div>
-      <div className="absolute bg-[#000000] right-[-15%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[44%]" style={{backgroundImage:`url(${tweed})`}}></div>
+      <div className={`absolute  left-[-18%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[48%]`} style={{backgroundImage:`url(${tweed})`}}></div>
+      <div className="absolute bg-[#000000] right-[-15%] z-[3] w-[36%] top-0 h-full opacity-1 blur-xl hidden dark:block brightness-[0.3] xs:w-[48%]" style={{backgroundImage:`url(${tweed})`}}></div>
     </div>
   );
 };

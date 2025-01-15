@@ -48,7 +48,7 @@ function Mobile_nav() {
 
   return (
     <div
-      className={`w-full nav  z-[1000]   transition-opacity duration-200 fixed bottom-6 xs:bottom-4 `}
+      className={`w-full nav  z-[1000]   transition-opacity duration-200 fixed bottom-6 xs:top-4 `}
     >
       <div className="flex items-center justify-center xs:gap-4 w-full ">
         <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center  dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative border-[1px] xs:border-[#ececec] border-[#d2d2d2] dark:border-[#22222200] shadow-md shadow-[#a6a6a6] dark:shadow-[#000000]">

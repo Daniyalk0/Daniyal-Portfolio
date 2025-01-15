@@ -37,11 +37,10 @@ function App() {
         ></div>
         <CustomCursor />
         <Mobile_nav />
-        <div
-          className={``}
-        >
+
+        
           <Outlet />
-        </div>
+
       </div>
     // </Loader>
   );

@@ -14,16 +14,16 @@ const Socials = () => {
   const [linkedin, setLinkedin] = useState(false);
   const [X, setX] = useState(false);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".social",
-      { scale: "0",
-        translateX:"100%"
-        }, // Starting state
-      { scale: "1",
-        translateX:"0%", duration: 1.6, delay:0.3 } // Ending state with animation duration
-    );
-  }, []);
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     ".social",
+  //     { scale: "0",
+  //       translateX:"100%"
+  //       }, // Starting state
+  //     { scale: "1",
+  //       translateX:"0%", duration: 1.6, delay:0.3 } // Ending state with animation duration
+  //   );
+  // }, []);
 
   return (
     <div className="social w-full  xl:w-[18.5vw] flex xl:flex-col items-center justify-center gap-2 relative ">

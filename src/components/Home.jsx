@@ -14,12 +14,34 @@ import Lang from "./Lang";
 import tweed from "../assets/tweed.webp";
 import nayaLight from "../assets/nayaLight.webp";
 import seamless_paper_texture from "../assets/seamless_paper_texture.webp";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Home = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".reuse",
+      {
+        opacity: 0,
+        y:-100,
+      },
+      { opacity: 1, duration: 2, delay: 0.3,  y:0,}
+    );
+  }, []);
+  useGSAP(() => {
+    gsap.fromTo(
+      ".reuse2",
+      {
+        opacity: 0,
+        x:-100,
+      },
+      { opacity: 1, duration: 2, delay: 0.2,  x:0, stagger:0.5}
+    );
+  }, []);
   return (
     <>
-      <div className=" mt-[-1.7rem]  py-6  px-3">
-        <div className="border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen rounded-[5vw]  px-[2vw] xs:px-3 xs:py-3 lg:rounded-[4vw] lg:py-4 lg:px-0 xl:flex items-center justify-center gap-4 xl:py-0 md:hidden hidden relative  overflow-hidden   xl:rounded-[3vw] flex-col   z-[999]">
+      <div className="   py-4  px-3">
+        <div className="reuse border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen rounded-[5vw]  px-[2vw] xs:px-3 xs:py-3 lg:rounded-[4vw] lg:py-4 lg:px-0 xl:flex items-center justify-center gap-4 xl:py-0 md:hidden hidden relative   overflow-hidden   xl:rounded-[3vw] flex-col   z-[999]">
           <div
             style={{
               backgroundImage: `url('${nayaLight}')`,
@@ -59,7 +81,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full md:flex items-center justify-center xl:hidden hidden ">
+      <div className="w-full md:flex items-center justify-center xl:hidden hidden reuse">
         <div className="  items-center justify-center w-[97%] py-4 md:flex    border-[2px]  dark:border-[#292929] border-[#cdcdcd] min-h-screen  flex-col gap-4 relative overflow-hidden rounded-[5vw] px-4 ">
           <div
             style={{
@@ -101,7 +123,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" items-center justify-center gap-3  w-full flex md:hidden min-h-screen   relative px-2 py-2 xs:mt-[-1rem] mt-[-1rem] ">
+      <div className="reuse2 items-center justify-center gap-3  w-full flex md:hidden min-h-screen   relative px-2 py-2 xs:mt-[-1rem] mt-[-1rem] ">
         <div className="flex items-center gap-4 justify-between p-2 rounded-[6vw] w-[100%] flex-col md:gap-5 border-[2px]  dark:border-[#292929] border-[#e3e3e3] bg-gray-300 dark:bg-zinc-900 relative overflow-hidden ">
           <div
             style={{

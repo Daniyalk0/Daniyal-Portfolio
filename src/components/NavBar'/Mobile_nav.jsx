@@ -6,6 +6,8 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import nayaLight from "../../assets/nayaLight.webp";
 import tweed from "../../assets/tweed.webp";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap/all";
 
 
 function Mobile_nav() {
@@ -33,12 +35,23 @@ function Mobile_nav() {
     }, 2000);
   }, []);
 
+  useGSAP(() => {
+    gsap.fromTo(
+      ".nav",
+      {
+        opacity: 0,
+        y:100,
+      },
+      { opacity: 1, duration: 2, delay: 1,  y:0,}
+    );
+  }, []);
+
   return (
     <div
-      className={`w-full pt-7 pb-3 relative  xl:pt-4  transition-opacity duration-200`}
+      className={`w-full nav  z-[1000]   transition-opacity duration-200 fixed bottom-6 xs:bottom-4 `}
     >
       <div className="flex items-center justify-center xs:gap-4 w-full ">
-        <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center  dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative border-[1px] xs:border-[#ececec] border-[#d2d2d2] dark:border-[#292929]">
+        <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center  dark:bg-transparent xs:gap-2 xl:p-3 rounded-full  w-fit z-[999] relative border-[1px] xs:border-[#ececec] border-[#d2d2d2] dark:border-[#22222200] shadow-md shadow-[#a6a6a6] dark:shadow-[#000000]">
          <div
                      style={{
                        backgroundImage: `url('${nayaLight}')`,
@@ -65,8 +78,8 @@ function Mobile_nav() {
                 className={`font-[anzo5] dark:bg-[#ffffff33] bg-[#46464628] px-2 rounded-md absolute xl:text-[0.9vw] text-[2vw] xl:left-[-1vw] md:left-[-1.2vw] left-[-1.2vw] xs:left-[-2.7vw] xs:text-[2.5vw] md:text-[1.5vw] transition-all duration-300 pointer-events-none 
                 ${
                   hoveredIcon === id
-                    ? "top-[2.3vw] opacity-100"
-                    : "top-[-0.3vw] opacity-0"
+                    ? "bottom-[2.3vw] opacity-100"
+                    : "bottom-[-0.3vw] opacity-0"
                 } ${id === "four" ? "ml-[0.5vw]" : ""} ${
                   id === "two" ? "ml-[0.3vw]" : ""
                 }`}

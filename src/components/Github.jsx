@@ -48,16 +48,23 @@ const Github = () => {
     });
   }, [isEnter]);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".github",
-      { scale: "0",
-        translateX:"100%"
-        }, // Starting state
-      { scale: "1",
-        translateX:"0%", duration: 1.6, delay:0.3 } // Ending state with animation duration
-    );
-  }, []);
+//   useGSAP(() => {
+
+//     gsap.fromTo(
+//       ".github",
+//       { scale: "0", translateX: "100%" },
+//     { 
+//       scale: "1", 
+//       translateX: "0%", 
+//       duration: 1.6, 
+//       delay: 0.5, 
+//       stagger: 0.2, // Adds a delay of 0.2 seconds between each element's animation
+//       force3D: true 
+//     }
+//   );
+// })
+  
+  
 
   return (
     <div className="github flex items-center gap-3 xl:flex-col relative w-full">

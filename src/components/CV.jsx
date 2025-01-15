@@ -46,21 +46,21 @@ const CV = () => {
   }, [isEnter]);
 
   
-useGSAP(() => {
-  gsap.fromTo(
-    ".CV",
-    { 
-      scale: "0", 
-      translateY: "100%" 
-    }, // Starting state
-    { 
-      scale: "1", 
-      translateY: "0%", 
-      duration: 1.6, 
-      delay: 0.6,
-    }
-  );
-}, []);
+// useGSAP(() => {
+//   gsap.fromTo(
+//     ".CV",
+//     { 
+//       scale: "0", 
+//       translateY: "100%" 
+//     }, // Starting state
+//     { 
+//       scale: "1", 
+//       translateY: "0%", 
+//       duration: 1.6, 
+//       delay: 0.6,
+//     }
+//   );
+// }, []);
 
   return (
     <div

@@ -72,21 +72,21 @@ const Lang = () => {
   
   gsap.registerPlugin(ScrollTrigger);
 
-useGSAP(() => {
-  gsap.fromTo(
-    ".lang",
-    { 
-      scale: "0", 
-      translateY: "100%" 
-    }, // Starting state
-    { 
-      scale: "1", 
-      translateY: "0%", 
-      duration: 1.6, 
-      delay: 0.6,
-    }
-  );
-}, []);
+// useGSAP(() => {
+//   gsap.fromTo(
+//     ".lang",
+//     { 
+//       scale: "0", 
+//       translateY: "100%" 
+//     }, // Starting state
+//     { 
+//       scale: "1", 
+//       translateY: "0%", 
+//       duration: 1.6, 
+//       delay: 0.6,
+//     }
+//   );
+// }, []);
 
   return (
     <div

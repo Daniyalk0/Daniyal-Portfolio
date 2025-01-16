@@ -11,7 +11,7 @@ import nayaLight from '../assets/nayaLight.webp'
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-const Lang = () => {
+const Lang = ({className}) => {
   const {
     isTransitioning,
     setIsTransitioning,
@@ -90,7 +90,7 @@ const Lang = () => {
 
   return (
     <div
-      className={`lang rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929] xs:w-[55vw] w-[53vw] h-[200px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[26vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw]  px-3 py-0 xs:py-5 xs:px-4 md:w-[55vw] xl:px-7 xl:py-8 lg:w-[60vw] 2xl:mr-4 2xl:ml-0  bg-[#ececec] dark:bg-transparent flex items-start md:items-center justify-center flex-col `}
+      className={`${className} lang rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929] xs:w-[55vw] w-[53vw] h-[200px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[26vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw]  px-3 py-0 xs:py-5 xs:px-4 md:w-[55vw] xl:px-7 xl:py-8 lg:w-[60vw] 2xl:mr-4 2xl:ml-0  bg-[#ececec] dark:bg-transparent flex items-start md:items-center justify-center flex-col `}
     >
     <div
                style={{

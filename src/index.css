@@ -128,8 +128,3 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
 }
 
 
-.github {
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}

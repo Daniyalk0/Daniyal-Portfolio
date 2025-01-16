@@ -1,13 +1,17 @@
 {
-    "title": "Frontend Developer based in New Delhi, currently seeking opportunities to create impactful web applications.",
-    "changeLanguage": "Change Language",
-    "name":"Hi, i'm Daniyal",
-    "aboutTitle" : "About",
-    "aboutHomeText":"Passionate about web development and enjoy solving problems.",
-    "langText":"change language",
-    "toolsTitle":"Stack I Use",
-    "cv":"View CV",
-    "copyTitle":"Have something in mind?",
-    "copy":"Copy Email"
-  }
-  
+  "title": "Frontend Developer based in New Delhi, currently seeking opportunities to create impactful web applications.",
+  "changeLanguage": "Change Language",
+  "name": "Hi, i'm Daniyal",
+  "aboutTitle": "About",
+  "aboutHomeText": "Passionate about web development and enjoy solving problems.",
+  "langText": "change language",
+  "toolsTitle": "Stack I Use",
+  "cv": "View CV",
+  "copyTitle": "Have something in mind?",
+  "copy": "Copy Email",
+  "aboutPageTitle": "What I'm About?",
+  "myStory": "my story",
+  "whatIdo":"what i do now",
+  "aboutText1": "I was born in Uttar Pradesh, India, and currently live in New Delhi. Since childhood, I’ve been fascinated by the blend of creativity and technology, which eventually led me to frontend development. With expertise in React, I enjoy crafting functional and visually appealing interfaces that enhance user experiences.",
+  "aboutText2": "I’m actively exploring opportunities to bring my skills to impactful projects while delving into backend development to broaden my expertise and become a well-rounded developer."
+}

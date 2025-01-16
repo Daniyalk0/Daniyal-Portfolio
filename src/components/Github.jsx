@@ -113,7 +113,7 @@ const Github = () => {
             Way to code —
           </h2>
         </div> */}
-        <div className="icon border-[1px]  dark:border-[2px] p-[2.2vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%] rotate-[-50deg] xs:text-[0.6rem] xs:p-[2.5vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[10] bg-[#eeeeee] dark:bg-zinc-900 xl:p-5 overflow-hidden">
+        <div className="icon border-[1px]  dark:border-[2px] p-[2.2vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%] rotate-[-50deg] xs:text-[0.6rem] xs:p-[2.5vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[10] bg-[#ffffff] dark:bg-zinc-900 xl:p-5 overflow-hidden">
           <FaArrowRight className={`arrow2 md:absolute`} />
           <FaArrowRight className="arrow md:block hidden md:absolute" />
         </div>
@@ -147,7 +147,7 @@ const Github = () => {
         
                   <div
                     style={{ backgroundImage: `url('${tweed}')` }}
-                    className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.30] opacity-[0.9] hidden dark:block"
+                    className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.40] opacity-[1] hidden dark:block"
                   ></div>
           <div
             className={`text-[#F2D99F] p-6 md:p-8 ml-1 bg-zinc-800 w-fit rounded-full absolute  ${

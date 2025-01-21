@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import tweed from "../assets/tweed.webp";
 import nayaLight from "../assets/nayaLight.webp";
 
-const Copy = () => {
+const Copy = ({className, textClass, btnClass}) => {
   const [copyState, setCopyState] = useState(false);
   const email = "getdaniyalkhan@gmail.com";
   const { isTransitioning, currentLang, textL, currentTa, currentUr } =
@@ -25,7 +25,7 @@ const Copy = () => {
   };
 
   return (
-    <div className="rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2] dark:border-[#292929] xs:w-[100%] w-full h-[200px]  border-[1px] relative overflow-hidden md:h-[29.7vw]  xl:w-[19vw] xl:h-[220px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-7 xs:py-5 xs:px-6 md:w-[34vw] xl:px-8 xl:py-8 lg:w-[30vw]  2xl:mr-4 2xl:ml-0   bg-[rgb(238,238,238)] dark:bg-transparent  flex items-start justify-between flex-col  z-[6] xs:h-[190px] xs:justify-center xs:gap-14">
+    <div className={`${className} rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2] dark:border-[#292929] xs:w-[100%] w-full h-[200px]  border-[1px] relative overflow-hidden md:h-[29.7vw]  xl:w-[19vw] xl:h-[220px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-7 xs:py-5 xs:px-6 md:w-[34vw] xl:px-8 xl:py-8 lg:w-[30vw]  2xl:mr-4 2xl:ml-0   bg-[rgb(238,238,238)] dark:bg-transparent  flex items-start justify-between flex-col  z-[6] xs:h-[190px] xs:justify-center xs:gap-14 `}>
       <div
         style={{
           backgroundImage: `url('${nayaLight}')`,
@@ -37,7 +37,7 @@ const Copy = () => {
         className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
       ></div>
       <p
-        className={`font-[pop2]  mt-[0rem] text-[#2a2a2a] dark:text-[#cbcbcb]   xs:mt-[1vw] xl:text-[1.3rem] xl:mt-[-0.5vw] md:mt-[0vw] xl:left-[2vw] z-[4] md:text-[1.4rem]  xs:left-[7vw] xs:text-[1.1rem]  text-[1.15rem]  ${
+        className={`font-[pop2] ${textClass}  mt-[0rem] text-[#2a2a2a] dark:text-[#cbcbcb]   xs:mt-[1vw] xl:text-[1.3rem] xl:mt-[-0.5vw] md:mt-[0vw] xl:left-[2vw] z-[4] md:text-[1.4rem]  xs:left-[7vw] xs:text-[1.1rem]  text-[1.15rem]  ${
           isTransitioning ? "opacity-0" : "opacity-1"
         }  ${
           !textL && "text-right rtl"
@@ -51,7 +51,7 @@ const Copy = () => {
       </p>
       <button
         onClick={handleCopy}
-        className="flex items-center w-[100%] gap-2 md:w-[100%] xl:rounded-[1.4vw] h-[43%]   relative overflow-hidden xl:h-[37%] rounded-[4vw] md:rounded-[2vw] md:h-[10vw] md:text-[2.5vw]  xs:w-[100%] xs:h-[15vw] xs:text-[5vw] text-[1rem] lg:text-[1rem] xl:text-[0.9rem] lg:h-[30%]"
+        className={`flex items-center w-[100%] gap-2 md:w-[100%] xl:rounded-[1.4vw] h-[43%]   relative overflow-hidden xl:h-[37%] rounded-[4vw] md:rounded-[2vw] md:h-[10vw] md:text-[2.5vw]  xs:w-[100%] xs:h-[15vw] xs:text-[5vw] text-[1rem] lg:text-[1rem] xl:text-[0.9rem] lg:h-[30%] ${btnClass}`}
       >
         <div className="w-full h-full flex items-center justify-center relative z-[4] text-[#363636] bg-gray-100  lg:dark:bg-transparent  dark:bg-zinc-900 dark:text-[#cbcbcb]  gap-2 ">
           {copyState ? (

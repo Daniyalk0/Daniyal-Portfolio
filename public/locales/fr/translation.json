@@ -8,6 +8,36 @@
     "toolsTitle":"pile que j'utilise",
      "cv":"voir le CV",
      "copyTitle":"Vous avez quelque chose en tête?",
-     "copy":"copier l'e-mail"
+     "copy":"copier l'e-mail",
+     "aboutPageTitle": "ce que je suis",
+     "myStory": "mon histoire",
+     "whatIdo": "ce que je fais maintenant",
+     "aboutText1": "Je suis né dans l'Uttar Pradesh, en Inde, et je vis actuellement à New Delhi. Depuis mon enfance, je suis fasciné par le mélange de créativité et de technologie, qui m’a finalement conduit au développement front-end. Fort de mon expertise en React, j'aime créer des interfaces fonctionnelles et visuellement attrayantes qui améliorent l'expérience utilisateur.",
+
+     "aboutText2": "J'explore activement les opportunités d'apporter mes compétences à des projets à fort impact tout en me plongeant dans le développement backend pour élargir mon expertise et devenir un développeur complet.",
+     "best": "Ce que je fais de mieux",
+     "responsiveText": "Donner la priorité aux conceptions mobiles pour des performances et une convivialité optimales sur n’importe quel écran.",
+     "responsive": "Conception axée sur le mobile",
+     "UIUX": "Collaboration UI/UX",
+     "UIUXtext": "Traduire des conceptions complexes en expériences utilisateur intuitives avec une précision au pixel près.",
+     "vcs": "Expertise en contrôle de versions",
+     "vcsText": "Collaborer efficacement avec les équipes utilisant Git et GitHub pour une gestion transparente du code.",
+     "api": "Intégration d'API",
+     "apiText": "Intégrer et utiliser des API RESTful pour créer des applications dynamiques basées sur les données.",
+
+     
+
+     "onixTitle": "Boutique Onix",
+     "ecommerce": "application de commerce électronique",
+     "onixAbout": "Cette application de commerce électronique propose une récupération de données en temps réel à partir de la base de données Appwrite, permettant une application Web attrayante où les utilisateurs peuvent s'authentifier à l'aide d'Appwrite, filtrer et enregistrer de manière transparente des articles dans leur panier, des produits, offrant ainsi une expérience d'achat optimisée.",
+   
+     "blogTitle": "B.log()",
+     "blog": "application de blog",
+     "blogAbout": "Une application de blog complète permettant aux utilisateurs de s'inscrire, de s'authentifier, d'afficher les profils d'autres utilisateurs, comme leurs publications, et d'effectuer des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) complètes sur leurs propres articles de blog tout en gérant de manière transparente leur expérience de blog.",
+   
+     "cloneTitle": "Studio au coucher du soleil",
+     "clone": "cloner",
+     "cloneAbout": "Un clone réactif et détaillé du site Web Sundown Studio, recréant sa conception dynamique, son interactivité et son expérience utilisateur pour mettre en valeur les compétences de développement front-end."
+   
   }
   

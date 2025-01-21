@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReUse from "./ReUse";
 import ProjectTab from "./ProjectTab";
 import Onixstore from "./HomeProjects/Onixstore";
@@ -18,27 +18,21 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Home = () => {
- 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".reuse",
-      {
-        opacity: 0,
-        y:-100,
-      },
-      { opacity: 1, duration: 2,  y:0,}
-    );
-  }, []);
-  useGSAP(() => {
-    gsap.fromTo(
-      ".reuse2",
-      {
-        opacity: 0,
-        x:-100,
-      },
-      { opacity: 1, duration: 2,  x:0, stagger:0.5}
-    );
-  }, []);
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      gsap.fromTo(
+        ".reuse",
+        { opacity: 0, y: -100 },
+        { opacity: 1, duration: 1.5, y: 0 }
+      );
+
+      gsap.fromTo(
+        ".reuse2",
+        { opacity: 0, x: -100 },
+        { opacity: 1, duration: 1.3, x: 0, stagger: 0.5 }
+      );
+    });
+  }, []); // Empty dependency array ensures it runs onl
   return (
     <>
       <div className="   py-4  px-3">
@@ -54,7 +48,6 @@ const Home = () => {
             className="absolute left-0 top-0 w-full h-full z-[0] xs:brightness-[0.35] brightness-[0.37] opacity-[1] hidden dark:block"
           ></div>
 
-          
           <div className="flex items-center justify-center gap-3 py-3">
             <div className=" flex-wrap items-center justify-center gap-3  w-[78%]  xl:flex ">
               <div className="flex items-center nowrap justify-between w-full 2xl:justify-center 2xl:gap-5">
@@ -119,7 +112,7 @@ const Home = () => {
               <CV />
               <Lang />
             </div>
-              <Socials/>
+            <Socials />
           </div>
         </div>
       </div>
@@ -150,7 +143,7 @@ const Home = () => {
             <Lang />
           </div>
           <Copy />
-          <Socials/>
+          <Socials />
         </div>
       </div>
     </>

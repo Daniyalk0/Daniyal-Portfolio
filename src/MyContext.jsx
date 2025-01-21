@@ -11,6 +11,7 @@ export const MyProvider = ({ children }) => {
   const [currentTa, setCurrentTa] = useState(false);
   const [currentUr, setCurrentUr] = useState(false);
   const [currentGm, setCurrentGm] = useState(false);
+  const [currentFr, setCurrentFr] = useState(false);
   
   useEffect(() => {
     console.log(currentLang);
@@ -30,7 +31,9 @@ export const MyProvider = ({ children }) => {
         setCurrentUr,
         currentUr,
         setCurrentGm,
-        currentGm
+        currentGm,
+        currentFr,
+        setCurrentFr
       }}
     >
       {children}

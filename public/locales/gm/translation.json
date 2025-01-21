@@ -7,5 +7,36 @@
     "toolsTitle":"Stapel, den ich verwende",
      "cv":"Lebenslauf ansehen",
      "copyTitle":"Haben Sie etwas im Sinn?",
-     "copy":"E-Mail kopieren"
+     "copy":"E-Mail kopieren",
+     "aboutPageTitle": "Worum es bei mir geht",
+     "myStory": "meine Geschichte",
+     "whatIdo": "was ich jetzt mache",
+
+     "aboutText1": "Ich wurde in Uttar Pradesh, Indien, geboren und lebe derzeit in Neu-Delhi. Seit meiner Kindheit fasziniert mich die Mischung aus Kreativität und Technologie, was mich schließlich zur Frontend-Entwicklung führte. Mit meiner Expertise in React genieße ich es, funktionale und optisch ansprechende Schnittstellen zu erstellen, die das Benutzererlebnis verbessern.",
+
+     "aboutText2": "Ich suche aktiv nach Möglichkeiten, meine Fähigkeiten in wirkungsvolle Projekte einzubringen, während ich mich gleichzeitig mit der Backend-Entwicklung beschäftige, um mein Fachwissen zu erweitern und ein vielseitiger Entwickler zu werden.",
+
+     "best": "Was ich am besten kann",
+     "responsiveText": "Priorisierung des mobilgeräteorientierten Designs für optimale Leistung und Benutzerfreundlichkeit auf allen Bildschirmgrößen",
+     "responsive": "Design mit mobiler Priorität",
+     "UIUX": "UI/UX-Zusammenarbeit",
+     "UIUXtext": "Komplexe Designs mit pixelgenauer Präzision in intuitive Benutzererlebnisse übersetzen.",
+     "vcs": "Version Control Expertise",
+     "vcsText": "Effektive Zusammenarbeit mit Teams, die Git und GitHub für eine nahtlose Codeverwaltung verwenden.",
+     "api": "API Integration",
+     "apiText": "Integration und Nutzung von RESTful-APIs zur Erstellung dynamischer, datengesteuerter Anwendungen.",
+
+
+     "onixTitle": "Onix Store",
+     "ecommerce": "e-commerce app",
+     "onixAbout": "Diese E-Commerce-App bietet Echtzeit-Datenabruf aus der Appwrite-Datenbank und ermöglicht so eine ansprechende Webanwendung, in der Benutzer sich mit Appwrite authentifizieren, Artikel nahtlos filtern und in ihrem Warenkorb speichern können, um ein optimiertes Einkaufserlebnis zu bieten.",
+   
+     "blogTitle": "B.log()",
+     "blog": "blog app",
+     "blogAbout": "Eine Blog-Anwendung mit vollem Funktionsumfang, die es Benutzern ermöglicht, sich zu registrieren, zu authentifizieren, die Profile anderer Benutzer anzuzeigen, deren Beiträge zu liken und vollständige CRUD-Vorgänge (Erstellen, Lesen, Aktualisieren, Löschen) an ihren eigenen Blog-Beiträgen durchzuführen und gleichzeitig ihr Blogging-Erlebnis nahtlos zu verwalten.",
+   
+     "cloneTitle": "Sonnenuntergang-Studio",
+     "clone": "Klon",
+     "cloneAbout": "Ein reaktionsfähiger und detaillierter Klon der Sundown Studio-Website, der deren dynamisches Design, Interaktivität und Benutzererfahrung nachbildet, um die Fähigkeiten der Front-End-Entwicklung hervorzuheben."
+   
 }

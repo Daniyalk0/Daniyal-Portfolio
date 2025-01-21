@@ -84,7 +84,7 @@ function Mobile_nav() {
       className={` nav  z-[1000]  fixed left-1/2 xs:left-1/2  -translate-x-1/2 xs:top-[2.7vw] xs:-translate-x-1/2  h-fit top-[0.7vw]`}
     >
       <div className={`flex items-center justify-center xs:gap-4 w-full ${isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
-        <div className="flex gap-3 p-3 md:gap-6 xl:gap-4 g items-center  dark:bg-transparent xs:gap-3 xl:p-3 rounded-full xs:p-2  w-fit z-[999] relative border-[1px] xs:border-[#ececec] xl:shadow-zinc-500 border-[#d2d2d2] dark:border-[#22222200] shadow-md  shadow-[#a6a6a690] dark:shadow-[#1c1c1c]">
+        <div className="flex gap-3 p-3 md:gap-6 lg:gap-3 xl:gap-4 g items-center  dark:bg-transparent xs:gap-3 xl:p-3 rounded-full xs:p-2  w-fit z-[999] relative border-[1px] xs:border-[#ececec] xl:shadow-zinc-500 border-[#d2d2d2] dark:border-[#22222200] shadow-md  shadow-[#a6a6a690] dark:shadow-[#1c1c1c]">
          <div
                      style={{
                        backgroundImage: `url('${nayaLight}')`,
@@ -100,7 +100,7 @@ function Mobile_nav() {
             <div
               onClick={() => changeRoute(text)}
               key={id}
-              className="dark:text-white text-[5vw] md:text-[3vw] font-bold relative group xl:text-[1.8vw] xs:text-[6vw]"
+              className="dark:text-white text-[5vw] md:text-[3vw] font-bold relative group xl:text-[1.8vw] lg:text-[1.4rem] xs:text-[6vw]"
               onMouseEnter={() => setHoveredIcon(id)}
               onMouseLeave={() => setHoveredIcon("")}
             >
@@ -108,7 +108,7 @@ function Mobile_nav() {
 
               {/* Text */}
               <h2
-                className={`font-[anzo5] dark:bg-[#ffffff33] bg-[#46464628] px-2 rounded-md absolute xl:text-[0.9vw] text-[2vw] xl:left-[-1vw] md:left-[-1.2vw] left-[-1.2vw] xs:left-[-2.7vw] xs:text-[2.5vw] md:text-[1.5vw] transition-all duration-300 pointer-events-none 
+                className={`font-[anzo5] dark:bg-[#ffffff33] bg-[#46464628] px-2 rounded-md absolute xl:text-[0.9vw] text-[2vw] xl:left-[-1vw] md:left-[-1.2vw] left-[-1.2vw] xs:left-[-2.7vw] xs:text-[2.5vw] md:text-[1.5vw]  transition-all duration-300 pointer-events-none 
                 ${
                   hoveredIcon === id
                     ? "top-[2.3vw] opacity-100"

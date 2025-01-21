@@ -11,7 +11,29 @@
   "copy": "Copy Email",
   "aboutPageTitle": "What I'm About?",
   "myStory": "my story",
-  "whatIdo":"what i do now",
-  "aboutText1": "I was born in Uttar Pradesh, India, and currently live in New Delhi. Since childhood, I’ve been fascinated by the blend of creativity and technology, which eventually led me to frontend development. With expertise in React, I enjoy crafting functional and visually appealing interfaces that enhance user experiences.",
-  "aboutText2": "I’m actively exploring opportunities to bring my skills to impactful projects while delving into backend development to broaden my expertise and become a well-rounded developer."
+  "whatIdo": "what i do now",
+  "aboutText1": "I was born in my Hometown Uttar Pradesh , India, and I'm currently in Delhi for career advancement. Since childhood, I’ve been fascinated by the blend of creativity and technology, which eventually led me to frontend development. With expertise in React, I enjoy crafting functional and visually appealing interfaces that enhance user experiences.",
+  "aboutText2": "I’m actively exploring opportunities to bring my skills to impactful projects while delving into backend development to broaden my expertise and become a well-rounded developer.",
+  "best": "What I Do Best",
+  "responsiveText": "Prioritizing mobile-first designs for optimal performance and usability on any screen.",
+  "responsive": "Mobile-First Design",
+  "UIUX": "UI/UX Collaboration",
+  "UIUXtext": "Translating complex designs into intuitive user experiences with pixel-perfect precision.",
+  "vcs": "Version Control Expertise",
+  "vcsText": "Collaborating effectively with teams using Git and GitHub for seamless code management.",
+  "api": "API Integration",
+  "apiText": "Integrating and consuming RESTful APIs to build dynamic, data-driven applications.",
+
+  "onixTitle": "Onix Store",
+  "ecommerce": "e-commerce app",
+  "onixAbout": "This e-commerce app features real-time data retrieval from the Appwrite database, enabling an engaging web application where users can authenticate using Appwrite, seamlessly filter and save items to their cart, products, providing an optimized shopping experience.",
+
+  "blogTitle": "B.log()",
+  "blog": "blog app",
+  "blogAbout": "A full-featured blog application enabling users to register, authenticate, view other users' profiles, like their posts, and perform complete CRUD (Create, Read, Update, Delete) operations on their own blog posts while seamlessly managing their blogging experience.",
+
+  "cloneTitle": "Sundown Studio",
+  "clone": "clone",
+  "cloneAbout": "A responsive and detailed clone of the Sundown Studio website, recreating its dynamic design, interactivity, and user experience to highlight front-end development skills."
+
 }

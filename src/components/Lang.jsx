@@ -11,7 +11,7 @@ import nayaLight from '../assets/nayaLight.webp'
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-const Lang = ({className}) => {
+const Lang = ({className, langClass, textClass, langOptCont}) => {
   const {
     isTransitioning,
     setIsTransitioning,
@@ -25,6 +25,7 @@ const Lang = ({className}) => {
     CurrentUr,
     currentGm,
     setCurrentGm,
+    setCurrentFr
   } = useMyContext();
   const [activeLang, setActiveLang] = useState("en");
   const [isHover, setIsHover] = useState("");
@@ -68,6 +69,15 @@ const Lang = ({className}) => {
         setCurrentGm(false);
       }, 500);
     }
+    if (lng === "fr") {
+      setTimeout(() => {
+        setCurrentFr(true);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        setCurrentFr(false);
+      }, 500);
+    }
   };
   
   gsap.registerPlugin(ScrollTrigger);
@@ -105,7 +115,8 @@ const Lang = ({className}) => {
                     ></div>
       {" "}
       <p
-        className={`font-[pop2] md:mt-2  w-[84%] text-[1.10rem] text-[#2a2a2a] dark:text-[#cbcbcb] left-[3vw] xs:text-[0.9rem]  xl:text-[1.3rem]  xl:left-[2vw] md:left-[4.6vw] absolute z-[4] top-[1rem] ${
+        className={`${textClass} font-[pop2] md:mt-2  w-[84%] text-[1.10rem]
+           text-[#383838] dark:text-[#cbcbcb] left-[3vw] xs:text-[0.9rem]  xl:text-[1.3rem]  xl:left-[2vw] md:left-[4.6vw] absolute z-[4] top-[1rem] ${
           isTransitioning ? "opacity-0 " : "opacity-1"
         } transition-opacity duration-700  ${
           !textL ? "text-right rtl" : "xs:text-center"
@@ -114,13 +125,13 @@ const Lang = ({className}) => {
         {/* Language */}
         {t("langText")}
       </p>
-      <div className="w-full h-[83%] xs:h-[90%] flex justify-end items-end  md:w-[90%] xl:w-full xl:h-full xl:mt-5 flex-col gap-[0.3rem] lg:gap-[1rem] xl:gap-[0.5rem]  xs:mt-6 xs:gap-[0.5rem] ">
+      <div className={`w-full h-[83%] xs:h-[90%] flex justify-end items-end  md:w-[90%] xl:w-full xl:h-full xl:mt-5 flex-col gap-[0.3rem] lg:gap-[1rem] xl:gap-[0.5rem]  xs:mt-6 xs:gap-[0.5rem] ${langOptCont}`}>
         <div className="w-full flex h-fit justify-center items-center gap-[0.3rem] lg:gap-[1rem] xl:gap-[0.5rem] ">
           <div
             onClick={() => {
               changeLanguage("en"), setCurrentLang("en");
             }}
-            className={` w-[32%] xl:w-[60%] md:h-[9vw] lg:w-[14rem] h-[3.9rem]  border-[1px] rounded-[0.8rem] xl:h-[4.4rem] border-[#c0c0c0] dark:border-[#292929]
+            className={`${langClass} lg:h-[90px] md:h-[71px] w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem]  border-[1px] rounded-[0.8rem] xl:h-[4.4rem] border-[#c0c0c0] dark:border-[#292929]
                relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center  justify-center bg-[#ffffff] dark:bg-zinc-900 shadow-md   xl:px-[0.25rem] xl:py-[0.30rem] overflow-hidden  ${
                  currentLang === "en" &&
                  "border-transparent dark:border-transparent dark:shadow-none shadow-none"
@@ -146,7 +157,7 @@ const Lang = ({className}) => {
             }}
             // onMouseEnter={() => setIsHover("ind")}
             // onMouseLeave={() => setIsHover("")}
-            className={`w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[10vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
+            className={`${langClass} lg:h-[90px] md:h-[71px] w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem]  border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center   bg-[#ffffff] dark:bg-zinc-900 shadow-md  xl:px-[0.25rem] xl:py-[0.30rem] justify-center   ${
                 currentLang === "hi" &&
@@ -178,7 +189,7 @@ const Lang = ({className}) => {
             }}
             // onMouseEnter={() => setIsHover("ru")}
             // onMouseLeave={() => setIsHover("")}
-            className={` w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[9vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem]  
+            className={`${langClass} lg:h-[90px] w-[32%] md:h-[71px] xl:w-[60%] lg:w-[14rem] h-[3.9rem]  border-[1px] rounded-[0.8rem] xl:h-[4.4rem]  
                 border-[#c0c0c0] dark:border-[#292929]
               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center   bg-[#ffffff] dark:bg-zinc-900 shadow-md  xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
                 currentLang === "ta" &&
@@ -210,7 +221,7 @@ const Lang = ({className}) => {
             onClick={() => {
               changeLanguage("fr"), setCurrentLang("fr");
             }}
-            className={` w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[9vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
+            className={`${langClass} lg:h-[90px] md:h-[71px] w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem]  border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
               relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center    bg-[#ffffff] dark:bg-zinc-900 shadow-md   xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
                 currentLang === "fr" &&
@@ -238,7 +249,7 @@ const Lang = ({className}) => {
             }}
             // onMouseEnter={() => setIsHover("ar")}
             // onMouseLeave={() => setIsHover("")}
-            className={` w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] md:h-[10vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
+            className={`${langClass} lg:h-[90px] md:h-[71px] w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem]  border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
                relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center px-[0.2rem] py-[0.15rem]  bg-[#ffffff] dark:bg-zinc-900 shadow-md  md:p-[0.37rem xl:px-[0.25rem] xl:py-[0.30rem] justify-center  ${
                  currentLang === "ur" &&
@@ -269,7 +280,7 @@ const Lang = ({className}) => {
             }}
             // onMouseEnter={() => setIsHover("gm")}
             // onMouseLeave={() => setIsHover("")}
-            className={`w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem]  md:h-[10vw] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
+            className={`${langClass} lg:h-[90px] md:h-[71px] w-[32%] xl:w-[60%] lg:w-[14rem] h-[3.9rem] border-[1px] rounded-[0.8rem] xl:h-[4.4rem] 
                 border-[#c0c0c0] dark:border-[#292929]
                relative text-[#2a2a2a] dark:text-[#cbcbcb] font-[pop2] flex items-center px-[0.2rem] py-[0.15rem]  bg-[#ffffff] dark:bg-zinc-900 shadow-md   md:p-[0.37rem xl:px-[0.25rem] xl:py-[0.30rem] justify-center ${
                  currentLang === "gm" &&

@@ -17,7 +17,7 @@ const ProjectTab = ({
   classImage1,
   classImage2,
   wClass,
-  parentClass
+  parentClass,
 }) => {
   const [hoverState, setHoverState] = useState(false);
   const [githubHover, setGithubHover] = useState(false);
@@ -26,7 +26,6 @@ const ProjectTab = ({
   useEffect(() => {
     console.log("github", githubHover);
   }, [githubHover]);
-
 
   // console.log(githubHover);
 
@@ -42,8 +41,6 @@ const ProjectTab = ({
   };
 
   return (
-   
-
     <div
       className={`w-[91.6vw] h-[240px] rounded-[6vw] border-[1px] relative  
       overflow-hidden border-[#c0c0c0]  dark:border-[#292929] md:h-[346px]  md:rounded-[4vw] xl:w-[20vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[19vw] flex items-center justify-center ${wClass} xs:w-[89vw]`}
@@ -52,12 +49,12 @@ const ProjectTab = ({
     >
       <Slider {...settings} className="w-full h-full">
         <div
-          className={`w-[95vw] h-[240px] md:h-[346px] md:w-[49vw]  xl:w-[20vw] xl:h-[250px]  2xl:w-[19vw] overflow-hidden flex items-center justify-center`}
+          className={`w-[95vw] h-[240px] md:h-[346px] md:w-[49vw]  xl:w-[20vw] xl:h-[250px]  2xl:w-[19vw]  flex items-center justify-center overflow-hidden`}
         >
           <img src={image1} alt="Image 1" className={`${classImage1}`} />
         </div>
         <div
-          className={`w-[95vw] h-[240px] md:h-[346px] md:w-[49vw]  xl:w-[20vw] xl:h-[250px]  2xl:w-[19vw] `}
+          className={`w-[95vw] h-[240px] md:h-[346px] md:w-[49vw]  xl:w-[20vw] xl:h-[250px]  2xl:w-[19vw] overflow-hidden`}
         >
           <img src={image2} alt="Image 2" className={` ${classImage2}`} />
         </div>
@@ -73,14 +70,16 @@ const ProjectTab = ({
           >
             <TbBrandVercel
               className={`  absolute z-[6] top-[40%] left-[30%] xl:text-[4vw] ${
-                vercelHover ? "text-zinc-600" : "dark:text-zinc-800 text-zinc-400"
+                vercelHover
+                  ? "text-zinc-600"
+                  : "dark:text-zinc-800 text-zinc-400"
               } transition-all duration-300 md:text-[9vw] lg:top-[38%]`}
             />
-          
-          <div
-            style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[1] hidden dark:block"
-          ></div>
+
+            <div
+              style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+              className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[1] hidden dark:block"
+            ></div>
           </div>
         </a>
         <a href={`${link1}`} target="_blank">
@@ -91,23 +90,23 @@ const ProjectTab = ({
               hoverState ? "left-0" : "-left-[100vw]"
             } w-1/2  absolute  z-[5] transition-all duration-500 border-r-[1px] border-[#c0c0c0]  dark:border-[#292929] top-0 bg-[#eeeeee] dark:bg-zinc-900`}
           >
-        
-        <div
-            style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[1] hidden dark:block"
+            <div
+              style={{ backgroundImage: `url('./src/assets/tweed.webp')` }}
+              className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[1] hidden dark:block"
             ></div>
             <FiGithub
               className={`absolute z-[6] top-[40%] left-[30%] xl:text-[4vw]  ${
-                githubHover ? "text-zinc-600" : "dark:text-zinc-800 text-zinc-400"
+                githubHover
+                  ? "text-zinc-600"
+                  : "dark:text-zinc-800 text-zinc-400"
               } transition-all duration-300 md:text-[9vw] lg:top-[38%]`}
             />
           </div>
-        
         </a>
       </div>
 
       <div className="bg-[#00000054] p-1 rounded-full  md:hidden  flex items-center justify-center absolute left-[2%] bottom-[4%]  text-zinc-500 xs:text-[1.1rem] xs:p-2 shadow-lg  shadow-zinc-800 ">
-        <FiGithub  className=" text-[#c8c8c8]"/>
+        <FiGithub className=" text-[#c8c8c8]" />
       </div>
       <div
         className="bg-[#00000054] p-1 rounded-full shadow-lg shadow-zinc-800 flex items-center justify-center md:hidden  absolute right-[2%] bottom-[4%] text-zinc-500 xs:text-[1.1rem] xs:p-2"
@@ -116,7 +115,6 @@ const ProjectTab = ({
         <TbBrandVercel className=" text-[#c8c8c8]" />
       </div>
     </div>
-     
   );
 };
 

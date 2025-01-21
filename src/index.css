@@ -128,3 +128,78 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
 }
 
 
+/* Ensure the slider elements take full height */
+.slick-list {
+  height: 100% !important;
+}
+
+.slick-track {
+  height: 100% !important;
+  display: flex !important; /* Ensure slides align properly */
+}
+
+.custom-slider .slick-slide {
+  height: 80% !important;
+  display: flex !important; /* Center content vertically */
+  justify-content: start;
+  align-items: start;
+
+}
+
+/* Reduce gap between dots */
+.slick-thumb li {
+  margin: 0 -2px !important; /* Adjust the gap between dots */
+}
+
+/* Default dot styling */
+.slick-thumb li div {
+  background-color: #655555; /* Default dot color */
+  border-radius: 50%; /* Make the dots round */
+  transition: all 0.4s ease; /* Smooth transition for hover/active effects */
+}
+
+/* Active dot styling */
+.slick-thumb li.slick-active div {
+  background-color: #2196f3; /* Active dot color */
+  transform: scale(1.2); /* Slightly enlarge the active dot */
+}
+
+.custom-slider .slick-dots {
+  background-color: rgb(194, 194, 194);
+  border-radius: 4vw;
+  width: fit-content !important; /* Keep the width fit to content */
+  position: absolute; /* Positioning to use transform */
+  left: 50%; /* Move to the center horizontally */
+  transform: translateX(-50%); /* Adjust position to perfectly center */
+  bottom: 26px !important; /* Optional: Adjust the position from the bottom */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default list styles */
+  text-align: center; /* Ensure child elements are centered in a block layout */
+  display:  flex;
+  align-items: center;
+  padding-inline: 0.3vw !important;
+  height: 22px !important;
+  justify-content: center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+  /* Add your styles here */
+  .custom-slider .slick-dots{
+    bottom: -34px !important;
+  }
+}
+@media screen and (min-width: 400px) {
+  /* Add your styles here */
+  .custom-slider .slick-dots{
+    bottom: -23px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* Add your styles here */
+  .custom-slider .slick-dots{
+    bottom: 13px !important;
+  }
+}
+
+

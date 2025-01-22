@@ -407,10 +407,10 @@ const Projects = () => {
               className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
             ></div>
 
-            <div className="w-full flex items-center justify-between h-[60%]">
-              <div className="about w-[100%]  h-[100%] flex flex-col justify-between gap-3 py-2 md:gap-0 xl:py-0 lg:w-[96%]  relative lg:py-0  lg:h-[100%] xl:w-[94%]">
+            <div className="w-full flex items-center justify-between h-[60%] ">
+              <div className="about w-[100%]  h-[100%] flex flex-col justify-between gap-3 py-2 md:gap-0 xl:py-0 lg:w-[96%]  relative lg:py-0  lg:h-[100%] xl:w-[94%]  xl:mb-12">
                 <div className="w-full h-full flex flex-col gap-2 ">
-                  <div className="w-full flex items-center justify-between  lg:mb-2 ">
+                  <div className="w-full flex items-center justify-between  lg:mb-2">
                     <p
                       className={`font-[pop2]  text-[1.8rem] text-[#383838] dark:text-[#cbcbcb] md:text-[2rem] lg:text-[1.3rem] xs:text-[1.3rem]  xl:text-[1.3rem]  relative z-[2]  ${
                         isTransitioning ? "opacity-0 " : "opacity-1"

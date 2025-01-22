@@ -27,24 +27,23 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 
 const Projects = () => {
-  const { isTransitioning, currentLang, textL, currentTa, currentFr } = useMyContext();
+  const { isTransitioning, currentLang, textL, currentTa, currentFr } =
+    useMyContext();
   const { t, i18n } = useTranslation();
   const [themeMode, setThemeMode] = useState("light");
   const [isEnter, setIsEnter] = useState(false);
 
   useGSAP(() => {
-    // Check if the viewport width is greater than a certain breakpoint (e.g., 768px)
-
     gsap.fromTo(
-      ".projects",
+      ".projectsss",
       {
         opacity: 0,
-        y: 100, // start from below the viewport
+        y: 100,
       },
       {
         opacity: 1,
         duration: 1.3,
-        y: 0, // move to its original position
+        y: 0,
       }
     );
   }, []);
@@ -57,7 +56,7 @@ const Projects = () => {
 
   return (
     <div className="   py-4  px-3 w-full h-full ">
-      <div className="projects about border-[2px] xs:border-[#e3e3e3] rounded-[6vw] dark:border-[#292929] border-[#cdcdcd] min-h-screen  px-2 py-3 lg:rounded-[4vw] lg:py-4  flex items-center gap-5 justify-center  relative   overflow-hidden   xl:rounded-[3vw] flex-col lg:mt-[3rem]   z-[999] xl:mt-[3rem] xl:py-4 md:mt-[3rem] mt-[2.5rem]  md:py-4 md:px-3 lg:px-4 ">
+      <div className="projectsss about border-[2px] xs:border-[#e3e3e3] rounded-[6vw] dark:border-[#292929] border-[#cdcdcd] min-h-screen  px-2 py-3 lg:rounded-[4vw] lg:py-4  flex items-center gap-5 justify-center  relative   overflow-hidden   xl:rounded-[3vw] flex-col lg:mt-[3rem]   z-[999] xl:mt-[3rem] xl:py-4 md:mt-[3rem] mt-[2.5rem]  md:py-4 md:px-3 lg:px-4 ">
         <div
           style={{
             backgroundImage: `url('${nayaLight}')`,
@@ -116,14 +115,11 @@ const Projects = () => {
                       } transition-opacity duration-700 ${
                         !textL && "text-right rtl"
                       } ${
-                        currentTa  &&
+                        currentTa &&
                         "xl:text-[0.5rem] xs:text-[4vw] text-[0.8rem] "
-                      } ${
-                        currentFr  &&
-                        " xs:text-[5.2vw] text-[0.8rem] "
-                      }`}
+                      } ${currentFr && " xs:text-[5.2vw] text-[0.8rem] "}`}
                     >
-                     {t('onixTitle')}
+                      {t("onixTitle")}
                     </p>
                     <h2
                       className={` lg:text-[0.7rem] font-[real] uppercase  text-[0.7rem] dark:text-[#4e4e4e] text-gray-400 font-semibold  xs:text-[0.6rem]  md:text-[0.8rem] xl:text-[0.7rem] relative z-[1] ${
@@ -131,11 +127,10 @@ const Projects = () => {
                       }  ${
                         !textL && "text-right rtl"
                       } transition-all duration-700 ${
-                        currentFr  &&
-                        "xs:text-[0.43rem] text-[0.44rem] "
+                        currentFr && "xs:text-[0.43rem] text-[0.44rem] "
                       }`}
                     >
-                     {t('ecommerce')}
+                      {t("ecommerce")}
                     </h2>
                   </div>
                   <div className="w-full h-[1px] xs:bg-[#e2e2e2]  bg-[#cdcdcd]     dark:bg-[#292929]  relative" />
@@ -145,8 +140,9 @@ const Projects = () => {
                     } transition-opacity duration-700 ${
                       !textL && "text-right rtl"
                     } ${
-                      currentTa  || currentFr &&
-                      "xl:text-[1.1vw] lg:text-[1.1vw] xs:text-[4vw] text-[0.8rem] "
+                      currentTa ||
+                      (currentFr &&
+                        "xl:text-[1.1vw] lg:text-[1.1vw] xs:text-[4vw] text-[0.8rem] ")
                     }`}
                   >
                     {/* This e-commerce app features real-time data retrieval from
@@ -154,7 +150,7 @@ const Projects = () => {
                     where users can authenticate using Appwrite, seamlessly
                     filter and save items to their cart, products, providing an
                     optimized shopping experience. */}
-                    {t('onixAbout')}
+                    {t("onixAbout")}
                   </p>
                 </div>
                 <div className=" lg:py-2 xl:pb-3 md:py-2 flex items-center lg:gap-[0.4rem] gap-2 w-full justify-end">
@@ -272,7 +268,7 @@ const Projects = () => {
                         "xl:text-[0.5rem] xs:text-[4vw] text-[0.8rem] "
                       }`}
                     >
-                     {t('blogTitle')}
+                      {t("blogTitle")}
                     </p>
                     <h2
                       className={` lg:text-[0.7rem] font-[real] uppercase  text-[0.7rem] dark:text-[#4e4e4e] text-gray-400 font-semibold  xs:text-[0.6rem]  md:text-[0.8rem] xl:text-[0.7rem] relative z-[1] ${
@@ -281,7 +277,7 @@ const Projects = () => {
                         !textL && "text-right rtl"
                       } transition-all duration-700 `}
                     >
-                     {t('blog')}
+                      {t("blog")}
                     </h2>
                   </div>
                   <div className="w-full h-[1px] xs:bg-[#e2e2e2]  bg-[#cdcdcd]     dark:bg-[#292929]  relative" />
@@ -300,7 +296,7 @@ const Projects = () => {
                     and perform complete CRUD (Create, Read, Update, Delete)
                     operations on their own blog posts while seamlessly managing
                     their blogging experience. */}
-                    {t('blogAbout')}
+                    {t("blogAbout")}
                   </p>
                 </div>
                 <div className=" lg:py-2 xl:pb-3 md:py-2 flex items-center lg:gap-[0.4rem] gap-2 w-full justify-end  relative">
@@ -398,8 +394,8 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="relative lg:w-[92%] flex items-center flex-col lg:flex-row justify-between  lg:justify-start lg:gap-3 gap-4 xl:w-[92.3%] xl:gap-4">
-          <div className="project3  px-4 py-5 relative flex items-center xl:justify-between  w-full flex-col  justify-between rounded-[5vw] overflow-hidden md:rounded-[2rem] lg:w-[60%] lg:rounded-[3vw] xl:px-7 xl:py-5 xl:rounded-[2vw] xl:w-[66%] border-[#d2d2d2]  border-[1px]  dark:border-[#292929]  xs:px-3 xs:py-4 md:px-5 md:py-6 lg:py-6 lg:flex-row lg:gap-2 ">
+        <div className="relative lg:w-[92%] flex items-center flex-col lg:flex-row justify-between  lg:h-[56vh] lg:justify-start lg:gap-3 gap-4 xl:w-[92.3%] xl:gap-4">
+          <div className="project3  px-4 py-5 relative flex items-center xl:justify-between  w-full flex-col  justify-between rounded-[5vw] overflow-hidden md:rounded-[2rem] lg:h-full lg:w-[60%] lg:rounded-[3vw] xl:px-7 xl:py-5 xl:rounded-[2vw] xl:w-[66%] border-[#d2d2d2]  border-[1px]  dark:border-[#292929]  xs:px-3 xs:py-4 md:px-5 md:py-6 lg:py-6 lg:flex-row lg:gap-2 ">
             <div
               style={{
                 backgroundImage: `url('${nayaLight}')`,
@@ -421,11 +417,12 @@ const Projects = () => {
                       } transition-opacity duration-700 ${
                         !textL && "text-right rtl"
                       } ${
-                        currentTa || currentFr &&
-                        "xl:text-[0.5rem] xs:text-[4vw] text-[0.8rem] "
+                        currentTa ||
+                        (currentFr &&
+                          "xl:text-[0.5rem] xs:text-[4vw] text-[0.8rem] ")
                       }`}
                     >
-                      {t('cloneTitle')}
+                      {t("cloneTitle")}
                     </p>
                     <h2
                       className={` lg:text-[0.7rem] font-[real] uppercase  text-[0.7rem] dark:text-[#4e4e4e] text-gray-400 font-semibold  xs:text-[0.6rem]  md:text-[0.8rem] xl:text-[0.7rem] relative z-[1] ${
@@ -434,7 +431,7 @@ const Projects = () => {
                         !textL && "text-right rtl"
                       } transition-all duration-700 `}
                     >
-                    {t('clone')}
+                      {t("clone")}
                     </h2>
                   </div>
                   <div className="w-full h-[1px] xs:bg-[#e2e2e2]  bg-[#cdcdcd]     dark:bg-[#292929]  relative" />
@@ -451,7 +448,7 @@ const Projects = () => {
                     {/* A responsive and detailed clone of the Sundown Studio
                     website, recreating its dynamic design, interactivity, and
                     user experience to highlight front-end development skills. */}
-                    {t('cloneAbout')}
+                    {t("cloneAbout")}
                   </p>
                 </div>
                 <div className=" lg:py-2 xl:pb-3 md:py-2 flex items-center lg:gap-[0.3rem] gap-2 lg:mt-5 w-full justify-end lg:justify-start ">
@@ -527,19 +524,19 @@ const Projects = () => {
               ></div>
             </div>
           </div>
-          <div className="w-full xl:w-[37%] flex flex-col gap-4 md:flex-row md:mt-6 lg:flex-col lg:mt-0 lg:w-[40%]  ">
+          <div className="w-full xl:w-[32vw] flex flex-col gap-4 md:flex-row lg:flex-col lg:h-full lg:mt-0 lg:w-[40%] md:h-[35vh] xl:h-full  ">
             <Lang
               className={
-                "xs:w-full w-full md:w-[60%] md:h-[34vw] lg:w-[99.9%] lg:h-[228px] xl:h-[219px] xl:w-full "
+                "xs:w-full w-full md:w-[60%] md:h-full lg:w-[99.9%] lg:h-[70%] xl:w-full xl:h-[55%]"
               }
-              textClass={` xs:left-4 xs:text-lg  xs:w-[89%] w-[94%]  ${
+              textClass={`lg:hidden xs:left-4 xs:text-lg  xs:w-[89%] w-[94%]  ${
                 !textL ? "text-right rtl" : "text-start xs:text-start"
               } md:w-[84%] md:left-14 md:text-xl lg:left-8 xl:mt-0 xl:text-lg`}
-              langClass={"md:h-[85px] lg:w-[9vw] lg:h-[6vw]"}
+              langClass={"md:h-[85px] lg:w-[9vw] lg:h-[5.9vw]"}
               langOptCont={""}
             />
             <Copy
-              className={"xl:w-[100.1%] xl:h-[145px] lg:w-[99.9%] lg:h-[150px]"}
+              classNamee={"xl:w-full lg:h-[36%] lg:w-[99.9%] lg:h-[150px]  md:h-full xl:h-[40%]"}
               textClass={"lg:text-lg xl:text-lg"}
               btnClass={"xl:h-[3vw]"}
             />

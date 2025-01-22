@@ -1,8 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode: 'jit',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    {
+      pattern: /xl:w-\[.*\]/, // Matches `xl:w-[...]`
+    },
+    {
+      pattern: /xl:h-\[.*\]/, // Matches `xl:h-[...]`
+    },
+    {
+      pattern: /lg:.*-.*-.*/, // Matches other dynamic lg-prefixed classes
+    },
   ],
   darkMode: "class",
   theme: {

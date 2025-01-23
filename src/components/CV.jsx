@@ -24,7 +24,7 @@ const CV = () => {
 
   const handleDownload = () => {
     // Replace with your actual CV file path
-    const cvUrl = "./DaniyalCV.pdf"; // Accessible from the public folder
+    const cvUrl = "./CV.pdf"; // Accessible from the public folder
     window.open(cvUrl, "_blank"); // Open in a new tab
   };
 
@@ -45,22 +45,21 @@ const CV = () => {
     });
   }, [isEnter]);
 
-  
-// useGSAP(() => {
-//   gsap.fromTo(
-//     ".CV",
-//     { 
-//       scale: "0", 
-//       translateY: "100%" 
-//     }, // Starting state
-//     { 
-//       scale: "1", 
-//       translateY: "0%", 
-//       duration: 1.6, 
-//       delay: 0.6,
-//     }
-//   );
-// }, []);
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     ".CV",
+  //     {
+  //       scale: "0",
+  //       translateY: "100%"
+  //     }, // Starting state
+  //     {
+  //       scale: "1",
+  //       translateY: "0%",
+  //       duration: 1.6,
+  //       delay: 0.6,
+  //     }
+  //   );
+  // }, []);
 
   return (
     <div
@@ -70,24 +69,24 @@ const CV = () => {
       onClick={handleDownload}
     >
       {" "}
-        <div
-                style={{ backgroundImage: `url('${tweed}')` }}
-                className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                  isEnter ? "brightness-[0.4] " : "brightness-0 opacity-0"
-                } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
-              ></div>
-              <div
-                style={{ backgroundImage: `url('${nayaLight}')` }}
-                className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                  isEnter ? "opacity-1 " : "opacity-0"
-                } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
-              ></div>
- <div
-            style={{
-              backgroundImage: `url('${nayaLight}')`,
-            }}
-            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
-          ></div>
+      <div
+        style={{ backgroundImage: `url('${tweed}')` }}
+        className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+          isEnter ? "brightness-[0.4] " : "brightness-0 opacity-0"
+        } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
+      ></div>
+      <div
+        style={{ backgroundImage: `url('${nayaLight}')` }}
+        className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+          isEnter ? "opacity-1 " : "opacity-0"
+        } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
+      ></div>
+      <div
+        style={{
+          backgroundImage: `url('${nayaLight}')`,
+        }}
+        className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+      ></div>
       <div
         style={{ backgroundImage: `url('${tweed}')` }}
         className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"

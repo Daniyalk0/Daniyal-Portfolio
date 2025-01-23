@@ -252,15 +252,3 @@
   background: linear-gradient(0deg, rgba(1,15,0,1) 0%, rgba(0,152,0,1) 100%);
 }
 
-.icon2 {
-  font-size: 40px;
-  color: #cfcfcfac;
-}
-
-
-
-
-.icon2:hover {
-
-  transform: scale(1.1); /* Optional: Add a subtle scaling effect */
-}

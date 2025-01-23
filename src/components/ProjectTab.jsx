@@ -9,7 +9,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NavLink } from "react-router-dom";
-import smoke from "../assets/smoke.png";
 import smoke3 from "../assets/smoke3.png";
 
 const ProjectTab = ({
@@ -122,7 +121,7 @@ const ProjectTab = ({
             hoverState ? "bottom-1 rotate-[0deg]" : "bottom-[-100%] rotate-[-360deg]"
           } transition-all duration-700 z-[1]`}
         >
-          <FiGithub   className={` icon2 ${textClass} transition-all duration-300`}/>
+          <FiGithub   className={` text-zinc-400 hover:text-zinc-200 hover:scale-[1.1] text-[2rem] ${textClass} transition-all duration-300`}/>
         </NavLink>
         <NavLink
         to={link1}
@@ -131,9 +130,8 @@ const ProjectTab = ({
           } transition-all duration-700 z-[1]`}
         >
           <TbBrandVercel
-            className={` icon2 ${textClass} transition-all duration-300`}
+             className={` text-zinc-400 hover:text-zinc-200 hover:scale-[1.1] text-[2rem] ${textClass} transition-all duration-300`}/>
         
-          />
         </NavLink>
       </div>
       <div className={`hidden md:flex brightness-[0.5] w-[100%] scale-[1.2] h-full absolute left-0 bottom-0 z-[0] bg-cover bg-center rotate-[90deg] ${hoverState ? 'opacity-1' : 'opacity-0'} transition-all duration-500`} style={{backgroundImage:`url('${smoke3}') `}}/>

@@ -8,6 +8,9 @@ import { FiGithub } from "react-icons/fi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { NavLink } from "react-router-dom";
+import smoke from "../assets/smoke.png";
+import smoke3 from "../assets/smoke3.png";
 
 const ProjectTab = ({
   image1,
@@ -18,6 +21,7 @@ const ProjectTab = ({
   classImage2,
   wClass,
   parentClass,
+  textClass
 }) => {
   const [hoverState, setHoverState] = useState(false);
   const [githubHover, setGithubHover] = useState(false);
@@ -42,16 +46,19 @@ const ProjectTab = ({
 
   return (
     <div
-      className={`w-[91.6vw] h-[240px] rounded-[6vw] border-[1px] relative  
-      overflow-hidden border-[#c0c0c0]  dark:border-[#292929] md:h-[346px]  md:rounded-[4vw] xl:w-[20vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[19vw] flex items-center justify-center ${wClass} xs:w-[89vw]`}
+      className={` w-[91.6vw] h-[240px] rounded-[6vw] border-[1px] relative  
+      overflow-hidden border-[#c0c0c0]  dark:border-[#292929] md:h-[346px]  md:rounded-[4vw] xl:w-[20vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[19vw] flex items-center justify-center ${wClass} xs:w-[89vw] relative `}
       onMouseEnter={() => setHoverState(true)}
       onMouseLeave={() => setHoverState(false)}
     >
-      <Slider {...settings} className="w-full h-full">
+      <Slider
+        {...settings}
+        className={`transition-all duration-500 w-full h-full  ${hoverState ? 'scale-[1.02]' : 'scale-[1]' } duration-300 transition-all`}
+      >
         <div
           className={`w-[95vw] h-[240px] md:h-[346px] md:w-[49vw]  xl:w-[20vw] xl:h-[250px]  2xl:w-[19vw]  flex items-center justify-center overflow-hidden`}
         >
-          <img src={image1} alt="Image 1" className={`${classImage1}`} />
+          <img src={image1} alt="Image 1" className={`${classImage1} `} />
         </div>
         <div
           className={`w-[95vw] h-[240px] md:h-[346px] md:w-[49vw]  xl:w-[20vw] xl:h-[250px]  2xl:w-[19vw] overflow-hidden`}
@@ -59,7 +66,7 @@ const ProjectTab = ({
           <img src={image2} alt="Image 2" className={` ${classImage2}`} />
         </div>
       </Slider>
-      <div className="links hidden md:block ">
+      {/* <div className="links hidden md:block ">
         <a href={`${link2}`} target="_blank">
           <div
             onMouseEnter={() => setVercelHover(true)}
@@ -81,7 +88,9 @@ const ProjectTab = ({
               className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[1] hidden dark:block"
             ></div>
           </div>
+       
         </a>
+        
         <a href={`${link1}`} target="_blank">
           <div
             onMouseEnter={() => setGithubHover(true)}
@@ -103,10 +112,35 @@ const ProjectTab = ({
             />
           </div>
         </a>
+      </div> */}
+      <div className="w-full h-full  items-end gap-10 absolute hidden md:flex  mb-9 overflow-hidden text-2xl">
+
+
+        <NavLink
+        to={link2}
+          className={`absolute left-[20%] ${
+            hoverState ? "bottom-1 rotate-[0deg]" : "bottom-[-100%] rotate-[-360deg]"
+          } transition-all duration-700 z-[1]`}
+        >
+          <FiGithub   className={` icon2 ${textClass} transition-all duration-300`}/>
+        </NavLink>
+        <NavLink
+        to={link1}
+          className={`absolute right-[20%] ${
+            hoverState ? "bottom-1 rotate-[0deg]" : "bottom-[-100%] rotate-[360deg]"
+          } transition-all duration-700 z-[1]`}
+        >
+          <TbBrandVercel
+            className={` icon2 ${textClass} transition-all duration-300`}
+        
+          />
+        </NavLink>
       </div>
+      <div className={`brightness-[0.5] w-[100%] scale-[1.2] h-full absolute left-0 bottom-0 z-[0] bg-cover bg-center rotate-[90deg] ${hoverState ? 'opacity-1' : 'opacity-0'} transition-all duration-500`} style={{backgroundImage:`url('${smoke3}') `}}/>
+
 
       <div className="bg-[#00000054] p-1 rounded-full  md:hidden  flex items-center justify-center absolute left-[2%] bottom-[4%]  text-zinc-500 xs:text-[1.1rem] xs:p-2 shadow-lg  shadow-zinc-800 ">
-        <FiGithub className=" text-[#c8c8c8]" />
+        <FiGithub className={`" text-[#c8c8c8]"`} />
       </div>
       <div
         className="bg-[#00000054] p-1 rounded-full shadow-lg shadow-zinc-800 flex items-center justify-center md:hidden  absolute right-[2%] bottom-[4%] text-zinc-500 xs:text-[1.1rem] xs:p-2"

@@ -44,8 +44,8 @@ const Socials = () => {
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
           ></div>
           <div
-            className={`absolute inset-0  bg-[#0a66c2] transition-opacity duration-700  ${
-              linkedin ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0  bg-[#0a66c2] transition-direction duration-500  ${
+              linkedin ? "bottom-[0]" : "bottom-[100%]"
             }`}
           ></div>
           <PiLinkedinLogo className="relative" />
@@ -68,8 +68,8 @@ const Socials = () => {
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
           ></div>
           <div
-            className={`absolute inset-0  bg-[#1DA1F2] transition-opacity duration-700  ${
-              X ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0  bg-[#1DA1F2] transition-direction duration-500  ${
+              X ? "bottom-0" : "bottom-[100%]"
             }`}
           ></div>
           <FaXTwitter className="relative" />
@@ -90,13 +90,13 @@ const Socials = () => {
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
           ></div>
           <div
-            className={`absolute inset-0 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] transition-opacity duration-700  ${
-              insta ? "opacity-100" : "opacity-0"
+            className={` absolute opacity-100 inset-0 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] transition-direction duration-500  ${
+              insta ? "bottom-[0]" : "bottom-[100%]"
             }`}
           ></div>
           <IoLogoInstagram className="relative z-[3]" />
         </div>
-        <a
+        {/* <a
         onMouseEnter={() => setEmail(true)}
         onMouseLeave={() => setEmail(false)}
         href="mailto:getdaniyalkhan@gmail.com"
@@ -113,12 +113,12 @@ const Socials = () => {
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
           ></div>
         <div
-          className={`absolute inset-0  bg-[#D34034] transition-opacity duration-700  ${
-            email ? "opacity-100" : "opacity-0"
+          className={`absolute bg-[#D34034] transition-direction duration-500  ${
+            email ? "bottom-[0]" : "top-[100%]"
           }`}
         ></div>
         <TfiEmail className="relative" />
-      </a>
+      </a> */}
       </div>
 
       <a
@@ -138,8 +138,8 @@ const Socials = () => {
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
           ></div>
         <div
-          className={`absolute inset-0  bg-[#D34034] transition-opacity duration-700  ${
-            email ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0  bg-[#D34034] transition-direction duration-500  ${
+            email ? "bottom-[0]" : "bottom-[100%]"
           }`}
         ></div>
         <TfiEmail className="relative" />

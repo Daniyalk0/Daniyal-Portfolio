@@ -3,7 +3,7 @@ import ReUse from "./ReUse";
 import ProjectTab from "./ProjectTab";
 import Onixstore from "./HomeProjects/Onixstore";
 import Blog from "./HomeProjects/Blog";
-import Game from "./HomeProjects/Game";
+import Clone from "./HomeProjects/Clone";
 import AboutHome from "./AboutHome";
 import Socials from "./Socials";
 import Github from "./Github";
@@ -57,7 +57,7 @@ const Home = () => {
               </div>
               <div className="flex items-center xl:gap-3 ">
                 <AboutHome />
-                <Game />
+                <Clone />
               </div>
               <div className="w-full flex items-start gap-4 ">
                 {/* <ExperienceHome /> */}
@@ -98,7 +98,7 @@ const Home = () => {
                 <Blog />
               </div>
               <div className="flex items-center justify-between w-full gap-4 flex-col ">
-                <Game />
+                <Clone />
               </div>
             </div>
             <div className="w-full flex items-center justify-center px-0">
@@ -133,7 +133,7 @@ const Home = () => {
           <AboutHome />
           <Onixstore />
           <Blog />
-          <Game />
+          <Clone />
           <Github />
           <div className="flex items-center gap-3 relative flex-col w-full">
             <ToolsHome />

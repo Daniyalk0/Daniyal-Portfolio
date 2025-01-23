@@ -25,6 +25,8 @@ import Lang from "../Lang";
 import Copy from "../Copy";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
+import { TbBrandVercel } from "react-icons/tb";
+import { FiGithub } from "react-icons/fi";
 
 const Projects = () => {
   const { isTransitioning, currentLang, textL, currentTa, currentFr } =
@@ -32,6 +34,8 @@ const Projects = () => {
   const { t, i18n } = useTranslation();
   const [themeMode, setThemeMode] = useState("light");
   const [isEnter, setIsEnter] = useState(false);
+  const [github, setGithub] = useState("");
+  const [vercel, setVercel] = useState("");
 
   useGSAP(() => {
     gsap.fromTo(
@@ -71,24 +75,24 @@ const Projects = () => {
         <div className="w-full flex items-center justify-center mt-2">
           <NavLink to={"/"}>
             <div
-              className="border-2 border-[#d2d2d2] dark:border-[#292929]  w-fit rounded-full xl:p-3 overflow-hidden dark:text-zinc-200 text-zinc-800 relative lg:text-[1.3rem] lg:p-2 mt-[-0.3rem] xs:mt-[-0.4rem] xs:p-3"
-              onMouseEnter={() => setIsEnter(true)}
-              onMouseLeave={() => setIsEnter(false)}
-            >
-              <div
-                style={{ backgroundImage: `url('${tweed}')` }}
-                className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                  isEnter ? "brightness-[0.4] " : "brightness-0 "
-                } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
-              ></div>
-              <div
-                style={{ backgroundImage: `url('${nayaLight}')` }}
-                className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                  isEnter ? "opacity-1 " : "opacity-0"
-                } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
-              ></div>
-              <RxCross2 className="relative z-[3]" />
-            </div>
+                       className="border-2 border-[#d2d2d2] dark:border-[#292929]  w-fit rounded-full xl:p-3 overflow-hidden dark:text-zinc-200 text-zinc-800 relative lg:text-[1.3rem] lg:p-2 mt-[-0.3rem] xs:mt-[-0.4rem] xs:p-3"
+                       onMouseEnter={() => setIsEnter(true)}
+                       onMouseLeave={() => setIsEnter(false)}
+                     >
+                       <div
+                         style={{ backgroundImage: `url('${tweed}')` }}
+                         className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+                           isEnter ? "brightness-0 " : "brightness-[0.39] "
+                         } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
+                       ></div>
+                       <div
+                         style={{ backgroundImage: `url('${nayaLight}')` }}
+                         className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+                           isEnter ? "opacity-1 " : "opacity-0"
+                         } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
+                       ></div>
+                       <RxCross2 className="relative z-[3]" />
+                     </div>
           </NavLink>
         </div>
 
@@ -241,6 +245,59 @@ const Projects = () => {
               dark:shadow-zinc-900 brightness-[1.14] dark:brightness-[1.05] right-[-1vw] xs:top-[4vw] top-[1.3rem] xl:h-[27rem] xl:w-[42%]"
               ></div>
             </div>
+
+            <div className="flex items-center justify-between w-full lg:mt-5 mt-3">
+              <NavLink
+              to={'https://onixstore.vercel.app/'}
+               target="_blank"
+                onMouseEnter={() => setVercel("onixVercel")}
+                onMouseLeave={() => setVercel("")}
+                className={`p-5 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[1.2vw]     xl:rounded-[1.5rem] w-[30%] xl:w-[40%] lg:text-[4vw] relative overflow-hidden
+                `}
+              >
+                <div
+                  style={{
+                    backgroundImage: `url('${nayaLight}')`,
+                  }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+                ></div>
+                <div
+                  style={{ backgroundImage: `url('${tweed}')` }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+                ></div>
+                <div
+                  className={`absolute inset-0  bg-[#1DA1F2] transition-direction duration-500  ${
+                    vercel === "onixVercel" ? "bottom-[0]" : "bottom-[100%]"
+                  } ${themeMode === 'dark' ? 'bgBtnDarkVercel' : 'bgBtnVercel'}`}
+                ></div>
+                <TbBrandVercel className="relative" />
+              </NavLink>
+              <NavLink
+              to={'https://github.com/Daniyalk0/onixstore'}
+               target="_blank"
+                onMouseEnter={() => setGithub("onixGithub")}
+                onMouseLeave={() => setGithub("")}
+                className={`p-5 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[1.2vw]     xl:rounded-[1.5rem] w-[30%] xl:w-[40%] lg:text-[4vw] relative overflow-hidden
+                `}
+              >
+                <div
+                  style={{
+                    backgroundImage: `url('${nayaLight}')`,
+                  }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+                ></div>
+                <div
+                  style={{ backgroundImage: `url('${tweed}')` }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+                ></div>
+                <div
+                  className={`absolute inset-0 ${themeMode === 'dark' ? 'bgBtnDarkGithub' : 'bgBtnGithub'}  transition-direction duration-500  ${
+                    github === "onixGithub" ? "top-0" : "top-[100%]"
+                  }`}
+                ></div>
+                <FiGithub className="relative" />
+              </NavLink>
+            </div>
           </div>
           <div className="project2  px-4 py-5  xl:px-9  relative flex items-center xl:justify-between  w-full flex-col  justify-between rounded-[5vw] overflow-hidden md:rounded-[2rem] lg:w-[45%] lg:rounded-[3vw]  xl:py-10 xl:rounded-[2vw] border-[#d2d2d2]  border-[1px]  dark:border-[#292929]  xs:px-3 xs:py-4 md:px-5 md:py-6">
             <div
@@ -391,7 +448,60 @@ const Projects = () => {
               dark:shadow-zinc-900 brightness-[1.14] dark:brightness-[1.05] right-[-1vw] xs:top-[4vw] top-[1.3rem] xl:h-[27rem] xl:w-[42%]"
               ></div>
             </div>
+            <div className="flex items-center justify-between w-full lg:mt-5 mt-3">
+              <NavLink
+              to={'https://appwrite-blog-pi-one.vercel.app/'}
+               target="_blank"
+                onMouseEnter={() => setVercel("blogVercel")}
+                onMouseLeave={() => setVercel("")}
+                className={`p-5 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[1.2vw]     xl:rounded-[1.5rem] w-[30%] xl:w-[40%] lg:text-[4vw] relative overflow-hidden
+                `}
+              >
+                <div
+                  style={{
+                    backgroundImage: `url('${nayaLight}')`,
+                  }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+                ></div>
+                <div
+                  style={{ backgroundImage: `url('${tweed}')` }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+                ></div>
+                <div
+                  className={`absolute inset-0  bg-[#1DA1F2] transition-direction duration-500  ${
+                    vercel === "blogVercel" ? "bottom-[0]" : "bottom-[100%]"
+                  } ${themeMode === 'dark' ? 'bgBtnDarkVercel' : 'bgBtnVercel'}`}
+                ></div>
+                <TbBrandVercel className="relative" />
+              </NavLink>
+              <NavLink
+              to={'https://github.com/Daniyalk0/Appwrite_Blog'}
+               target="_blank"
+                onMouseEnter={() => setGithub("blogGithub")}
+                onMouseLeave={() => setGithub("")}
+                className={`p-5 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[1.2vw]     xl:rounded-[1.5rem] w-[30%] xl:w-[40%] lg:text-[4vw] relative overflow-hidden
+                `}
+              >
+                <div
+                  style={{
+                    backgroundImage: `url('${nayaLight}')`,
+                  }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+                ></div>
+                <div
+                  style={{ backgroundImage: `url('${tweed}')` }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+                ></div>
+                <div
+                  className={`absolute inset-0 ${themeMode === 'dark' ? 'bgBtnDarkGithub' : 'bgBtnGithub'}  transition-direction duration-500  ${
+                    github === "blogGithub" ? "top-0" : "top-[100%]"
+                  }`}
+                ></div>
+                <FiGithub className="relative" />
+              </NavLink>
+            </div>
           </div>
+          
         </div>
 
         <div className="relative lg:w-[92%] flex items-center flex-col lg:flex-row justify-between  lg:h-[56vh] lg:justify-start lg:gap-3 gap-4 xl:w-[92.3%] xl:gap-4">
@@ -500,6 +610,7 @@ const Projects = () => {
                       }}
                     />
                   </div>
+            
                 </div>
               </div>
             </div>
@@ -521,7 +632,60 @@ const Projects = () => {
                 }}
                 className=" xs:h-[60vw] h-[68vw] xs:w-[40%] w-[42%] lg:h-[16.5rem]  rounded-[0.7rem] md:h-[43vw] md:w-[25%] lg:w-[45%] bg-cover bg-center relative overflow-hidden shadow-lg xs:shadow-zinc-400 shadow-zinc-500
               dark:shadow-zinc-900 brightness-[1.12] dark:brightness-[1.05] right-[-1vw] xs:top-[4vw] top-[1.3rem] xl:h-[16.7rem] xl:w-[40%]  "
+          
               ></div>
+            </div>
+            <div className="flex items-center justify-between px-1 lg:w-[20%]  mt-3 lg:flex-col w-full lg:h-[80%]  ">
+              <NavLink
+              to={'https://sundown-studio-five.vercel.app/'}
+               target="_blank"
+                onMouseEnter={() => setVercel("cloneVercel")}
+                onMouseLeave={() => setVercel("")}
+                className={`p-5 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[0vw] xl:h-[40%] xl:w-[100%]   xl:rounded-[1.1rem] w-[30%]  lg:text-[4vw] relative overflow-hidden
+                `}
+              >
+                <div
+                  style={{
+                    backgroundImage: `url('${nayaLight}')`,
+                  }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+                ></div>
+                <div
+                  style={{ backgroundImage: `url('${tweed}')` }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+                ></div>
+                <div
+                  className={`absolute inset-0  bg-[#1DA1F2] transition-direction duration-500  ${
+                    vercel === "cloneVercel" ? "bottom-[0]" : "bottom-[100%]"
+                  } ${themeMode === 'dark' ? 'bgBtnDarkVercel' : 'bgBtnVercel'}`}
+                ></div>
+                <TbBrandVercel className="relative " />
+              </NavLink>
+              <NavLink
+              to={'https://github.com/Daniyalk0/sundown-studio'}
+               target="_blank"
+                onMouseEnter={() => setGithub("cloneGithub")}
+                onMouseLeave={() => setGithub("")}
+                className={`p-5 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[0vw] xl:h-[40%] xl:w-[100%]   xl:rounded-[1.1rem] w-[30%]  lg:text-[4vw] relative overflow-hidden
+                `}
+              >
+                <div
+                  style={{
+                    backgroundImage: `url('${nayaLight}')`,
+                  }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+                ></div>
+                <div
+                  style={{ backgroundImage: `url('${tweed}')` }}
+                  className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
+                ></div>
+                <div
+                  className={`absolute inset-0 ${themeMode === 'dark' ? 'bgBtnDarkGithub' : 'bgBtnGithub'}  transition-direction duration-500  ${
+                    github === "cloneGithub" ? "top-0" : "top-[100%]"
+                  }`}
+                ></div>
+                <FiGithub className="relative" />
+              </NavLink>
             </div>
           </div>
           <div className="w-full xl:w-[32vw] flex flex-col gap-4 md:flex-row lg:flex-col lg:h-full lg:mt-0 lg:w-[40%] md:h-[35vh] xl:h-full  ">
@@ -536,7 +700,9 @@ const Projects = () => {
               langOptCont={""}
             />
             <Copy
-              classNamee={"xl:w-full lg:h-[36%] lg:w-[99.9%] lg:h-[150px]  md:h-full xl:h-[40%]"}
+              classNamee={
+                "xl:w-full lg:h-[36%] lg:w-[99.9%] lg:h-[150px]  md:h-full xl:h-[40%]"
+              }
               textClass={"lg:text-lg xl:text-lg"}
               btnClass={"xl:h-[3vw]"}
             />

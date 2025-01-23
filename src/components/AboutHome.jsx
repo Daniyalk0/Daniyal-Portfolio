@@ -7,7 +7,7 @@ import InnerImageZoom from "react-inner-image-zoom";
 import { useTranslation } from "react-i18next";
 import { useMyContext } from "../MyContext";
 import { NavLink } from "react-router-dom";
-import pfp from "../assets/pfp.jpg";
+import dpp from "../assets/dpp.jpg";
 import tweed from "../assets/tweed.webp";
 import nayaLight from "../assets/nayaLight.webp";
 // import nayaLight from "../assets/nayaLight.webp";
@@ -16,9 +16,10 @@ function AboutHome() {
   const [isEnter, setIsEnter] = useState(false);
   const { isTransitioning, currentLang, textL, currentTa } = useMyContext();
   const { t, i18n } = useTranslation();
+  const [pfpHover, setPfpHover] = useState(false)
 
   useGSAP(() => {
-    gsap.to(".arrow3", {
+    gsap.to(".arroww1", {
       bottom: isEnter ? "1rem" : "0.7rem",
       left: isEnter ? "3rem" : "0.7rem",
       duration: 0.3,
@@ -26,7 +27,7 @@ function AboutHome() {
     });
   }, [isEnter]);
   useGSAP(() => {
-    gsap.to(".arrow4", {
+    gsap.to(".arroww2", {
       bottom: isEnter ? "0.7rem" : "0.5rem",
       left: isEnter ? "0.7rem" : "-1.5rem",
       duration: 0.3,
@@ -37,17 +38,19 @@ function AboutHome() {
   return (
     <NavLink to={"/about"}>
       <div className="flex items-center justify-center gap-2 w-full md:w-full md:gap-3 xl:gap-1 relative overflow-hidden">
-        <div className="pfp md:block hidden">
-          <InnerImageZoom
-            src={pfp}
-            zoomSrc={pfp}
+        <div onMouseEnter={() => setPfpHover(true) } onMouseLeave={() => setPfpHover(false)} className={`w-[33%] md:w-[29vw] md:h-[29.4vw] h-[14.4rem]  object-cover rounded-[6vw] md:rounded-[4vw] lg:w-[23vw] xl:w-[18vw] xl:h-[15.4rem] xl:rounded-[2.3vw] 2xl:w-[17.3vw]  overflow-hidden`} >
+          {/* <InnerImageZoom
+            src={dpp}
+            zoomSrc={dpp}
             alt="naaa"
-            className="w-[33%] md:w-[29vw] md:h-[29.4vw] h-[14.4rem]  object-cover rounded-[6vw] md:rounded-[4vw] lg:w-[23vw] xl:w-[18vw] xl:h-[15.4rem] xl:rounded-[2.3vw] 2xl:w-[17.3vw]"
+            className="w-[33%] md:w-[29vw] md:h-[29.4vw] h-[14.4rem]  object-cover rounded-[6vw] md:rounded-[4vw] lg:w-[23vw] xl:w-[18vw] xl:h-[15.4rem] xl:rounded-[2.3vw] 2xl:w-[17.3vw] bg-cover bg-center"
             zoomType="hover"
             hideHint="false"
             fadeDuration={0}
+            zoomScale={0.1}
           />
-          <img />
+          <img /> */}
+          <div className={`bg-cover bg-center transition-all duration-1000  w-full h-full ${pfpHover ? 'scale-[1.9]' : ''}`} style={{backgroundImage:`url('${dpp}')`}}></div>
         </div>
         <div
           className="rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  w-full h-[210px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[34.3vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-6 xs:py-5 xs:px-6 md:w-[70%] xl:px-7 xl:py-7 lg:w-[71vw] xl:mr-0 xl:ml-2 2xl:mr-4 2xl:ml-0  dark:bg-zinc-900 dark:bg-transparent xs:h-[190px]"
@@ -96,8 +99,8 @@ function AboutHome() {
             {t("aboutHomeText")}
           </p>
           <div className="icon border-[1px] dark:border-[2px] p-[2.2vw] rounded-full w-fit dark:border-[#333333] border-[#00000038] dark:text-[#bdbdbd] text-[#636363] text-[3.4vw] flex items-center justify-center absolute right-[3%] bottom-[5%] rotate-[-50deg] xs:text-[0.6rem] xs:p-[2.5vw] xs:right-[4%] xs:bottom-[6%] md:text-[1rem] md:p-5   md:right-[1.8%] xl:right-[5%] xl:bottom-[7%]  z-[10] bg-[#ffffff] dark:bg-zinc-900 xl:p-5 overflow-hidden">
-            <FaArrowRight className={`arrow2 md:absolute`} />
-            <FaArrowRight className="arrow md:block hidden md:absolute" />
+            <FaArrowRight className={`arroww1 md:absolute`} />
+            <FaArrowRight className="arroww2 md:block hidden md:absolute" />
           </div>
         </div>
       </div>

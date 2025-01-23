@@ -82,25 +82,25 @@ const About = () => {
         <div className="w-full flex items-center justify-center mt-2">
           <NavLink to={'/'}>
 
-          <div
-            className="border-2 border-[#d2d2d2] dark:border-[#292929]  w-fit rounded-full xl:p-3 overflow-hidden dark:text-zinc-200 text-zinc-800 relative lg:text-[1.3rem] lg:p-2 mt-[-0.3rem] xs:mt-[-0.4rem] xs:p-3"
-            onMouseEnter={() => setIsEnter(true)}
-            onMouseLeave={() => setIsEnter(false)}
-          >
-            <div
-              style={{ backgroundImage: `url('${tweed}')` }}
-              className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                isEnter ? "brightness-[0.4] " : "brightness-0 "
-              } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
-            ></div>
-            <div
-              style={{ backgroundImage: `url('${nayaLight}')` }}
-              className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                isEnter ? "opacity-1 " : "opacity-0"
-              } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
-            ></div>
-            <RxCross2 className="relative z-[3]" />
-          </div>
+           <div
+                      className="border-2 border-[#d2d2d2] dark:border-[#292929]  w-fit rounded-full xl:p-3 overflow-hidden dark:text-zinc-200 text-zinc-800 relative lg:text-[1.3rem] lg:p-2 mt-[-0.3rem] xs:mt-[-0.4rem] xs:p-3"
+                      onMouseEnter={() => setIsEnter(true)}
+                      onMouseLeave={() => setIsEnter(false)}
+                    >
+                      <div
+                        style={{ backgroundImage: `url('${tweed}')` }}
+                        className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+                          isEnter ? "brightness-0 " : "brightness-[0.39] "
+                        } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
+                      ></div>
+                      <div
+                        style={{ backgroundImage: `url('${nayaLight}')` }}
+                        className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+                          isEnter ? "opacity-1 " : "opacity-0"
+                        } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
+                      ></div>
+                      <RxCross2 className="relative z-[3]" />
+                    </div>
             </NavLink>
         </div>
         <div className="w-full h-full flex items-center justify-center gap-4 flex-col lg:flex-row xs:mt-4">

@@ -99,34 +99,63 @@
 }
 
 .eng {
-  background: rgb(255,255,255);
-  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(179,25,66,1) 50%, rgba(255,255,255,0) 90%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(179, 25, 66, 1) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
 }
-.fr{
-  background: rgb(255,255,255);
-  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(0,72,181,1) 50%, rgba(255,255,255,0) 90%);
-}
-
-.ur{
-  background: rgb(255,255,255);
-  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(124, 8, 240) 50%, rgba(255,255,255,0) 90%);
-}
-
-.in{
-  background: rgb(255,255,255);
-background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(255,92,13,1) 50%, rgba(255,255,255,0) 90%);
-}
-
-.ta{
-  background: rgb(255,255,255);
-background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50%, rgba(255,255,255,0) 90%);
+.fr {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(0, 72, 181, 1) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
 }
 
-.gm{
-  background: rgb(255,255,255);
-  background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgba(199,165,21,1) 50%, rgba(255,255,255,0) 90%);
+.ur {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgb(124, 8, 240) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
 }
 
+.in {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 92, 13, 1) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+
+.ta {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgb(9, 158, 108) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+
+.gm {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(199, 165, 21, 1) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
 
 /* Ensure the slider elements take full height */
 .slick-list {
@@ -143,7 +172,6 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
   display: flex !important; /* Center content vertically */
   justify-content: start;
   align-items: start;
-
 }
 
 /* Reduce gap between dots */
@@ -176,7 +204,7 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
   padding: 0; /* Remove default padding */
   list-style: none; /* Remove default list styles */
   text-align: center; /* Ensure child elements are centered in a block layout */
-  display:  flex;
+  display: flex;
   align-items: center;
   padding-inline: 0.3vw !important;
   height: 22px !important;
@@ -185,19 +213,19 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
 
 @media screen and (min-width: 300px) and (max-width: 400px) {
   /* Add your styles here */
-  .custom-slider .slick-dots{
+  .custom-slider .slick-dots {
     bottom: -34px !important;
   }
 }
 @media screen and (min-width: 400px) {
   /* Add your styles here */
-  .custom-slider .slick-dots{
+  .custom-slider .slick-dots {
     bottom: -23px !important;
   }
 }
 @media screen and (min-width: 768px) {
   /* Add your styles here */
-  .custom-slider .slick-dots{
+  .custom-slider .slick-dots {
     bottom: 13px !important;
   }
 }
@@ -206,5 +234,33 @@ background: linear-gradient(135deg, rgba(255,255,255,0) 10%, rgb(9, 158, 108) 50
   scroll-behavior: smooth;
 }
 
+.bgBtnGithub {
+  background: rgb(244,244,244);
+  background: linear-gradient(0deg, rgba(244,244,244,1) 0%, rgba(0,7,244,1) 100%);
+}
+.bgBtnDarkGithub {
+  background: rgb(0,2,24);
+  background: linear-gradient(0deg, rgba(0,2,24,1) 0%, rgba(0,6,167,1) 100%);
+}
+
+.bgBtnVercel {
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,120,0,1) 100%);
+}
+.bgBtnDarkVercel {
+  background: rgb(1,15,0);
+  background: linear-gradient(0deg, rgba(1,15,0,1) 0%, rgba(0,152,0,1) 100%);
+}
+
+.icon2 {
+  font-size: 40px;
+  color: #cfcfcfac;
+}
 
 
+
+
+.icon2:hover {
+
+  transform: scale(1.1); /* Optional: Add a subtle scaling effect */
+}

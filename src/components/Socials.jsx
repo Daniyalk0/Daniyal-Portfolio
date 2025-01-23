@@ -96,7 +96,7 @@ const Socials = () => {
           ></div>
           <IoLogoInstagram className="relative z-[3]" />
         </div>
-        {/* <a
+        <a
         onMouseEnter={() => setEmail(true)}
         onMouseLeave={() => setEmail(false)}
         href="mailto:getdaniyalkhan@gmail.com"
@@ -112,13 +112,13 @@ const Socials = () => {
             style={{ backgroundImage: `url('${tweed}')` }}
             className="absolute left-0 top-0 w-full h-full z-[0] brightness-[0.35] opacity-[0.9] hidden dark:block"
           ></div>
-        <div
-          className={`absolute bg-[#D34034] transition-direction duration-500  ${
-            email ? "bottom-[0]" : "top-[100%]"
+       <div
+          className={`absolute inset-0  bg-[#D34034] transition-direction duration-500  ${
+            email ? "bottom-[0]" : "bottom-[100%]"
           }`}
         ></div>
         <TfiEmail className="relative" />
-      </a> */}
+      </a>
       </div>
 
       <a

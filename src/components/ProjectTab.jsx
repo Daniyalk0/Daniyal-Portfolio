@@ -136,17 +136,17 @@ const ProjectTab = ({
           />
         </NavLink>
       </div>
-      <div className={`brightness-[0.5] w-[100%] scale-[1.2] h-full absolute left-0 bottom-0 z-[0] bg-cover bg-center rotate-[90deg] ${hoverState ? 'opacity-1' : 'opacity-0'} transition-all duration-500`} style={{backgroundImage:`url('${smoke3}') `}}/>
+      <div className={`hidden md:flex brightness-[0.5] w-[100%] scale-[1.2] h-full absolute left-0 bottom-0 z-[0] bg-cover bg-center rotate-[90deg] ${hoverState ? 'opacity-1' : 'opacity-0'} transition-all duration-500`} style={{backgroundImage:`url('${smoke3}') `}}/>
 
 
-      <div className="bg-[#00000054] p-1 rounded-full  md:hidden  flex items-center justify-center absolute left-[2%] bottom-[4%]  text-zinc-500 xs:text-[1.1rem] xs:p-2 shadow-lg  shadow-zinc-800 ">
-        <FiGithub className={`" text-[#c8c8c8]"`} />
+      <div className="bg-[#00000054] p-1 rounded-full  md:hidden  flex items-center justify-center absolute left-[2%] bottom-[4%]  xs:text-[1.1rem] xs:p-2 shadow-lg  shadow-zinc-800 ">
+        <FiGithub className={`text-[#c8c8c8]`} />
       </div>
       <div
-        className="bg-[#00000054] p-1 rounded-full shadow-lg shadow-zinc-800 flex items-center justify-center md:hidden  absolute right-[2%] bottom-[4%] text-zinc-500 xs:text-[1.1rem] xs:p-2"
+        className="bg-[#00000054] p-1 rounded-full shadow-lg shadow-zinc-800 flex items-center justify-center md:hidden  absolute right-[2%] bottom-[4%]  xs:text-[1.1rem] xs:p-2"
         onClick={() => console.log("clickedd")}
       >
-        <TbBrandVercel className=" text-[#c8c8c8]" />
+        <TbBrandVercel className=" text-[#c8c8c8] " />
       </div>
     </div>
   );

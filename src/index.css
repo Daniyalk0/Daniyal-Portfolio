@@ -181,19 +181,19 @@
 
 /* Default dot styling */
 .slick-thumb li div {
-  background-color: #655555; /* Default dot color */
+  background-color: #9a9a9a; /* Default dot color */
   border-radius: 50%; /* Make the dots round */
   transition: all 0.4s ease; /* Smooth transition for hover/active effects */
 }
 
 /* Active dot styling */
 .slick-thumb li.slick-active div {
-  background-color: #2196f3; /* Active dot color */
+  background-color: #00bfff; /* Active dot color */
   transform: scale(1.2); /* Slightly enlarge the active dot */
 }
 
 .custom-slider .slick-dots {
-  background-color: rgb(194, 194, 194);
+  background-color: rgba(0, 0, 0, 0.089);
   border-radius: 4vw;
   width: fit-content !important; /* Keep the width fit to content */
   position: absolute; /* Positioning to use transform */

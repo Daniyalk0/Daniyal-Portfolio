@@ -48,35 +48,9 @@
   cursor: none !important;
 }
 
-/* Slider container */
-/* Slider container */
-.slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  white-space: nowrap;
-}
 
-/* Slider track */
-.slider-track {
-  display: flex;
-  align-items: center;
-  will-change: transform;
-  animation: none;
-}
 
-/* Each slide */
-.slide {
-  flex: 0 0 auto;
-}
 
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 3/3;
-  object-fit: contain;
-}
 
 .vignette-overlay {
   position: absolute;

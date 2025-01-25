@@ -1,18 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import AutoScroll from "embla-carousel-auto-scroll";
 import { FaArrowRight } from "react-icons/fa6";
-// import { FaReact } from "react-icons/fa";
-// import { RiTailwindCssFill } from "react-icons/ri";
-// import { FaHtml5 } from "react-icons/fa";
-// import { FaCss3Alt } from "react-icons/fa";
-// import { FaJs } from "react-icons/fa";
-// import { SiRedux } from "react-icons/si";
-// import { useGSAP } from "@gsap/react";
-// import { SiAppwrite } from "react-icons/si";
-// import gsap from "gsap/all";
-// import { FaGitAlt } from "react-icons/fa";
-// import { FaGithub } from "react-icons/fa";
+
 import img1 from "../assets/logo/html.png";
 import img2 from "../assets/logo/css.png";
 import img3 from "../assets/logo/github.png";
@@ -28,8 +16,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import tweed from "../assets/tweed.webp";
 import nayaLight from "../assets/nayaLight.webp";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
 import Slider from "react-infinite-logo-slider";
 
 const ToolsHome = () => {
@@ -49,31 +35,6 @@ const ToolsHome = () => {
     { icon: img8, key: 8 },
     { icon: img9, key: 9 },
   ];
-  const sliderRef = useRef(null);
-
-  // useEffect(() => {
-  //   const slider = sliderRef.current;
-
-  //   // Clone the content for seamless looping
-  //   const clone = slider.innerHTML;
-  //   slider.innerHTML += clone;
-
-  //   let start = 0;
-  //   const speed = 3; // Adjust speed here (higher = faster)
-
-  //   const animate = () => {
-  //     start -= speed;
-  //     if (Math.abs(start) >= slider.offsetWidth / 2) {
-  //       start = 0; // Reset seamlessly when halfway is done
-  //     }
-  //     slider.style.transform = `translateX(${start}px)`;
-  //     requestAnimationFrame(animate);
-  //   };
-
-  //   animate(); // Start animation
-
-  //   return () => cancelAnimationFrame(animate);
-  // }, []);
 
   useGSAP(() => {
     gsap.to(".arrowt1", {

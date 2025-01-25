@@ -18,6 +18,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Home = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     requestAnimationFrame(() => {
       gsap.fromTo(

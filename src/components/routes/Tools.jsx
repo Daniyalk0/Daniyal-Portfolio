@@ -12,6 +12,9 @@ import animationData from "../../assets/404.json";
 import Copy from "../Copy";
 
 const Tools = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [isEnter, setIsEnter] = useState(false);
   const { isTransitioning, currentLang, textL, currentTa } = useMyContext();
   const { t, i18n } = useTranslation();

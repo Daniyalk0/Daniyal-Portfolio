@@ -29,6 +29,9 @@ import { TbBrandVercel } from "react-icons/tb";
 import { FiGithub } from "react-icons/fi";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { isTransitioning, currentLang, textL, currentTa, currentFr } =
     useMyContext();
   const { t, i18n } = useTranslation();

@@ -13,6 +13,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { NavLink } from "react-router-dom";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [isEnter, setIsEnter] = useState(false);
   const { isTransitioning, currentLang, textL, currentTa } = useMyContext();
   const { t, i18n } = useTranslation();

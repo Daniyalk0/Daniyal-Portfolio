@@ -2,7 +2,6 @@ import { lazy, StrictMode, Suspense, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { MyProvider } from "./MyContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Loader from "./components/Loader.jsx";
 import "./index.css";
 import "./i18n.js";
 import App from "./App.jsx";
@@ -64,9 +63,9 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  // <StrictMode>
+  <StrictMode>
     <MyProvider>
       <RouterProvider router={router} />
     </MyProvider>
-  // </StrictMode>
+   </StrictMode>
 );

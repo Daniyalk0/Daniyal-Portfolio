@@ -2,8 +2,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
-import InnerImageZoom from "react-inner-image-zoom";
 import { useTranslation } from "react-i18next";
 import { useMyContext } from "../MyContext";
 import { NavLink } from "react-router-dom";

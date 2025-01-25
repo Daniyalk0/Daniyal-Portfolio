@@ -3,7 +3,6 @@ import Home from "./components/Home";
 import CustomCursor from "./components/CustomCursor";
 import Mobile_nav from "./components/NavBar'/Mobile_nav";
 import { Outlet } from "react-router-dom";
-import Loader from "./components/Loader";
 import seamless_paper_texture from "./assets/seamless_paper_texture.webp";
 import nayaLight from "./assets/nayaLight.webp";
 import dot from "./assets/dot.webp";
@@ -32,12 +31,6 @@ function App() {
     };
   });
 
-  useEffect(() => {
-    // Simulate loading time
-    const loaderTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000); // Loader visible duration
-  }, []);
 
   return (
     // <Loader>

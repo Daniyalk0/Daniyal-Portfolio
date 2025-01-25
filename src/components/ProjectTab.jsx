@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import React, { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { TbBrandVercel } from "react-icons/tb";
 import { FiGithub } from "react-icons/fi";
 

@@ -19,7 +19,7 @@ const ProjectTab = ({
   classImage2,
   wClass,
   parentClass,
-  textClass
+  textClass,
 }) => {
   const [hoverState, setHoverState] = useState(false);
   const [githubHover, setGithubHover] = useState(false);
@@ -44,14 +44,16 @@ const ProjectTab = ({
 
   return (
     <div
-      className={` w-[91.6vw] h-[240px] rounded-[6vw] border-[1px] relative  
-      overflow-hidden border-[#c0c0c0]  dark:border-[#292929] md:h-[346px]  md:rounded-[4vw] xl:w-[20vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[19vw] flex items-center justify-center ${wClass} xs:w-[89vw] relative `}
+      className={` w-[91.9vw] h-[240px] rounded-[6vw] border-[1px] relative  
+      overflow-hidden border-[#c0c0c0]  dark:border-[#292929] md:h-[346px]  md:rounded-[4vw] xl:w-[20vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[19vw] flex items-center justify-center ${wClass} xs:w-[90vw] relative `}
       onMouseEnter={() => setHoverState(true)}
       onMouseLeave={() => setHoverState(false)}
     >
       <Slider
         {...settings}
-        className={`transition-all duration-500 w-full h-full  ${hoverState ? 'scale-[1.02]' : 'scale-[1]' } duration-300 transition-all`}
+        className={`transition-all duration-500 w-full h-full  ${
+          hoverState ? "scale-[1.02]" : "scale-[1]"
+        } duration-300 transition-all`}
       >
         <div
           className={`w-[95vw] h-[240px] md:h-[346px] md:w-[49vw]  xl:w-[20vw] xl:h-[250px]  2xl:w-[19vw]  flex items-center justify-center overflow-hidden`}
@@ -112,39 +114,51 @@ const ProjectTab = ({
         </a>
       </div> */}
       <div className="w-full h-full  items-end gap-10 absolute hidden md:flex  mb-9 overflow-hidden text-2xl">
-
-
         <NavLink
-        to={link2}
+          to={link2}
           className={`absolute left-[20%] ${
-            hoverState ? "bottom-1 rotate-[0deg]" : "bottom-[-100%] rotate-[-360deg]"
+            hoverState
+              ? "bottom-1 rotate-[0deg]"
+              : "bottom-[-100%] rotate-[-360deg]"
           } transition-all duration-700 z-[1]`}
         >
-          <FiGithub   className={` text-zinc-400 hover:text-zinc-200 hover:scale-[1.1] text-[2rem] ${textClass} transition-all duration-300`}/>
+          <FiGithub
+            className={` text-zinc-400 hover:text-zinc-200 hover:scale-[1.1] text-[2rem] ${textClass} transition-all duration-300`}
+          />
         </NavLink>
         <NavLink
-        to={link1}
+          to={link1}
           className={`absolute right-[20%] ${
-            hoverState ? "bottom-1 rotate-[0deg]" : "bottom-[-100%] rotate-[360deg]"
+            hoverState
+              ? "bottom-1 rotate-[0deg]"
+              : "bottom-[-100%] rotate-[360deg]"
           } transition-all duration-700 z-[1]`}
         >
           <TbBrandVercel
-             className={` text-zinc-400 hover:text-zinc-200 hover:scale-[1.1] text-[2rem] ${textClass} transition-all duration-300`}/>
-        
+            className={` text-zinc-400 hover:text-zinc-200 hover:scale-[1.1] text-[2rem] ${textClass} transition-all duration-300`}
+          />
         </NavLink>
       </div>
-      <div className={`hidden md:flex brightness-[0.5] w-[100%] scale-[1.2] h-full absolute left-0 bottom-0 z-[0] bg-cover bg-center rotate-[90deg] ${hoverState ? 'opacity-1' : 'opacity-0'} transition-all duration-500`} style={{backgroundImage:`url('${smoke3}') `}}/>
-
-
-      <div className="bg-[#00000054] p-1 rounded-full  md:hidden  flex items-center justify-center absolute left-[2%] bottom-[4%]  xs:text-[1.1rem] xs:p-2 shadow-lg  shadow-zinc-800 ">
-        <FiGithub className={`text-[#c8c8c8]`} />
-      </div>
       <div
-        className="bg-[#00000054] p-1 rounded-full shadow-lg shadow-zinc-800 flex items-center justify-center md:hidden  absolute right-[2%] bottom-[4%]  xs:text-[1.1rem] xs:p-2"
-        onClick={() => console.log("clickedd")}
-      >
-        <TbBrandVercel className=" text-[#c8c8c8] " />
-      </div>
+        className={`hidden md:flex brightness-[0.5] w-[100%] scale-[1.2] h-full absolute left-0 bottom-0 z-[0] bg-cover bg-center rotate-[90deg] ${
+          hoverState ? "opacity-1" : "opacity-0"
+        } transition-all duration-500`}
+        style={{ backgroundImage: `url('${smoke3}') ` }}
+      />
+
+      <NavLink to={link2}>
+        <div className="bg-[#00000054] p-1 rounded-full  md:hidden  flex items-center justify-center absolute left-[2%] bottom-[4%]  xs:text-[1.1rem] xs:p-2 shadow-lg  shadow-zinc-800 ">
+          <FiGithub className={`text-[#c8c8c8]`} />
+        </div>
+      </NavLink>
+      <NavLink to={link1}>
+        <div
+          className="bg-[#00000054] p-1 rounded-full shadow-lg shadow-zinc-800 flex items-center justify-center md:hidden  absolute right-[2%] bottom-[4%]  xs:text-[1.1rem] xs:p-2"
+          onClick={() => console.log("clickedd")}
+        >
+          <TbBrandVercel className=" text-[#c8c8c8] " />
+        </div>
+      </NavLink>
     </div>
   );
 };

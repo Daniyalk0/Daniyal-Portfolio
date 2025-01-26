@@ -3,7 +3,7 @@ import { GoHome } from "react-icons/go";
 import { RiToolsLine } from "react-icons/ri";
 import { LuFolder } from "react-icons/lu";
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import nayaLight from "../../assets/nayaLight.webp";
 import tweed from "../../assets/tweed.webp";
 import { useGSAP } from "@gsap/react";
@@ -37,6 +37,17 @@ function Mobile_nav() {
     };
   }, []);
 
+  const location = useLocation();
+  useEffect(() => {
+    const trimmedPathname =
+      location.pathname === "/"
+        ? "home"
+        : location.pathname.replace(/^\/|\/$/g, ""); // Removes leading and trailing '/'
+    console.log(trimmedPathname);
+
+    setActiveRoute(trimmedPathname);
+  }, [location]);
+
   const icons = [
     { id: "first", Icon: GoHome, text: "Home" },
     { id: "two", Icon: RiToolsLine, text: "Tools" },
@@ -44,7 +55,6 @@ function Mobile_nav() {
     { id: "four", Icon: IoMdInformationCircleOutline, text: "About" },
   ];
   const changeRoute = (route) => {
-    setActiveRoute(route);
     if (route === "Home") {
       navigate(`/`);
     } else {
@@ -108,7 +118,9 @@ function Mobile_nav() {
             >
               <Icon
                 className={` ${
-                  activeRoute === text ? "dark:text-blue-400 text-[#37b6ff] " : ""
+                  activeRoute.toLowerCase() === text.toLowerCase()
+                    ? "dark:text-blue-400 text-[#37b6ff] "
+                    : ""
                 }
             transition-text duration-500 
         `}

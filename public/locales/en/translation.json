@@ -36,10 +36,10 @@
   "clone": "clone",
   "cloneAbout": "A responsive and detailed clone of the Sundown Studio website, recreating its dynamic design, interactivity, and user experience to highlight front-end development skills.",
 
-  "codingLang":"Languages",
+  "codingLang":"Coding Languages",
   "codingTools":"Tools",
   "codingLibs":"Library and Framworks",
   "codingBaas":"BAAS",
-  "codingBaas2": "(Backend as a Service)"
+  "codingBaas2": "BAAS (Backend as a Service)"
 
 }

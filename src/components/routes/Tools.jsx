@@ -64,16 +64,16 @@ const Tools = () => {
     return () => intervals.forEach((interval) => clearInterval(interval)); // Cleanup
   }, []);
 
-  useGSAP(() => {
-    gsap.killTweensOf(".tools"); // Stop any existing animations to prevent conflicts
+  // useGSAP(() => {
+  //   gsap.killTweensOf(".tools"); // Stop any existing animations to prevent conflicts
   
-    // Adjust animation based on screen width
-    gsap.fromTo(
-      ".tools",
-      { opacity: 0, y: window.innerWidth >= 768 ? -100 : -70 }, // Adjust based on screen size
-      { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" } // Smooth easing for better effect
-    );
-  }, []);
+  //   // Adjust animation based on screen width
+  //   gsap.fromTo(
+  //     ".tools",
+  //     { opacity: 0, y: window.innerWidth >= 768 ? -100 : -70 }, // Adjust based on screen size
+  //     { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" } // Smooth easing for better effect
+  //   );
+  // }, []);
   
   
 
@@ -122,7 +122,8 @@ const Tools = () => {
                 }`}
               >
                 {/* Passionate about web development and enjoy solving problems. */}
-                Languages
+                {/* Languages */}
+                {t('codingLang')}
               </p>
               <StackCom
                 icon={html}
@@ -178,7 +179,7 @@ const Tools = () => {
                 }`}
               >
                 {/* Passionate about web development and enjoy solving problems. */}
-                Tools
+                {t('codingTools')}
               </p>
               <div className="flex items-center gap-4 md:gap-3 lg:gap-0 xl:gap-0  w-full justify-between lg:justify-between  ">
                 <StackCom
@@ -260,7 +261,7 @@ const Tools = () => {
                 }`}
               >
                 {/* Passionate about web development and enjoy solving problems. */}
-                Library and Framworks
+                {t('codingLibs')}
               </p>
 
               <StackCom
@@ -322,7 +323,7 @@ const Tools = () => {
                 }`}
               >
                 {/* Passionate about web development and enjoy solving problems. */}
-                BAAS
+                {t('codingBaas')}
               </p>
 
                 <StackCom
@@ -356,7 +357,7 @@ const Tools = () => {
               }`}
             >
               {/* Passionate about web development and enjoy solving problems. */}
-              Tools
+              {t('codingTools')}
             </p>
 
             <StackCom
@@ -401,7 +402,7 @@ const Tools = () => {
               }`}
             >
               {/* Passionate about web development and enjoy solving problems. */}
-              BAAS (Backend as a Service)
+              {t('codingBaas2')}
             </p>
 
             <StackCom

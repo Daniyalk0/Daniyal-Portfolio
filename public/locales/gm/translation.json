@@ -37,6 +37,12 @@
    
      "cloneTitle": "Sonnenuntergang-Studio",
      "clone": "Klon",
-     "cloneAbout": "Ein reaktionsfähiger und detaillierter Klon der Sundown Studio-Website, der deren dynamisches Design, Interaktivität und Benutzererfahrung nachbildet, um die Fähigkeiten der Front-End-Entwicklung hervorzuheben."
+     "cloneAbout": "Ein reaktionsfähiger und detaillierter Klon der Sundown Studio-Website, der deren dynamisches Design, Interaktivität und Benutzererfahrung nachbildet, um die Fähigkeiten der Front-End-Entwicklung hervorzuheben.",
+
+     "codingLang":"Codierungssprachen",
+     "codingTools":"Werkzeuge",
+     "codingLibs":"Bibliothek und Frameworks",
+     "codingBaas":"BAAS",
+     "codingBaas2": "Backend als Dienst."
    
 }

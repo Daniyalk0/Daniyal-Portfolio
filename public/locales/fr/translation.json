@@ -37,7 +37,13 @@
    
      "cloneTitle": "Studio au coucher du soleil",
      "clone": "cloner",
-     "cloneAbout": "Un clone réactif et détaillé du site Web Sundown Studio, recréant sa conception dynamique, son interactivité et son expérience utilisateur pour mettre en valeur les compétences de développement front-end."
+     "cloneAbout": "Un clone réactif et détaillé du site Web Sundown Studio, recréant sa conception dynamique, son interactivité et son expérience utilisateur pour mettre en valeur les compétences de développement front-end.",
+
+     "codingLang":"Langages de codage",
+     "codingTools":"Outils",
+     "codingLibs":"Bibliothèque et frameworks",
+     "codingBaas":"BAAS",
+     "codingBaas2": "Back-end en tant que service"
    
   }
   

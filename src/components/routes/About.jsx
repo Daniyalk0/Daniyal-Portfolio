@@ -20,32 +20,15 @@ const About = () => {
   const { isTransitioning, currentLang, textL, currentTa } = useMyContext();
   const { t, i18n } = useTranslation();
   useGSAP(() => {
-    const animate = () => {
-      gsap.killTweensOf(".about"); // Stop any existing animations to prevent conflicts
+    gsap.killTweensOf(".about"); // Stop any existing animations to prevent conflicts
   
-      if (window.innerWidth >= 768) {
-        // Animation for larger screens (tablets/desktops)
-        gsap.fromTo(
-          ".about",
-          { opacity: 0, y: 100 }, 
-          { opacity: 1, y: 0, duration: 1.3 }
-        );
-      } else {
-        // Animation for smaller screens (mobile)
-        gsap.fromTo(
-          ".about",
-          { opacity: 0, y: -100 }, 
-          { opacity: 1, y: 0, duration: 2 }
-        );
-      }
-    };
-  
-    animate(); // Run on initial mount
-  
-    window.addEventListener("resize", animate); // Listen for screen resizing
-  
-    return () => window.removeEventListener("resize", animate); // Cleanup on unmount
+    gsap.fromTo(
+      ".about",
+      { opacity: 0, y: window.innerWidth >= 768 ? -100 : -70 }, // Adjust based on screen size
+      { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" } // Smooth easing for better effect
+    );
   }, []);
+  
   
   const settings = {
     customPaging: function (i) {

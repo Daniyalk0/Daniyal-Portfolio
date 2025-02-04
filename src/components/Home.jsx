@@ -24,18 +24,21 @@ const Home = () => {
   }, []);
   
   useEffect(() => {
-    gsap.fromTo(
-      ".reuse",
-      { opacity: 0, y: -100 },
-      { opacity: 1, duration: 1.5, y: 0 }
-    );
+    requestAnimationFrame(() => {
+      gsap.fromTo(
+        ".reuse",
+        { opacity: 0, y: -100 },
+        { opacity: 1, duration: 1.5, y: 0, ease: "power2.out" }
+      );
   
-    gsap.fromTo(
-      ".reuse2",
-      { opacity: 0, x: -100 },
-      { opacity: 1, duration: 1.3, x: 0, stagger: 0.5 }
-    );
-  }, []); // Empty dependency array ensures it runs only once
+      gsap.fromTo(
+        ".reuse2",
+        { opacity: 0, x: -80 },
+        { opacity: 1, duration: 1.3, x: 0, stagger: 0.5, delay:0.2, ease: "power2.out" }
+      );
+    });
+  }, []);
+  
   
   return (
     <>

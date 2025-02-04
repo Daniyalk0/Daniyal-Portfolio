@@ -40,30 +40,16 @@ const Projects = () => {
   const [github, setGithub] = useState("");
   const [vercel, setVercel] = useState("");
   useGSAP(() => {
-    const animate = () => {
-      gsap.killTweensOf(".projectsss"); // Prevent conflicts
+    gsap.killTweensOf(".projectsss"); // Prevent conflicts
   
-      if (window.innerWidth >= 768) {
-        gsap.fromTo(
-          ".projectsss",
-          { opacity: 0, y: -100 },
-          { opacity: 1, y: 0, duration: 1.3 }
-        );
-      } else {
-        gsap.fromTo(
-          ".projectsss",
-          { opacity: 0, y: 100 },
-          { opacity: 1, y: 0, duration: 2 }
-        );
-      }
-    };
-  
-    animate(); // Run on mount
-  
-    window.addEventListener("resize", animate); // Listen for screen resizing
-  
-    return () => window.removeEventListener("resize", animate); // Cleanup
+    // Adjust animation based on screen width
+    gsap.fromTo(
+      ".projectsss",
+      { opacity: 0, y: window.innerWidth >= 768 ? 100 : 80 }, // Adjust based on screen size
+      { opacity: 1, y: 0, duration: 1, ease: "power2.out" } // Smooth easing for better effect
+    );
   }, []);
+  
   
 
   useEffect(() => {

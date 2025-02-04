@@ -65,31 +65,16 @@ const Tools = () => {
   }, []);
 
   useGSAP(() => {
-    const animate = () => {
-      gsap.killTweensOf(".tools"); // Kill previous animations to prevent conflicts
+    gsap.killTweensOf(".tools"); // Stop any existing animations to prevent conflicts
   
-      if (window.innerWidth >= 768) {
-        gsap.fromTo(
-          ".tools",
-          { opacity: 0, y: 100 },
-          { opacity: 1, y: 0, duration: 1.3 }
-        );
-      } else {
-        gsap.fromTo(
-          ".tools",
-          { opacity: 0, x: 100 },
-          { opacity: 1, x: 0, duration: 2 }
-        );
-      }
-    };
-  
-    animate(); // Run on mount
-  
-    // Listen for resize events
-    window.addEventListener("resize", animate);
-  
-    return () => window.removeEventListener("resize", animate); // Cleanup
+    // Adjust animation based on screen width
+    gsap.fromTo(
+      ".tools",
+      { opacity: 0, y: window.innerWidth >= 768 ? -100 : -70 }, // Adjust based on screen size
+      { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" } // Smooth easing for better effect
+    );
   }, []);
+  
   
 
   //   useGSAP(() => {
@@ -409,14 +394,14 @@ const Tools = () => {
           </div>
           <div className=" w-full  rounded-[6vw] md:rounded-[4vw]  md:w-full border-[1px] relative overflow-hidden xs:border-[#e5e5e5] border-[#d2d2d2]    dark:border-[#292929]  xl:w-[40vw] 2xl:w-[35vw] lg:rounded-[2vw]  xl:px-9 xl:pt-2 lg:w-[45vw]  lg:px-8 md:px-7  h-auto md:py-4 px-6 py-4  xl:rounded-[2vw] flex md:hidden flex-col xs:px-5">
             <p
-              className={`font-[pop2]  text-[1.25rem] text-[#313131] dark:text-[#cbcbcb]  xs:text-[1.1rem] xl:text-[1.4rem] xl:mt-[2vw]   relative z-[2]  ${
+              className={`font-[pop2]  text-[1.06rem] text-[#313131] dark:text-[#cbcbcb]  xs:text-[0.9rem] xl:text-[1.4rem] xl:mt-[2vw]   relative z-[2]  ${
                 isTransitioning ? "opacity-0 " : "opacity-1"
               } transition-opacity duration-700 ${!textL && "text-right rtl"} ${
                 currentTa && "xl:text-[0.5rem] xs:text-[4vw] text-[0.8rem] "
               }`}
             >
               {/* Passionate about web development and enjoy solving problems. */}
-              BAAS
+              BAAS (Backend as a Service)
             </p>
 
             <StackCom

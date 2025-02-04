@@ -39,21 +39,32 @@ const Projects = () => {
   const [isEnter, setIsEnter] = useState(false);
   const [github, setGithub] = useState("");
   const [vercel, setVercel] = useState("");
-
   useGSAP(() => {
-    gsap.fromTo(
-      ".projectsss",
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        opacity: 1,
-        duration: 1.3,
-        y: 0,
+    const animate = () => {
+      gsap.killTweensOf(".projectsss"); // Prevent conflicts
+  
+      if (window.innerWidth >= 768) {
+        gsap.fromTo(
+          ".projectsss",
+          { opacity: 0, y: -100 },
+          { opacity: 1, y: 0, duration: 1.3 }
+        );
+      } else {
+        gsap.fromTo(
+          ".projectsss",
+          { opacity: 0, y: 100 },
+          { opacity: 1, y: 0, duration: 2 }
+        );
       }
-    );
+    };
+  
+    animate(); // Run on mount
+  
+    window.addEventListener("resize", animate); // Listen for screen resizing
+  
+    return () => window.removeEventListener("resize", animate); // Cleanup
   }, []);
+  
 
   useEffect(() => {
     // Fetch the theme mode from local storage
@@ -62,8 +73,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="   py-4  px-3 w-full h-full ">
-      <div className="projectsss about border-[2px] xs:border-[#e3e3e3] rounded-[6vw] dark:border-[#292929] border-[#cdcdcd] min-h-screen  px-2 py-3 lg:rounded-[4vw] lg:py-4  flex items-center gap-5 justify-center  relative   overflow-hidden   xl:rounded-[3vw] flex-col lg:mt-[3rem]   z-[999] xl:mt-[3rem] xl:py-4 md:mt-[3rem] mt-[2.5rem]  md:py-4 md:px-3 lg:px-4 ">
+    <div className="   py-4  px-2 w-full h-full ">
+      <div className="projectsss about border-[2px] xs:border-[#e3e3e3] rounded-[6vw] dark:border-[#292929] border-[#cdcdcd] min-h-screen  px-2 py-2 lg:rounded-[4vw] lg:py-4   flex items-center gap-5 justify-center xs:px-2 xs:py-2 relative   overflow-hidden   xl:rounded-[3vw] flex-col lg:mt-[3rem]   z-[999] xl:mt-[3rem] xl:py-8 md:mt-[3rem] mt-[2.5rem]  md:py-4 md:px-3 lg:px-4  s:mt-[3rem]">
         <div
           style={{
             backgroundImage: `url('${nayaLight}')`,
@@ -74,30 +85,6 @@ const Projects = () => {
           style={{ backgroundImage: `url('${tweed}')` }}
           className="absolute left-0 top-0 w-full h-full z-[0] xs:brightness-[0.35] brightness-[0.37] opacity-[1] hidden dark:block"
         ></div>
-
-        <div className="w-full flex items-center justify-center mt-2">
-          <NavLink to={"/"}>
-            <div
-                       className="border-2 border-[#d2d2d2] dark:border-[#292929]  w-fit rounded-full xl:p-3 overflow-hidden dark:text-zinc-200 text-zinc-800 relative lg:text-[1.3rem] lg:p-2 mt-[-0.3rem] xs:mt-[-0.4rem] xs:p-3"
-                       onMouseEnter={() => setIsEnter(true)}
-                       onMouseLeave={() => setIsEnter(false)}
-                     >
-                       <div
-                         style={{ backgroundImage: `url('${tweed}')` }}
-                         className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                           isEnter ? "brightness-0 " : "brightness-[0.39] "
-                         } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
-                       ></div>
-                       <div
-                         style={{ backgroundImage: `url('${nayaLight}')` }}
-                         className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                           isEnter ? "opacity-1 " : "opacity-0"
-                         } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
-                       ></div>
-                       <RxCross2 className="relative z-[3]" />
-                     </div>
-          </NavLink>
-        </div>
 
         <div className="flex flex-col gap-4 w-full items-center justify-center lg:gap-3 lg:flex-row xl:gap-4">
           <div className="project1  xl:px-9   px-4 py-5 relative flex items-center xl:justify-between  w-full flex-col  justify-between rounded-[5vw] overflow-hidden md:rounded-[2rem] lg:w-[45%] lg:rounded-[3vw]  xl:py-10 xl:rounded-[2vw] border-[#d2d2d2]  border-[1px]  dark:border-[#292929]  xs:px-3 xs:py-4 md:px-5 md:py-6">

@@ -24,20 +24,19 @@ const Home = () => {
   }, []);
   
   useEffect(() => {
-    requestAnimationFrame(() => {
-      gsap.fromTo(
-        ".reuse",
-        { opacity: 0, y: -100 },
-        { opacity: 1, duration: 1.5, y: 0 }
-      );
-
-      gsap.fromTo(
-        ".reuse2",
-        { opacity: 0, x: -100 },
-        { opacity: 1, duration: 1.3, x: 0, stagger: 0.5 }
-      );
-    });
-  }, []); // Empty dependency array ensures it runs onl
+    gsap.fromTo(
+      ".reuse",
+      { opacity: 0, y: -100 },
+      { opacity: 1, duration: 1.5, y: 0 }
+    );
+  
+    gsap.fromTo(
+      ".reuse2",
+      { opacity: 0, x: -100 },
+      { opacity: 1, duration: 1.3, x: 0, stagger: 0.5 }
+    );
+  }, []); // Empty dependency array ensures it runs only once
+  
   return (
     <>
       <div className="   py-4  px-3">

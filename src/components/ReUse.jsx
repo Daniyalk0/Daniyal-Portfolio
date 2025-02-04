@@ -7,39 +7,12 @@ import nayaLight from "../assets/nayaLight.webp";
 import gsap from "gsap/all";
 import { useGSAP } from "@gsap/react";
 
-const ReUse = ({ isGreet = true, background = true }) => {
+const ReUse = () => {
   const { isTransitioning, currentLang, textL, currentTa, currentUr } =
     useMyContext();
   const [greeting, setGreeting] = useState("");
   const [isEntered, setIsEntered] = useState(false);
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    // Function to get the current time in IST and set the greeting
-    const updateGreeting = () => {
-      const now = new Date();
-      console.log(now);
-
-      const istTime = new Date(
-        now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
-      );
-      const hours = istTime.getHours();
-
-      if (hours < 12) {
-        setGreeting("Good Morning");
-      } else if (hours < 17) {
-        setGreeting("Good Afternoon");
-      } else {
-        setGreeting("Good Evening");
-      }
-    };
-
-    updateGreeting(); // Set the initial greeting
-    const intervalId = setInterval(updateGreeting, 60000); // Update greeting every minute
-
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
-  }, []);
-
 
 
   return (

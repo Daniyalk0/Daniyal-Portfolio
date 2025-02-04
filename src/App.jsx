@@ -14,24 +14,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   UseLenis();
-  useEffect(() => {
-    const handleResize = () => {
-      // Check if the screen width is less than 500px
-      if (window.innerWidth < 500) {
-        // If the screen is less than 500px, destroy Lenis
-        if (lenis) {
-          lenis.destroy();
-        }
-      } else {
-        // Re-initialize Lenis if screen width is greater than or equal to 500px
-        if (!lenis) {
-          useLenis();
-        }
-      }
-    };
-  });
-
-
+ 
   return (
     // <Loader>
     <div

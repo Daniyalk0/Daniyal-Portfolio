@@ -8,28 +8,12 @@ import gsap from "gsap/all";
 import tweed from "../assets/tweed.webp";
 import nayaLight from "../assets/nayaLight.webp";
 import seamless_paper_texture from "../assets/seamless_paper_texture.webp";
+import { useMyContext } from "../MyContext";
 
 const Github = () => {
   const [isEnter, setIsEnter] = useState(false);
   const [isLight, setIsLight] = useState(false);
-  const [themeMode, setdarkMode] = useState("light");
-
-  useEffect(() => {
-    const themecheck = localStorage.getItem("themeMode");
-    if (themecheck) {
-      document.querySelector("html").classList.remove("light", "dark");
-      document.querySelector("html").classList.add(themecheck);
-      setdarkMode(themecheck);
-    }
-  }, [themeMode]);
-
-  const themeSwitch = () => {
-    const theme = themeMode === "dark" ? "light" : "dark";
-    localStorage.setItem("themeMode", theme);
-    document.querySelector("html").classList.remove("light", "dark");
-    document.querySelector("html").classList.add(theme);
-    setdarkMode(theme);
-  };
+ const {themeMode, themeSwitch, setThemeMode} = useMyContext()
 
   useGSAP(() => {
     gsap.to(".arrow", {

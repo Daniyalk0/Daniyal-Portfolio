@@ -21,6 +21,7 @@ export default {
     extend: {
       screens: {
         xs: { raw: '(min-width: 300px) and (max-width: 400px)' },
+        s: { raw: '(min-width: 500px) and (max-width: 767px)' },
       },
       brightness: {
         15: '0.27', // 15% brightness

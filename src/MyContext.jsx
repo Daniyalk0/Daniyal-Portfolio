@@ -17,6 +17,25 @@ export const MyProvider = ({ children }) => {
     console.log(currentLang);
   }, [currentLang]);
 
+  const [themeMode, setThemeMode] = useState("light");
+
+  useEffect(() => {
+    const themecheck = localStorage.getItem("themeMode");
+    if (themecheck) {
+      document.querySelector("html").classList.remove("light", "dark");
+      document.querySelector("html").classList.add(themecheck);
+      setThemeMode(themecheck);
+    }
+  }, [themeMode]);
+
+  const themeSwitch = () => {
+    const theme = themeMode === "dark" ? "light" : "dark";
+    localStorage.setItem("themeMode", theme);
+    document.querySelector("html").classList.remove("light", "dark");
+    document.querySelector("html").classList.add(theme);
+    setThemeMode(theme);
+  };
+
   return (
     <MyContext.Provider
       value={{
@@ -33,7 +52,10 @@ export const MyProvider = ({ children }) => {
         setCurrentGm,
         currentGm,
         currentFr,
-        setCurrentFr
+        setCurrentFr,
+        themeMode,
+        setThemeMode,
+        themeSwitch
       }}
     >
       {children}

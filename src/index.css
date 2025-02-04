@@ -226,3 +226,12 @@
   background: linear-gradient(0deg, rgba(1,15,0,1) 0%, rgba(0,152,0,1) 100%);
 }
 
+.lineAnimate1{
+  background: rgb(255,59,0);
+  background: linear-gradient(45deg, rgba(255,59,0,1) 39%, rgba(0,26,255,1) 64%);
+}
+.lineAnimate2{
+  background: rgb(255,59,0);
+  background: linear-gradient(45deg, rgba(255,59,0,1) 39%, rgba(0,26,255,1) 64%);
+}
+

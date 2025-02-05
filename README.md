@@ -1,4 +1,4 @@
-# Project Description
+# Daniyal Portfolio
 This personal portfolio features a modern grid-based layout, showcasing my journey as a Frontend Developer. It highlights my skills, projects, and passion for creativity and innovation in web development.
 
 ## 🚀 Live Demo  

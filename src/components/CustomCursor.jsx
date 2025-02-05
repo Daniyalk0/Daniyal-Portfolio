@@ -7,7 +7,7 @@ const CustomCursor = () => {
   const [isVisible, setIsVisible] = useState(true); // Controls opacity of the cursor
 
   // The size of the cursor
-  const cursorSize = 29; // Adjust to match the cursor's width and height
+  const cursorSize = 29; 
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -54,16 +54,6 @@ const CustomCursor = () => {
     animate(); // Start animation loop
   }, [isVisible]);
 
-  // useEffect(() => {
-  //   if (cursorRef.current) {
-  //     cursorRef.current.style.opacity = isVisible ? 1 : 0;
-  //     cursorRef.current.style.transform = `translate3d(${currentPosition.current.x - cursorSize / 2}px, ${
-  //       currentPosition.current.y - cursorSize / 2
-  //     }px, 0)`;
-  //   }
-  // }, [isVisible, currentPosition.current.x, currentPosition.current.y]);
-  
-  
 
   return (
     <div

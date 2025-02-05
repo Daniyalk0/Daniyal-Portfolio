@@ -64,25 +64,18 @@ const Tools = () => {
     return () => intervals.forEach((interval) => clearInterval(interval)); // Cleanup
   }, []);
 
-  // useGSAP(() => {
-  //   gsap.killTweensOf(".tools"); // Stop any existing animations to prevent conflicts
+  useGSAP(() => {
+    gsap.killTweensOf(".tools"); // Stop any existing animations to prevent conflicts
   
-  //   // Adjust animation based on screen width
-  //   gsap.fromTo(
-  //     ".tools",
-  //     { opacity: 0, y: window.innerWidth >= 768 ? -100 : -70 }, // Adjust based on screen size
-  //     { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" } // Smooth easing for better effect
-  //   );
-  // }, []);
+    // Adjust animation based on screen width
+    gsap.fromTo(
+      ".tools",
+      { opacity: 0, y: window.innerWidth >= 768 ? -100 : -70 }, // Adjust based on screen size
+      { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" } // Smooth easing for better effect
+    );
+  }, []);
   
   
-
-  //   useGSAP(() => {
-  // gsap.from('.html', {
-  // width:'0%',
-  // duration:2,
-  // })
-  //   })
   return (
     <div className="   py-4  px-2 w-full h-full ">
       <div className="tools border-[2px] xs:border-[#e3e3e3] rounded-[6vw] dark:border-[#292929] border-[#cdcdcd]  px-[2vw] xs:px-2 xs:py-2 lg:rounded-[4vw] lg:py-7 lg:px-0 lg:flex items-center justify-center gap-4   relative   overflow-hidden py-4  xl:rounded-[3vw] flex-col lg:mt-[3rem]   z-[999] xl:mt-[3rem] xl:py-8  md:mt-[3rem] md:py-5 mt-[2.5rem]  s:mt-[3rem]">

@@ -23,9 +23,8 @@ const CV = () => {
   console.log(currentGm);
 
   const handleDownload = () => {
-    // Replace with your actual CV file path
-    const cvUrl = "./CV.pdf"; // Accessible from the public folder
-    window.open(cvUrl, "_blank"); // Open in a new tab
+    const cvUrl = "./Daniyal_CV.pdf"; 
+    window.open(cvUrl, "_blank"); 
   };
 
   useGSAP(() => {
@@ -44,22 +43,6 @@ const CV = () => {
       ease: "power1.out",
     });
   }, [isEnter]);
-
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     ".CV",
-  //     {
-  //       scale: "0",
-  //       translateY: "100%"
-  //     }, // Starting state
-  //     {
-  //       scale: "1",
-  //       translateY: "0%",
-  //       duration: 1.6,
-  //       delay: 0.6,
-  //     }
-  //   );
-  // }, []);
 
   return (
     <div

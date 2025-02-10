@@ -5,8 +5,6 @@ import { TfiEmail } from "react-icons/tfi";
 import { IoLogoInstagram } from "react-icons/io5";
 import tweed from "../assets/tweed.webp";
 import nayaLight from "../assets/nayaLight.webp";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 const Socials = () => {
   const [insta, setInsta] = useState(false);
@@ -14,21 +12,12 @@ const Socials = () => {
   const [linkedin, setLinkedin] = useState(false);
   const [X, setX] = useState(false);
 
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     ".social",
-  //     { scale: "0",
-  //       translateX:"100%"
-  //       }, // Starting state
-  //     { scale: "1",
-  //       translateX:"0%", duration: 1.6, delay:0.3 } // Ending state with animation duration
-  //   );
-  // }, []);
-
   return (
     <div className="social w-full  xl:w-[18.5vw] flex xl:flex-col items-center justify-center gap-2 relative ">
       <div className="flex items-center justify-between w-full ">
-        <div
+        <a
+        href="https://www.linkedin.com/in/daniyal-khan-648107263/"
+        target="_blank"
           onMouseEnter={() => setLinkedin(true)}
           onMouseLeave={() => setLinkedin(false)}
           className={`p-5 w-[23%] xl:w-auto bg-[#eeeeee] dark:bg-zinc-900 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[1.7vw]  relative overflow-hidden xl:rounded-[1.5rem] lg:text-[4vw] `}
@@ -49,9 +38,11 @@ const Socials = () => {
             }`}
           ></div>
           <PiLinkedinLogo className="relative" />
-        </div>
+        </a>
 
-        <div
+        <a
+        href="https://x.com/ll0sts0ull_"
+        target="_blank"
           onMouseEnter={() => setX(true)}
           onMouseLeave={() => setX(false)}
           className={`p-5 flex items-center justify-center rounded-[1.2rem] border-[1px] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  dark:text-white text-[6vw] xl:text-[2.2vw] xl:p-[1.7vw]     xl:rounded-[1.5rem] w-[23%] xl:w-auto lg:text-[4vw] relative overflow-hidden
@@ -73,8 +64,10 @@ const Socials = () => {
             }`}
           ></div>
           <FaXTwitter className="relative" />
-        </div>
-        <div
+        </a>
+        <a
+        href="https://www.instagram.com/ll0sts0ull/?hl=en"
+        target="_blank"
           onMouseEnter={() => setInsta(true)}
           onMouseLeave={() => setInsta(false)}
           className={`p-5 flex items-center justify-center border-[1px]   text-[6vw] xl:text-[2.1vw] xl:p-[1.7vw]    transition-opacity duration-500 xl:rounded-[1.5rem] lg:text-[4vw] relative overflow-hidden  bg-[#eeeeee] dark:bg-zinc-900   rounded-[1.2rem]  xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929] w-[23%] xl:w-auto  dark:text-white`}
@@ -95,7 +88,7 @@ const Socials = () => {
             }`}
           ></div>
           <IoLogoInstagram className="relative z-[3]" />
-        </div>
+        </a>
         <a
         onMouseEnter={() => setEmail(true)}
         onMouseLeave={() => setEmail(false)}

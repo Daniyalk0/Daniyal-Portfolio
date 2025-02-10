@@ -14,7 +14,7 @@ function AboutHome() {
   const [isEnter, setIsEnter] = useState(false);
   const { isTransitioning, currentLang, textL, currentTa } = useMyContext();
   const { t, i18n } = useTranslation();
-  const [pfpHover, setPfpHover] = useState(false)
+  const [pfpHover, setPfpHover] = useState(false);
 
   useGSAP(() => {
     gsap.to(".arroww1", {
@@ -34,35 +34,43 @@ function AboutHome() {
   }, [isEnter]);
 
   return (
-  
-      <div className="flex items-center justify-center gap-2 w-full md:w-full md:gap-3 xl:gap-1 relative overflow-hidden">
-        <div onMouseEnter={() => setPfpHover(true) } onMouseLeave={() => setPfpHover(false)} className={`hidden md:block w-[33%] md:w-[29vw] md:h-[29.4vw] h-[14.4rem]  object-cover rounded-[6vw] md:rounded-[4vw] lg:w-[23vw] xl:w-[18vw] xl:h-[15.4rem] xl:rounded-[2.3vw] 2xl:w-[17.3vw]  overflow-hidden`} >
-          <div className={`bg-cover bg-center transition-all duration-1000  w-full h-full ${pfpHover ? 'scale-[2]' : ''}`} style={{backgroundImage:`url('${dpp}')`}}></div>
-        </div>
-        <NavLink to={"/about"}>
+    <div className="flex items-center justify-center gap-2 w-full md:w-full md:gap-3 xl:gap-1 relative overflow-hidden">
+      <div
+        onMouseEnter={() => setPfpHover(true)}
+        onMouseLeave={() => setPfpHover(false)}
+        className={`hidden md:block w-[33%] md:w-[29vw] md:h-[29.4vw] h-[14.4rem]  object-cover rounded-[6vw] md:rounded-[4vw] lg:w-[23vw] xl:w-[18vw] xl:h-[15.4rem] xl:rounded-[2.3vw] 2xl:w-[17.3vw]  overflow-hidden`}
+      >
+        <div
+          className={`bg-cover bg-center transition-all duration-1000  w-full h-full ${
+            pfpHover ? "scale-[2]" : ""
+          }`}
+          style={{ backgroundImage: `url('${dpp}')` }}
+        ></div>
+      </div>
+      <NavLink to={"/about"}>
         <div
           className="rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929]  w-full h-[210px] border-[1px] relative overflow-hidden md:h-[29.7vw] xl:w-[34.3vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-6 xs:py-5 xs:px-6 md:w-[70%] xl:px-7 xl:py-7 lg:w-[71vw] xl:mr-0 xl:ml-2 2xl:mr-4 2xl:ml-0  dark:bg-zinc-900 dark:bg-transparent xs:h-[190px]"
           onMouseEnter={() => setIsEnter(true)}
           onMouseLeave={() => setIsEnter(false)}
         >
-      <div
-               style={{ backgroundImage: `url('${tweed}')` }}
-               className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                 isEnter ? "brightness-[0.4] " : "brightness-0 opacity-0"
-               } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
-             ></div>
-             <div
-               style={{ backgroundImage: `url('${nayaLight}')` }}
-               className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
-                 isEnter ? "opacity-1 " : "opacity-0"
-               } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
-             ></div>
-         <div
-                    style={{
-                      backgroundImage: `url('${nayaLight}')`,
-                    }}
-                    className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
-                  ></div>
+          <div
+            style={{ backgroundImage: `url('${tweed}')` }}
+            className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+              isEnter ? "brightness-[0.4] " : "brightness-0 opacity-0"
+            } transition-all duration-500 z-[1] hidden dark:block opacity-1`}
+          ></div>
+          <div
+            style={{ backgroundImage: `url('${nayaLight}')` }}
+            className={`absolute left-0 top-0 w-full h-full z-[-1]  ${
+              isEnter ? "opacity-1 " : "opacity-0"
+            } transition-all duration-500 z-[1] block dark:hidden brightness-[1] `}
+          ></div>
+          <div
+            style={{
+              backgroundImage: `url('${nayaLight}')`,
+            }}
+            className="absolute left-0 top-0 w-full h-full z-[0] brightness-[1.08] xs:brightness-[1.14] opacity-[1] dark:hidden"
+          ></div>
 
           <div
             style={{ backgroundImage: `url('${tweed}')` }}
@@ -91,8 +99,8 @@ function AboutHome() {
             <FaArrowRight className="arroww2 md:block hidden md:absolute" />
           </div>
         </div>
-    </NavLink>
-      </div>
+      </NavLink>
+    </div>
   );
 }
 

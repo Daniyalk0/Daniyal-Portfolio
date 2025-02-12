@@ -13,7 +13,7 @@
   "myStory": "my story",
   "whatIdo": "what i do now",
   "aboutText1": "I was born in my Hometown Uttar Pradesh , India, and I'm currently in Delhi for career advancement. Since childhood, I’ve been fascinated by the blend of creativity and technology, which eventually led me to frontend development. With expertise in React, I enjoy crafting functional and visually appealing interfaces that enhance user experiences.",
-  "aboutText2": "I’m actively exploring opportunities to bring my skills to impactful projects while delving into backend development to broaden my expertise and become a well-rounded developer.",
+  "aboutText2": "I’m actively exploring opportunities to bring my skills to impactful projects while building a project in nextjs and typescript to broaden my expertise and become a well-rounded frontend developer.",
   "best": "What I Do Best",
   "responsiveText": "Prioritizing mobile-first designs for optimal performance and usability on any screen.",
   "responsive": "Mobile-First Design",
@@ -36,7 +36,7 @@
   "clone": "clone",
   "cloneAbout": "A responsive and detailed clone of the Sundown Studio website, recreating its dynamic design, interactivity, and user experience to highlight front-end development skills.",
 
-  "codingLang":"Coding Languages",
+  "codingLang":"Programming Languages",
   "codingTools":"Tools",
   "codingLibs":"Library and Framworks",
   "codingBaas":"BAAS",

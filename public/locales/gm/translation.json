@@ -14,7 +14,7 @@
 
      "aboutText1": "Ich wurde in Uttar Pradesh, Indien, geboren und lebe derzeit in Neu-Delhi. Seit meiner Kindheit fasziniert mich die Mischung aus Kreativität und Technologie, was mich schließlich zur Frontend-Entwicklung führte. Mit meiner Expertise in React genieße ich es, funktionale und optisch ansprechende Schnittstellen zu erstellen, die das Benutzererlebnis verbessern.",
 
-     "aboutText2": "Ich suche aktiv nach Möglichkeiten, meine Fähigkeiten in wirkungsvolle Projekte einzubringen, während ich mich gleichzeitig mit der Backend-Entwicklung beschäftige, um mein Fachwissen zu erweitern und ein vielseitiger Entwickler zu werden.",
+     "aboutText2": "Ich suche aktiv nach Möglichkeiten, meine Fähigkeiten in wirkungsvolle Projekte einzubringen, während ich ein Projekt in nextjs und Typescript erstelle, um mein Fachwissen zu erweitern und ein vielseitiger Frontend-Entwickler zu werden.",
 
      "best": "Was ich am besten kann",
      "responsiveText": "Priorisierung des mobilgeräteorientierten Designs für optimale Leistung und Benutzerfreundlichkeit auf allen Bildschirmgrößen",
@@ -39,7 +39,7 @@
      "clone": "Klon",
      "cloneAbout": "Ein reaktionsfähiger und detaillierter Klon der Sundown Studio-Website, der deren dynamisches Design, Interaktivität und Benutzererfahrung nachbildet, um die Fähigkeiten der Front-End-Entwicklung hervorzuheben.",
 
-     "codingLang":"Codierungssprachen",
+     "codingLang":"Programmiersprachen",
      "codingTools":"Werkzeuge",
      "codingLibs":"Bibliothek und Frameworks",
      "codingBaas":"BAAS",

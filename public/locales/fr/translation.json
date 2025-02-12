@@ -14,7 +14,7 @@
      "whatIdo": "ce que je fais maintenant",
      "aboutText1": "Je suis né dans l'Uttar Pradesh, en Inde, et je vis actuellement à New Delhi. Depuis mon enfance, je suis fasciné par le mélange de créativité et de technologie, qui m’a finalement conduit au développement front-end. Fort de mon expertise en React, j'aime créer des interfaces fonctionnelles et visuellement attrayantes qui améliorent l'expérience utilisateur.",
 
-     "aboutText2": "J'explore activement les opportunités d'apporter mes compétences à des projets à fort impact tout en me plongeant dans le développement backend pour élargir mon expertise et devenir un développeur complet.",
+     "aboutText2": "J'explore activement les opportunités d'apporter mes compétences à des projets percutants tout en construisant un projet dans nextjs et dactylographié pour élargir mon expertise et devenir un développeur front-end complet.",
      "best": "Ce que je fais de mieux",
      "responsiveText": "Donner la priorité aux conceptions mobiles pour des performances et une convivialité optimales sur n’importe quel écran.",
      "responsive": "Conception axée sur le mobile",
@@ -39,7 +39,7 @@
      "clone": "cloner",
      "cloneAbout": "Un clone réactif et détaillé du site Web Sundown Studio, recréant sa conception dynamique, son interactivité et son expérience utilisateur pour mettre en valeur les compétences de développement front-end.",
 
-     "codingLang":"Langages de codage",
+     "codingLang":"Langages de programmation",
      "codingTools":"Outils",
      "codingLibs":"Bibliothèque et frameworks",
      "codingBaas":"BAAS",

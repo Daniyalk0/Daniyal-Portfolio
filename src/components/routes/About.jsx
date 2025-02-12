@@ -17,7 +17,7 @@ const About = () => {
     window.scrollTo(0, 0);
   }, []);
   const [isEnter, setIsEnter] = useState(false);
-  const { isTransitioning, currentLang, textL, currentTa } = useMyContext();
+  const { isTransitioning, currentLang, textL, currentTa, currentGm, currentFr } = useMyContext();
   const { t, i18n } = useTranslation();
   useGSAP(() => {
     gsap.killTweensOf(".about"); // Stop any existing animations to prevent conflicts
@@ -28,6 +28,8 @@ const About = () => {
       { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" } // Smooth easing for better effect
     );
   }, []);
+  
+  console.log(currentGm);
   
   
   const settings = {
@@ -118,13 +120,13 @@ const About = () => {
                 {t("whatIdo")}
               </h2>
               <p
-                className={`font-[real] md:text-[1.2rem] lg:text-[1.08rem]  text-[1.15rem] leading-8  text-[#434343] md:leading-8 dark:text-[#cbcbcb] xl:leading-[2.2rem] xs:text-[1rem]  xl:text-[1.15rem]  relative z-[2]  ${
+                className={`font-[real] md:text-[1.2rem] lg:text-[1.08rem]  text-[1.15rem] leading-8  text-[#434343] md:leading-8 dark:text-[#cbcbcb] xl:leading-[2.2rem] xs:text-[1rem]  xl:text-[1.1rem]  relative z-[2]  ${
                   isTransitioning ? "opacity-0 " : "opacity-1"
                 } transition-opacity duration-700 ${
                   !textL && "text-right rtl"
                 } ${
-                  currentTa && "xl:text-[1vw] xs:text-[4vw]  lg:text-[1.1vw]  text-[0.8rem] "
-                }`}
+                  currentTa && "xl:text-[0.76vw] xs:text-[4vw]  lg:text-[1vw] lg:leading-[1.3rem] xl:leading-[1.5rem] text-[0.8rem] "
+                } ${currentGm || currentFr ? "xl:text-[1rem] xl:leading-[1.7rem] lg:text-[1rem] lg:leading-[1.8rem]" : ""}`}
               >
                 {/* Passionate about web development and enjoy solving problems. */}
                 {t("aboutText2")}

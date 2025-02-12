@@ -1,15 +1,16 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
-import img1 from "../assets/logo/html.png";
-import img2 from "../assets/logo/css.png";
+import img1 from "../assets/logo/js.png";
+import img2 from "../assets/logo/ts.png";
 import img3 from "../assets/logo/github.png";
 import img4 from "../assets/logo/appwrite.png";
 import img5 from "../assets/logo/react.png";
 import img6 from "../assets/logo/redux.png";
 import img7 from "../assets/logo/tailwind.png";
-import img8 from "../assets/logo/js.png";
+import img8 from "../assets/logo/next.png";
 import img9 from "../assets/logo/git.png";
+import img10 from "../assets/logo/vscode.png";
 import { useMyContext } from "../MyContext";
 import { useTranslation } from "react-i18next";
 import { useGSAP } from "@gsap/react";
@@ -17,6 +18,7 @@ import gsap from "gsap/all";
 import tweed from "../assets/tweed.webp";
 import nayaLight from "../assets/nayaLight.webp";
 import Slider from "react-infinite-logo-slider";
+import { useNavigate } from "react-router-dom";
 
 const ToolsHome = () => {
   const { isTransitioning, currentLang, textL, currentTa, currentUr } =
@@ -34,6 +36,7 @@ const ToolsHome = () => {
     { icon: img7, key: 7 },
     { icon: img8, key: 8 },
     { icon: img9, key: 9 },
+    { icon: img10, key: 10 },
   ];
 
   useGSAP(() => {
@@ -52,11 +55,17 @@ const ToolsHome = () => {
       ease: "power1.out",
     });
   }, [isEnter]);
+  const navigate = useNavigate()
+
+  const navigateTools = () => {
+navigate('./tools')
+  }
 
   return (
     <div
       onMouseEnter={() => setIsEnter(true)}
       onMouseLeave={() => setIsEnter(false)}
+      onClick={navigateTools}
       className="rounded-[6vw] md:rounded-[4vw] xs:border-[#e5e5e5] border-[#d2d2d2]  dark:border-[#292929] xs:w-[100%] w-[100%] h-[200px] border-[1px] relative  md:h-[29.7vw] xl:w-[28vw] xl:h-[250px] xl:rounded-[2vw] 2xl:w-[35.4w] lg:rounded-[3vw] text-white px-7 py-6 xs:py-5 xs:px-6 md:w-[61vw] xl:px-0 xl:py-7  lg:w-[65vw]  2xl:mr-4 2xl:ml-0 bg-transparent lg:bg-[#ececec] dark:bg-transparent xs:h-[190px] overflow-hidden "
     >
       <div
